@@ -1,0 +1,37 @@
+<script>
+// navigation
+$(document).ready(function() {
+  var htmLlist = [
+    '<li><a href="#Sec01" class="f__link">****について</a></li>',
+    '<li><a href="#Sec02" class="f__link">****について</a></li>',
+    '<li><a href="#Sec03" class="f__link">****について</a></li>',
+    '<li><a href="#Sec04" class="f__link">****について</a></li>'
+  ];
+  htmLlist.forEach(function(listItem) {
+    $('.addList').append(listItem);
+  });
+});
+</script>
+<script src="./js/common.js"></script>
+
+<header class="fixed">
+  <div class="hwrap flexBox">
+    <h1 class="logo flexBox">
+      <img src="./img/saitama_icon.png" class="sIcon">
+      <a href="index.html"><span>Saitama Cycle Journey</span><p>彩りの輪</p></a>
+    </h1>
+    <nav class="navi sp_none"><ul class="addList flexBox"></ul></nav>
+  </div>
+
+  <div id="hamMenu" class="ham pc_none">
+    <button type="button" class="btn_menu">
+      <div class="back_color">
+        <!-- ボタンの記述 -->
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      </div>
+    </button>
+    <nav class="scrollbar_none"><ul class="addList ham_list"></ul></nav>
+  </div>
+</header>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>自転車発祥の地「さいたま」 | 彩りの輪 ～Saitama Cycle Journey～</title>
+<meta name="description" content="自転車発祥の地・埼玉県の歴史と魅力を巡る旅へ。300年前に考案された陸船車や、自転車王国・埼玉の最新スポット、博物館イベント情報など、サイクリスト初心者からベテランまで楽しめる情報満載！">
+<link rel="icon" href="./img/favicon.ico">
+
+<!-- CSS Area -->
+<link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="./css/normalize.css">
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/style.css">
+<!-- /CSS Area -->
+
+<!-- JS Area -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+let temp = "templates";
+$(function(){
+  $("#header").load(`${temp}/header.html`);
+  $("#footer").load("templates/footer.html");
+});
+</script>
+<!-- /JS Area -->
+
+<style>
+#Page {
+  margin-top: 120px;
+}
+#Page h2 b {
+  font-size: .6em;
+}
+</style>
+</head>
+
+
+<body id="Page">
+<div class="bg" style="display: none;"></div>
+
+
+<div id="header"></div>
+
+
+<main>
+<!-- // intro // -->
+  <div class="intro inview fadeIn_up">
+    <h2><b id="txt_radius 1">自転車の原点を巡る</b>自転車発祥の地「さいたま」<span>Saitama: Born to Ride</span></h2>
+    <figure><img src="./img/***.jpg" alt="＊＊＊＊＊" class="trim ph"></figure>
+    <p class="read_txt">
+    <span class="u_line">日本で初めて自転車が走ったのは、ここ「さいたま」。</span><br>歴史の息づく地を訪ね、自転車文化のはじまりに触れてみませんか？<br>“ただの移動手段”を超えた物語が、ここにはあります。
+    </p>
+  </div>
+<!-- // intro // -->
+
+
+<style>
+.mainVI .masked-area img {
+  height: 100%;
+  object-fit: cover;
+}
+.masked-area {
+  max-width: 1440px;
+  height: 700px;
+  border-radius: 55% 70% 45% 65%;
+  border: 10px solid #e1e1e1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 820px) {
+.mainVI .masked-area img {
+  width: 100%;
+  height: 500px;
+}
+.masked-area {
+  height: 500px;
+}
+}
+
+
+/*
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.swiper-slide {
+  width: 100%;
+  height: 300px;
+  clip-path: polygon(
+    25% 0%, 75% 0%, 100% 50%,
+    75% 100%, 25% 100%, 0% 50%
+  );
+  overflow: hidden;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+*/
+
+
+main .mainCnt section:nth-child(odd):after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ECFCCD;
+    transform: skewY(-7deg);
+}
+
+
+main .mainCnt section h3 {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 65px;
+    padding-left: unset;
+    font-size: 2.9em;
+    text-align: center;
+}
+main .mainCnt section h3:before {
+    top: -100px;
+    left: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+  background-image: url(./img/wheel_icon.png);
+  animation: spin 10s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+main .mainCnt section h3:after {
+    top: 45%;
+    left: 0;
+    right: 0;
+    width: 70%;
+    height: 20px;
+    margin: 0 auto;
+}
+main .mainCnt section h3:after {
+display: none;
+    content: "";
+    z-index: -2;
+    position: absolute;
+    background-color: #009944;
+    width: 40%;
+    height: 30px;
+    border-radius: 50px;
+    top: 45%;
+    opacity: .4;
+}
+main .mainCnt section h3 span {
+    transform: unset;
+    font-size: .5em;
+
+font-weight: 900;
+margin-top: 0;
+margin-bottom: 15px;
+}
+
+main .mainCnt section h3 b::before,
+main .mainCnt section h3 b::after {
+  content: "～";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #5D5D5D;
+}
+main .mainCnt section h3 b::before {
+  left: -.5em;
+}
+main .mainCnt section h3 b::after {
+  right: -.5em;
+}
+main .mainCnt section h3 b {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  padding: 0 1em; /* 疑似要素との間隔調整 */
+}
+
+main .mainCnt section p {
+    width: 80%;
+    margin: 20px auto 40px;
+}
+
+@media screen and (max-width: 820px) {
+main .mainCnt section h3 {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: unset;
+    font-size: 1.8em;
+    text-align: center;
+}
+main .mainCnt section h3 b::before {
+  left: -.3em;
+}
+main .mainCnt section h3 b::after {
+  right: -.3em;
+}
+}
+
+
+/* */
+a.btn {
+    display: flex;
+    margin: 0 auto;
+    max-width: 400px;
+    height: 70px;
+    border: 3px solid #ff701e;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+
+/*    color: #999;*/
+    font-weight: 900;
+
+  cursor: pointer;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.btn.linkBtn {
+  background: #fff;
+  color: #ff701e;
+  overflow: hidden;
+  position: relative;
+  transition-duration: .4s;
+  z-index: 2;
+}
+.btn.linkBtn::after {
+  background: #ff701e;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  margin: auto;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding-top: 100%;
+  height: 0;
+  z-index: -1;
+  transform: translateY(-50%) scale(0.1);
+  transition: opacity .5s, transform 0s;
+  transition-delay: 0s, .4s;
+}
+.btn.linkBtn:hover {
+  color: #fff;
+}
+.btn.linkBtn:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+  transition-delay: 0s;
+  transition: opacity .8s, transform .6s ease-in-out;
+}
+
+.btn.linkBtn:hover {
+  color: #fff;
+  transform: scale(0.97); /* 少し小さくして押した感 */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* 内側の影で凹み感 */
+}
+.btn.linkBtn:active {
+  transform: scale(0.94);
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+/* (仮) */
+.mainCnt section img {
+    max-width: 800px;
+    height: 300px;
+    display: block;
+    margin: 0 auto 20px;
+}
+img.ph {
+  background: #ccc;
+}
+</style>
+
+
+  <div class="mainCnt">
+
+    <section id="Sec01" class="sec-scroll-point">
+      <article class="inview fadeIn_up">
+        <h3><span>世界最古の自転車</span><b>偉人「庄田 門弥」と「陸船車」</b></h3>
+        <figure><img src="#" alt="＊＊＊＊＊" class="ph"></figure>
+        <div class="content-block">
+          <p>
+            1729年（享保14年）、現在の埼玉県本庄市で百姓として暮らしていた庄田門弥は、世界最古の自転車機能を備えた「陸船車（りくせんしゃ）」を発明しました。自転車文化の発祥地はここ埼玉だったとも言われています。<br><br>
+            世界的には、1817年にドイツのカール・フォン・ドライスが、ペダルのない足蹴り式乗り物「ドライジーネ」を発明したのが自転車の始まりとされ、1861年にはフランスのミショー親子が前輪にペダルを取り付けたモデルを開発しました。これらのどちらが自転車の原型かを巡っては、今も議論があるようです。
+          </p>
+        </div>
+      </article>
+    </section>
+
+
+    <section id="Sec02" class="sec-scroll-point">
+      <article class="inview fadeIn_up">
+        <h3><span>サイクリストが集う場所</span><b>埼玉県は自転車王国！</b></h3>
+        <figure><img src="#" alt="＊＊＊＊＊" class="ph"></figure>
+        <div class="content-block">
+          <p>
+            埼玉県は、自転車の魅力と実力が凝縮された「自転車王国」として知られています。<br><br>
+            全国トップの自転車保有率を誇り、日常の足としても広く活用されています。<br>
+            荒川や利根川などの川沿いには整備された自転車道が広がり、自然を感じながら走れる理想的な環境が整っています。<br>
+            さらに、県が選定した「自転車みどころスポットを巡るルート100」では、観光・グルメ・歴史を楽しめる多彩なルートが展開。<br>
+            自転車関連企業の集積も進み、ブリヂストンサイクルなどが県内に拠点を構えています。<br><br>
+            加えて、本庄市の庄田門弥が発明した「陸船車」によって、自転車文化の原点としての歴史も有しており、埼玉県は名実ともにサイクリングの聖地となっています。
+          </p>
+        </div>
+      </article>
+    </section>
+
+
+    <section id="Sec03" class="sec-scroll-point">
+      <article class="inview fadeIn_up">
+        <h3><span>300年前の「走る夢」</span><b>日本の乗り物文化の原点を体感</b></h3>
+        <figure><img src="#" alt="＊＊＊＊＊" class="ph"></figure>
+        <div class="content-block">
+          <p>
+            大阪府堺市にあるシマノ自転車博物館は、豊富な展示と解説を通して、世界および日本における自転車の歴史や魅力を学び、体感できる、日本最大級の自転車博物館です。<br><br>
+  現在、当博物館では特別展『古文書から紐解く 江戸時代に考案された自転車』が開催されています。<br>
+  本展では、江戸期の武州北壕村（現在の埼玉県本庄市北堀）の豪農・庄田門弥が1729年（享保14年）に発明した「陸船車」に関する古文書と、その復元模型が展示されており、あわせて彦根藩士・平石九平次が1732年に発明した「陸舟奔車」も公開されています。<br><br>
+  これらの展示は、シマノ自転車博物館4階の特別展示室にて、来年2026年3月23日までご覧いただけます。大阪方面へお出かけの際は、ぜひ足を運んでみてください。
+          </p>
+        </div>
+      </article>
+    </section>
+
+
+<!-- // snsArea // -->
+    <div class="snsArea sec-scroll-point">
+      <div class="inview fadeIn_up">
+        <b>SHARE</b>
+        <ul class="flexBox">
+          <li><a href="https://www.facebook.com/share.php?u={URL}" rel="nofollow noopener" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+          <li><a href="http://twitter.com/share?url=[URL]" rel="nofollow noopener" target="_blank"><img src="./img/logo-white.png" class="x_icon"></a></li>
+          <li><a href="https://line.me/R/msg/text/?{URL}" target="_blank" rel="nofollow noopener"><i class="fab fa-line"></i></a></li>
+        </ul>
+      </div>
+    </div>
+<!-- // snsArea // -->
+
+  </div>
+</main>
+
+
+<div id="footer"></div>
+
+
+<div id="PageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></div>
+
+
+<!-- JS Area -->
+<script src="./js/jquery.arctext.js"></script>
+<script src="./js/jquery.inview.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
+<script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
+
+<script>
+// arctext
+$(function () {
+  $('#txt_radius1').arctext({radius: 100});
+});
+
+// inview
+$(function(){
+  $(".inview").on("inview", function (event, isInView) {
+    if (isInView) {
+      $(this).stop().addClass("is-show");
+    }
+  });
+});
+
+// ScrollHint
+new ScrollHint('.tableArea', {
+  suggestiveShadow: true,
+  remainingTime: 5000,
+  i18n: {
+    scrollable: 'スクロールできます'
+  }
+});
+</script>
+<!-- /JS Area -->
+</body>
+</html>
