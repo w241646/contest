@@ -28,12 +28,18 @@ $(function(){
 });
 </script>
 
+<style>
+.mainVI::after {
+width: 100%;
+max-width: var(--after-width, 1300px);
+}
+</style>
 <script>
 function applyResponsiveStyles() {
   const width = window.innerWidth;
 
   // 基準値（例：最小320px、最大1920px）
-  const minWidth = 320;
+  const minWidth = 300;
   const maxWidth = 1920;
 
   // 正規化（0〜1の範囲に変換）
@@ -42,12 +48,19 @@ function applyResponsiveStyles() {
   // スタイルの動的計算（例：フォントサイズを14px〜24pxの間で変化させる）
   const fontSize = 14 + (24 - 14) * normalized;
   const padding = 8 + (32 - 8) * normalized;
+  const contentMinWidth = 300; // コンテンツの最小幅
+  const contentMaxWidth = 1350; // コンテンツの最大幅
+  const contentWidth = contentMinWidth + (contentMaxWidth - contentMinWidth) * normalized;
 
   // 適用対象の要素
-  const target = document.querySelector('.responsive-box');
+  // const target = document.querySelector('.responsive-box');
+  const target = document.querySelector('.mainVI');
   if (target) {
-    target.style.fontSize = `${fontSize}px`;
-    target.style.padding = `${padding}px`;
+    // target.style.fontSize = `${fontSize}px`;
+    // target.style.padding = `${padding}px`;
+    target.style.setProperty('--after-width', `${contentWidth}px`);
+    // target.style.width = `${contentWidth}px`;
+    // target.style.margin = '0 auto'; // 中央寄せ（任意）
   }
 }
 
@@ -183,7 +196,7 @@ const swiper = new Swiper('.mySwiper', {
 
 
 <main>
-<!-- <p class="responsive-box">AAAAああああ</p> -->
+<!-- <p class="responsive-box" style="width: 1000px;">AAAAああああ</p> -->
 
 
 <!-- // intro // -->
@@ -202,13 +215,13 @@ const swiper = new Swiper('.mySwiper', {
 <style>
 .mainVI::after {
     content: "";
-width: 100%;
-max-width: 1440px;
+/* width: 100%;
+max-width: 1440px; */
     height: 700px;
     display: block;
     position: absolute;
-top: 10%;
-left: 15%;
+top: 13%;
+left: 17%;
   mix-blend-mode: multiply;
   opacity: .3;
     background: #e0ceff;
@@ -286,7 +299,8 @@ animation: floatRotate 10s ease-in-out infinite;
   height: 550px;
 }
 .mainVI::after {
-  height: 550px;
+  height: 520px;
+top: 15%;
 left: 0;
 }
 .mainVI .mVI_txt {
@@ -443,7 +457,7 @@ a.btn {
     margin: 0 auto;
     max-width: 400px;
     height: 70px;
-    border: 3px solid #70cb39;
+    border: 3px solid #81ccc4;
     border-radius: 15px;
     align-items: center;
     justify-content: center;
@@ -457,14 +471,14 @@ a.btn {
 
 .btn.linkBtn {
   background: #fff;
-  color: #70cb39;
+  color: #81ccc4;
   overflow: hidden;
   position: relative;
   transition-duration: .4s;
   z-index: 2;
 }
 .btn.linkBtn::after {
-  background: #70cb39;
+  background: #81ccc4;
   border-radius: 50%;
   content: "";
   display: block;
@@ -485,7 +499,8 @@ a.btn {
 }
 .btn.linkBtn:hover {
   color: #fff;
-  border: 3px solid #62ad2d;
+  border: 3px solid #81ccc4;
+  opacity: 1;
 }
 .btn.linkBtn:hover::after {
   opacity: 1;
