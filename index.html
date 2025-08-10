@@ -29,6 +29,7 @@ $(function(){
 </script>
 
 <style>
+.mainVI::before,
 .mainVI::after {
 width: 100%;
 max-width: var(--after-width, 1300px);
@@ -213,6 +214,19 @@ const swiper = new Swiper('.mySwiper', {
 
 
 <style>
+.mainVI::before {
+  content: "";
+  height: 700px;
+  display: block;
+  position: absolute;
+  top: -5%;
+  left: 9%;
+  mix-blend-mode: multiply;
+  opacity: .3;
+  background: #c8e6c9;
+  border-radius: 35% 40% 60% 35% / 45% 50% 55% 50%;
+animation: floatRotate 12s ease-in-out infinite;
+}
 .mainVI::after {
     content: "";
 /* width: 100%;
@@ -297,6 +311,11 @@ animation: floatRotate 10s ease-in-out infinite;
 }
 .masked-area {
   height: 550px;
+}
+.mainVI::before {
+  height: 450px;
+top: 0;
+left: 0;
 }
 .mainVI::after {
   height: 520px;
