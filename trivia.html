@@ -23,6 +23,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script>
+// navigation
+$(document).ready(function() {
+  var htmLlist = [
+    '<li><a href="#Sec01" class="f__link">サクラソウについて</a></li>',
+    '<li><a href="#Sec02" class="f__link">サクラソウの育て方</a></li>',
+    '<li><a href="#Sec03" class="f__link">サクラソウの歴史・文化</a></li>',
+    '<li><a href="#Sec04" class="f__link">サクラソウ鑑賞スポット</a></li>'
+  ];
+  htmLlist.forEach(function(listItem) {
+    $('.addList').append(listItem);
+  });
+});
+</script>
+<script src="./js/common.js"></script>
+
+<script>
 let temp = "templates";
 $(function(){
   $("#header").load(`${temp}/header.html`);
@@ -172,6 +188,10 @@ $(function(){
             <dd><p>自転車の並進（並んで走ること）は原則禁止されています。道幅が狭くなり、歩行者や車との接触事故の原因になります。安全に走行するためには、一列で間隔を保ち、周囲に配慮することが大切です。ルールを守って快適な自転車利用を心がけましょう。</p></dd>
           </dl>
         </div>
+
+        <!-- json include -->
+        <div class="content-block" id="Trivia">
+        </div>
       </article>
     </section>
 
@@ -265,5 +285,13 @@ new ScrollHint('.tableArea', {
 });
 </script>
 <!-- /JS Area -->
+
+<script src="./js/json_list.js"></script>
+<script>
+/* 記入例：実行関数('jsonpのファイル名','掃き出し先id') */
+$(function(){
+    list('trivia','#Trivia');
+});
+</script>
 </body>
 </html>
