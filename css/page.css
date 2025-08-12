@@ -16,3 +16,33 @@
 #Page main .mainCnt section .content-block dl dd {
   margin-top: 10px;
 }
+
+
+.review.flexBox {
+  justify-content: space-between;
+  align-items: baseline;
+}
+.review.flexBox > div {
+  width: calc(100% / 3 - 2%);
+  background: #fff;
+  padding: 20px;
+}
+.review.flexBox > div:nth-child(3n+1):not(:first-child) {
+  margin-top: 2%;
+}
+.review.flexBox > div p {
+  display: block;
+  width: 100%;
+}
+.review.flexBox > div p + p {
+  margin-top: 10px;
+}
+.review.flexBox > div img {
+  width: 100%;
+  height: auto;
+}
+
+main .mainCnt section#Sec03 h4:before {
+    content: "\f521";
+    color: #c5b358;
+}
