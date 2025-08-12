@@ -1,6 +1,6 @@
 // JavaScript Document
 
-<!-- PageTop -->
+/* -- PageTop -- */ 
 $(function() {
     var showFlag = false;
     var topBtn = $('#PageTop');   
@@ -39,10 +39,10 @@ $(function(){
         return false;
     });
 });
-<!-- /PageTop -->
+/* -- /PageTop -- */ 
 
 
-<!-- btn_menu -->
+/* -- btn_menu -- */
 jQuery(function($) {
     $('.btn_menu').click(function() {
         $(this).toggleClass('active');
@@ -63,10 +63,10 @@ jQuery(function($) {
         $('body').css('potision', 'static');
     })
 })
-<!-- /btn_menu -->
+/* -- /btn_menu -- */
 
 
-<!-- menu_link -->
+/* -- menu_link -- */
 $(function () {
   $(window).on("load scroll resize", function () {
     var st = $(window).scrollTop();
@@ -86,10 +86,10 @@ $(function () {
     });
   });
 });
-<!-- /menu_link -->
+/* -- /menu_link -- */
 
 
-<!-- loading -->
+/* -- loading -- */
 $(function () {
   var webStorage = function () {
     if (sessionStorage.getItem('access')) {
@@ -108,10 +108,10 @@ $(function () {
   }
   webStorage();
 });
-<!-- /loading -->
+/* -- /loading -- */
 
 
-<!-- underLine -->
+/* -- underLine -- */
 $(function () {
   $(window).on('scroll',function(){
     $(".u_line").each(function(){
@@ -124,4 +124,29 @@ $(function () {
     });
   });
 });
-<!-- /underLine -->
+/* -- underLine -- */
+
+
+/* -- swiper -- */
+document.addEventListener('DOMContentLoaded', function () {
+  const swiper = new Swiper('.mySwiper', {
+    loop: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+    speed: 3000,
+    autoplay: {
+      delay: 4000,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+});
+/* -- /swiper -- */
