@@ -1,0 +1,18 @@
+#Page {
+  margin-top: 120px;
+}
+#Page h2 b {
+  font-size: .6em;
+}
+
+
+#Page main .mainCnt section .content-block {
+    width: 80%;
+    margin: 20px auto 40px;
+}
+#Page main .mainCnt section .content-block dl + dl {
+  margin-top: 18px;
+}
+#Page main .mainCnt section .content-block dl dd {
+  margin-top: 10px;
+}
