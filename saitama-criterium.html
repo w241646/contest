@@ -23,6 +23,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script>
+// navigation
+$(document).ready(function() {
+  var htmLlist = [
+    '<li><a href="#Sec01" class="f__link">サクラソウについて</a></li>',
+    '<li><a href="#Sec02" class="f__link">サクラソウの育て方</a></li>',
+    '<li><a href="#Sec03" class="f__link">サクラソウの歴史・文化</a></li>',
+    '<li><a href="#Sec04" class="f__link">サクラソウ鑑賞スポット</a></li>'
+  ];
+  htmLlist.forEach(function(listItem) {
+    $('.addList').append(listItem);
+  });
+});
+</script>
+<script src="./js/common.js"></script>
+
+<script>
 let temp = "templates";
 $(function(){
   $("#header").load(`${temp}/header.html`);
