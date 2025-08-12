@@ -48,19 +48,19 @@ jQuery(function($) {
         $(this).toggleClass('active');
         $('.bg').fadeToggle();
         $('#hamMenu nav').toggleClass('open');
-        $('body').css('potision', 'fixed');
+        // $('body').css('position', 'fixed');
     })
     $('.ham_list a').click(function() {
         $('.bg').fadeToggle();
         $('.btn_menu').removeClass('active');
         $('#hamMenu nav').removeClass('open');
-        $('body').css('potision', 'fixed');
+        // $('body').css('position', 'fixed');
     })
     $('.bg').click(function() {
         $(this).fadeOut();
         $('.btn_menu').removeClass('active');
         $('#hamMenu nav').removeClass('open');
-        $('body').css('potision', 'static');
+        // $('body').css('position', 'static');
     })
 })
 /* -- /btn_menu -- */
