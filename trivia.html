@@ -55,11 +55,91 @@
             埼玉県は、自然豊かなサイクリングロードや歴史ある街並み、そして自転車文化が根付いた地域です。このページでは、埼玉を舞台にした自転車にまつわる豆知識を紹介します。初心者からベテランまで楽しめるスポットや、地元ならではの情報を通じて、もっと自転車が好きになるはず！
           </p>
         </div>
+
+<script>
+$(function() {
+  $(".inview_re").on("inview",function(event,isInView,visiblepartX,visiblepartY) {
+    if(isInView){
+      $(this).stop().addClass("is-show");
+    }
+    // else{
+    //   $(this).stop().removeClass('is-show');
+    // }
+  });
+});
+</script>
+<style>
+ dl.talk dt {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: .6s;
+}
+dl.talk dt.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+dl.talk dd {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: .6s;
+}
+dl.talk dd.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fadein {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: .6s;
+}
+.fadein.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.delay_a {
+  transition-delay: 2.0s;
+}
+.delay_b {
+  transition-delay: 8.0s;
+}
+</style>
+
         <div class="content-block">
           <!-- <dl>
             <dt><b>＊＊＊＊＊</b></dt>
             <dd><p>＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊</p></dd>
           </dl> -->
+
+          <dl class="talk">
+            <dt class="inview_re delay_a">
+              <div class="faceicon">
+                <img src="img/icon_a.png" alt="" >
+              </div>
+              <b>荒川サイクリングロードは埼玉の自転車天国</b>
+            </dt>
+            <dd class="inview_re delay_b">
+              <div class="faceicon">
+                <img src="img/icon_b.png" alt="" >
+              </div>
+              <p>都心から埼玉へと続く全長80km以上のルート。信号が少なく、快適に走れる人気スポット。<br>埼玉区間では「秋ヶ瀬公園」「榎本牧場」など、サイクリスト向けの休憩スポットが点在。<br>特に榎本牧場は、サイクルラック完備＆ジェラートが絶品で、ライダーの聖地的存在。</p>
+            </dd>
+          </dl>
+
+          <dl class="talk">
+            <dt class="inview_re delay_a">
+              <div class="faceicon">
+                <img src="img/icon_a.png" alt="" >
+              </div>
+              <b>＊＊＊＊＊</b>
+            </dt>
+            <dd class="inview_re delay_b">
+              <div class="faceicon">
+                <img src="img/icon_b.png" alt="" >
+              </div>
+              <p>＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊</p>
+            </dd>
+          </dl>
+
 
           <dl>
             <dt><b>荒川サイクリングロードは埼玉の自転車天国</b></dt>
