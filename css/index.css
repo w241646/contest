@@ -75,11 +75,11 @@ animation: floatRotate 10s ease-in-out infinite;
   padding: 1%;
 
   text-shadow:
-    3px 3px 0 #000,
-    -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+    3px 3px 0 #505050,
+    -1px -1px 0 #505050,  
+    1px -1px 0 #505050,
+    -1px 1px 0 #505050,
+    1px 1px 0 #505050;
 }
 .mainVI .mVI_txt p {
   line-height: normal;
@@ -103,11 +103,11 @@ animation: floatRotate 10s ease-in-out infinite;
   margin-bottom: 15px;
   background: #fff;
   box-shadow:
-    2px 2px 0 #000,
-    -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;  
+    2px 2px 0 #505050,
+    -1px -1px 0 #505050,  
+    1px -1px 0 #505050,
+    -1px 1px 0 #505050,
+    1px 1px 0 #505050;  
 }
 
 .mainVI .masked-area img {
