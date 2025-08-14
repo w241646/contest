@@ -42,6 +42,16 @@ main .intro figure img {
   border-radius: 50%;
   border: 1px solid #eee;
   box-shadow: 2px 4px 0px #999;
+  background-color: #fdfdfd;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.icon-a {
+  background-image: url("../img/icon_a.png");
+}
+.icon-b {
+  background-image: url("../img/icon_b.png");
 }
 .mainCnt section .faceicon img {
   width: 100%;
@@ -81,16 +91,16 @@ main .intro figure img {
 .content-block dl.talk dd p {
   background: #e5fbfd;
 }
-.content-block dl.talk dt b::after { 
-  content: "なのですか？";
+/* .content-block dl.talk dt b::after { 
+  content: "ですか？";
   display: block;
   width: 100%;
 }
 .content-block dl.talk dd p::after { 
-  content: "なのじゃ！";
+  content: "のじゃ！";
   display: block;
   width: 100%;
-}
+} */
 
 @media screen and (max-width: 820px) {
 .content-block {
@@ -99,7 +109,7 @@ main .intro figure img {
 
 .mainCnt section .faceicon {
     width: 20%;
-    height: 50px;
+    height: 10vh;
 }
 .mainCnt section .faceicon img {
     height: 50px;
