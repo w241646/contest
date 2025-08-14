@@ -56,6 +56,28 @@
             世界的には、1817年にドイツのカール・フォン・ドライスが、ペダルのない足蹴り式乗り物「ドライジーネ」を発明したのが自転車の始まりとされ、1861年にはフランスのミショー親子が前輪にペダルを取り付けたモデルを開発しました。これらのどちらが自転車の原型かを巡っては、今も議論があるようです。
           </p>
         </div>
+        <div class="content-block">
+          <!-- <dl>
+            <dt><b>＊＊＊＊＊</b></dt>
+            <dd><p>＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊</p></dd>
+          </dl> -->
+
+          <dl class="talk">
+            <dt class="inview_re delay_a">
+              <div class="faceicon">
+                <img src="img/icon_a.png" alt="" >
+              </div>
+              <b>荒川サイクリングロードは埼玉の自転車天国</b>
+            </dt>
+            <dd class="inview_re delay_b">
+              <div class="faceicon">
+                <img src="img/icon_b.png" alt="" >
+              </div>
+              <p>都心から埼玉へと続く全長80km以上のルート。信号が少なく、快適に走れる人気スポット。<br>埼玉区間では「秋ヶ瀬公園」「榎本牧場」など、サイクリスト向けの休憩スポットが点在。<br>特に榎本牧場は、サイクルラック完備＆ジェラートが絶品で、ライダーの聖地的存在。</p>
+            </dd>
+          </dl>
+        </div>
+  
       </article>
     </section>
 
@@ -122,31 +144,7 @@
 <script src="./js/jquery.inview.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
 <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
-
-<script>
-// arctext
-$(function () {
-  $('#txt_radius1').arctext({radius: 100});
-});
-
-// inview
-$(function(){
-  $(".inview").on("inview", function (event, isInView) {
-    if (isInView) {
-      $(this).stop().addClass("is-show");
-    }
-  });
-});
-
-// ScrollHint
-new ScrollHint('.tableArea', {
-  suggestiveShadow: true,
-  remainingTime: 5000,
-  i18n: {
-    scrollable: 'スクロールできます'
-  }
-});
-</script>
+<script src="./js/sub.js"></script>
 <!-- /JS Area -->
 </body>
 </html>
