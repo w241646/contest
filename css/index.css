@@ -171,6 +171,11 @@ left: 0;
 }
 }
 
+main .intro figure img {
+  max-width: 700px;
+  height: 400px;
+  border-radius: 57% 50% 74% 82% / 90% 67% 100% 78%;
+}
 
 main .mainCnt section p {
     width: 80%;
