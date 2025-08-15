@@ -457,3 +457,9 @@ dl.talk dd.is-show {
   content: "\f02d" !important;
   color: #b59a78 !important;
 }
+
+
+/* .current */
+.f__link.current {
+  border-bottom: 5px solid #e693f7;
+}
