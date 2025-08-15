@@ -250,7 +250,8 @@ a.btn {
 }
 .card-list.flexBox > div img {
   width: 100%;
-  height: auto;
+  height: 100px;
+  object-fit: contain;
 }
 .card-list > div {
   opacity: 0;
