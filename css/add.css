@@ -463,3 +463,12 @@ dl.talk dd.is-show {
 .f__link.current {
   border-bottom: 5px solid #e693f7;
 }
+
+
+/* #breadcrumb */
+#breadcrumb {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 25px;
+}
