@@ -212,6 +212,12 @@ a.btn {
   margin-top: 10px;
 }
 
+/* .row_list */
+.row_list dl {
+  padding: 20px;
+  background: #fdfdfd;
+  border: 1px solid #eee;
+}
 
 /* .talk */
 .content-block dl.talk dt,
