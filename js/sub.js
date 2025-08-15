@@ -6,6 +6,7 @@ $(function () {
 });
 /* -- /arctext -- */
 
+
 /* -- inview -- */
 $(function(){
   $(".inview").on("inview", function (event, isInView) {
@@ -14,7 +15,7 @@ $(function(){
     }
   });
 });
-/* -- /inview -- */
+
 
 /* -- inview - talk -- */
 $(function() {
@@ -24,7 +25,48 @@ $(function() {
     }
   });
 });
-/* -- /inview - talk -- */
+
+/* -- inview - row_list -- */
+$(function () {
+  $(".row_list").each(function () {
+    const $row = $(this);
+    const $items = $row.find("dl");
+
+    $row.on("inview", function (event, isInView) {
+      if (isInView) {
+        $items.each(function (index) {
+          const delay = index * 300;
+          const $this = $(this);
+          setTimeout(function () {
+            $this.addClass("inview");
+          }, delay);
+        });
+      }
+    });
+  });
+});
+
+/* -- inview - card-list -- */
+$(function () {
+  $(".card-list").each(function () {
+    const $cardList = $(this);
+    const $items = $cardList.children("div");
+
+    $cardList.on("inview", function (event, isInView) {
+      if (isInView) {
+        $items.each(function (index) {
+          const delay = index * 250;
+          const $this = $(this);
+          setTimeout(function () {
+            $this.addClass("inview");
+          }, delay);
+        });
+      }
+    });
+  });
+});
+/* -- /inview -- */
+
 
 /* -- ScrollHint -- */
 new ScrollHint('.tableArea', {
