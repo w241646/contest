@@ -268,9 +268,16 @@ a.btn {
   opacity: 1;
   transform: translateY(0);
 }
+
 @media screen and (max-width: 820px) {
 .card-list.flexBox > div {
-  width: calc(100% / 2 - 2%);
+  width: calc(100% / 1 - 2%);
+}
+.card-list.flexBox > div:nth-child(3n+1):not(:first-child) {
+  margin-top: unset;
+}
+.card-list.flexBox > div + div {
+  margin-top: 15px;
 }
 }
 
