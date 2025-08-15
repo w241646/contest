@@ -11,6 +11,16 @@ $(document).ready(function() {
   htmLlist.forEach(function(listItem) {
     $('.addList').append(listItem);
   });
+
+/* -- current mark -- */
+  var currentPage = location.pathname.split("/").pop(); // 例: "game.html"
+  $('.f__link').each(function() {
+    var linkHref = $(this).attr('href').replace('./', '');
+    if (linkHref === currentPage) {
+      $(this).addClass('current');
+    }
+  });
+/* -- /current mark -- */
 });
 </script>
 <script src="./js/common.js"></script>
