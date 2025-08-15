@@ -12,31 +12,6 @@ main .intro figure img {
 }
 
 
-/* .card-list */
-.card-list.flexBox {
-  justify-content: space-between;
-  align-items: baseline;
-}
-.card-list.flexBox > div {
-  width: calc(100% / 3 - 2%);
-  background: #fff;
-  padding: 20px;
-}
-.card-list.flexBox > div:nth-child(3n+1):not(:first-child) {
-  margin-top: 2%;
-}
-.card-list.flexBox > div p {
-  display: block;
-  width: 100%;
-}
-.card-list.flexBox > div p + p {
-  margin-top: 10px;
-}
-.card-list.flexBox > div img {
-  width: 100%;
-  height: auto;
-}
-
 /* .review */
 .review.card-list.flexBox > div .faceicon {
   margin: 0 auto 20px;
