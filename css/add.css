@@ -433,3 +433,27 @@ dl.talk dd.is-show {
 .delay_b {
   transition-delay: 8.0s;
 }
+
+
+/* .point_area */
+.point_area {
+  margin-top: 10px;
+}
+.point_area ul {
+  margin-top: 10px;
+  gap: 1em;
+}
+.point_area ul li {
+    padding: 0.5em .8em;
+    /* border: 1px solid #eee; */
+    background-color: #e0f1fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-weight: 500;
+}
+
+
+.row_list h4:before {
+  content: "\f02d" !important;
+  color: #b59a78 !important;
+}
