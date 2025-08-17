@@ -221,7 +221,8 @@ a.btn {
 .row_list dl {
   padding: 20px;
   background: #fdfdfd;
-  border: 1px solid #eee;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 .row_list dl {
   opacity: 0;
@@ -240,8 +241,10 @@ a.btn {
 }
 .card-list.flexBox > div {
   width: calc(100% / 3 - 2%);
-  background: #fff;
   padding: 20px;
+  background: #fdfdfd;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 .card-list.flexBox > div:nth-child(3n+1):not(:first-child) {
   margin-top: 2%;
