@@ -1,0 +1,10 @@
+﻿review (
+[
+    {
+        "img": "img/icon_cycle.png",
+        "rate": "4",
+        "name": "****",
+        "note": "****",
+    },
+]
+);
