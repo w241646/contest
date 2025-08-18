@@ -105,10 +105,6 @@
             <dt><b>竹林カフェ 風（松伏町）</b></dt>
             <dd><p>江戸川サイクリングロード沿いの竹林の中にある屋外カフェです。 養蜂をやっているので自家製はちみつを使った軽食がメインです。 はちみつトーストやはちみつ生クリームのシフォンケーキや自家製コシヒカリの塩おにぎりなどどれもこだわった軽食を提供しています。 もちろん自家製はちみつも販売しています。 竹林の中でゆっくり休憩できる空間となっています。</p></dd>
           </dl>
-          <dl>
-            <dt><b>＊＊＊＊＊</b></dt>
-            <dd><p>＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊</p></dd>
-          </dl>
         </div>
       </article>
     </section>
@@ -127,22 +123,16 @@
         <div id="Review" class="content-block card-list review flexBox">
           <div class="rev-box flexBox" data-rating="4.2">
             <figure class="faceicon"><img src="img/icon_cycle.png" alt="#"></figure>
-            <p class="rev-name">さいくりすと さん</p>
+            <p class="rev-name">さいくりすと さん<small>(10代・男性)</small></p>
             <p class="stars"></p>
             <p class="note">都心からアクセスしやすく、信号も少ない快適なロングライドが楽しめるコースでした。川沿いの風景は開放感があり、特に早朝や夕方の時間帯は空と水面が美しく、走っていてとても気持ちが良かったです。路面も比較的整備されていて、初心者でも安心して走れる印象。ただ、一部区間では舗装が荒れていたり、休憩ポイントが少ない場所もあったので、事前のルート確認は必須です。全体としては、自然と都市のバランスが絶妙な、走りごたえのあるサイクリングロードでした。</p>
           </div>
-          <div class="rev-box flexBox" data-rating="4.5">
+          <!-- <div class="rev-box flexBox" data-rating="4.5">
             <figure class="faceicon"><img src="img/icon_cycle.png" alt="#"></figure>
             <p class="rev-name">*** さん</p>
             <p class="stars"></p>
             <p class="note">**************</p>
-          </div>
-          <div class="rev-box flexBox" data-rating="3.5">
-            <figure class="faceicon"><img src="img/icon_cycle.png" alt="#"></figure>
-            <p class="rev-name">*** さん</p>
-            <p class="stars"></p>
-            <p class="note">**************</p>
-          </div>
+          </div> -->
        </div>
       </article>
     </section>
@@ -187,6 +177,11 @@ $(function(){
     list('spot','#Spot');
     review_list('review','#Review');
 });
+$(window).on('load', function() {
+    bindInviewAnimationCardList();
+    bindInviewAnimationRowList();
+});
+
 </script>
 <!-- /JS Area -->
 </body>
