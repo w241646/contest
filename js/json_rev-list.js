@@ -29,9 +29,16 @@ var list = "";
                     image = ''
                 }
 
-                var list = "";
+                var name = "";
                 if(json[i].name){
-                    list = '<div class="rev-box flexBox" data-rating="' + json[i].rate + '">' + image + '<p class="rev-name">' + json[i].name + ' さん</p><p class="stars"></p><p class="note">' + json[i].note + '</p></div>';
+                    name = '<p class="rev-name">' + json[i].name + ' さん (' + json[i].age + '代・' + json[i].gender + ')</p>'
+                } else {
+                    name = '<p class="rev-name">サイクリスト さん (' + json[i].age + '代・' + json[i].gender + ')</p>'
+                }
+
+                var list = "";
+                if(json[i].note){
+                    list = '<div class="rev-box flexBox" data-rating="' + json[i].rate + '">' + image + name +'<p class="stars"></p><b class="title">' + json[i].title + '</b><p class="note">' + json[i].note + '</p></div>';
                 } else {
                     list = '';
                 }
