@@ -45,7 +45,7 @@ var list = "";
    				$(append).append(list);
                 renderRatings();
    			}
-            bindInviewAnimationRowList();
+            bindInviewAnimationCardList();
 		}
     })
 };

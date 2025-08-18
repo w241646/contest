@@ -43,7 +43,7 @@ var list = "";
                 }
    				$(append).append(list);
    			}
-            bindInviewAnimationCardList();
+            bindInviewAnimationRowList();
 		}
     })
 };
