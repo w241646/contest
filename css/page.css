@@ -13,6 +13,10 @@ main .intro figure img {
 
 
 /* .review */
+div#Review {
+  gap: 3%;
+  justify-content: start;
+}
 .review.card-list.flexBox > div .faceicon {
   margin: 0 auto 20px;
 }
