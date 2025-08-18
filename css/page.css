@@ -28,6 +28,7 @@ main .intro figure img {
   );
     line-height: 35px;
     position: relative;
+    margin-top: 10px;
 }
 .review .stars,
 .review .rev-name {
