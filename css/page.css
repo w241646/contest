@@ -34,12 +34,22 @@ main .intro figure img {
   text-align: center;
 }
 .review .star {
+  display: inline-block;
+  position: relative;
   font-size: 20px;
-  margin-right: 2px;
+  margin-right: 2px; 
 }
 .review .filled-star,
 .review .half-star {
     color: gold;
+}
+.half-star::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: gold;
 }
 /* .review .half-star {
   color: orange;
