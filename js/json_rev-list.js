@@ -37,6 +37,7 @@ var list = "";
                 }
    				$(append).append(list);
                 bindInviewAnimationRowList();
+                renderRatings();
    			}
 		}
     })
