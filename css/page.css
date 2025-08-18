@@ -34,6 +34,11 @@ main .intro figure img {
 .review .rev-name {
   text-align: center;
 }
+.review .stars {
+  margin-top: 5px !important;
+  margin-bottom: 15px;
+  line-height: 1;
+}
 .review .star {
   display: inline-block;
   position: relative;
