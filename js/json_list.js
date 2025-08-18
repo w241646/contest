@@ -42,8 +42,8 @@ var list = "";
                     list = '';
                 }
    				$(append).append(list);
-                bindInviewAnimationCardList();
    			}
+            bindInviewAnimationCardList();
 		}
     })
 };

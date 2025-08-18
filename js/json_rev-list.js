@@ -43,9 +43,9 @@ var list = "";
                     list = '';
                 }
    				$(append).append(list);
-                bindInviewAnimationRowList();
                 renderRatings();
    			}
+            bindInviewAnimationRowList();
 		}
     })
 };
