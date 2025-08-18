@@ -31,9 +31,9 @@ var list = "";
 
                 var name = "";
                 if(json[i].name){
-                    name = '<p class="rev-name">' + json[i].name + ' さん (' + json[i].age + '代・' + json[i].gender + ')</p>'
+                    name = '<p class="rev-name">' + json[i].name + ' さん <small>(' + json[i].age + '代・' + json[i].gender + ')</small></p>'
                 } else {
-                    name = '<p class="rev-name">サイクリスト さん (' + json[i].age + '代・' + json[i].gender + ')</p>'
+                    name = '<p class="rev-name">サイクリスト さん <small>(' + json[i].age + '代・' + json[i].gender + ')</small></p>'
                 }
 
                 var list = "";
