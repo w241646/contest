@@ -23,6 +23,9 @@ div#Review {
 .review.card-list.flexBox > div .faceicon img {
   height: 100px;
 }
+b.title {
+  margin: 0 auto;
+}
 .review .note {
     background: repeating-linear-gradient(
     to bottom,
