@@ -96,7 +96,7 @@
           </p>
         </div>
 
-        <div class="content-block row_list">
+        <div id="Spot" class="content-block row_list">
           <dl>
             <dt><b>加須サイクリングセンター（加須市）</b></dt>
             <dd><p>利根川沿いに位置するサイクリスト向けの拠点施設で、休憩や情報収集に便利です。トイレや自販機もあり、長距離ライドの中継地点として重宝されます。済んだ空気のなかで、利根川沿いの季節の草花や景観と、赤城、日光連山から秩父連山、富士山、筑波山など、360度のパノラマを楽しめます。</p></dd>
@@ -124,7 +124,7 @@
   今回は、実際にこのルートを走ったユーザーのリアルな声をもとに、走行感・景観・休憩スポット・アクセスの良さなどを詳しくご紹介。週末のライド計画や新しいサイクリングスポットを探している方は、ぜひ参考にしてみてください！
           </p>
         </div>
-        <div class="content-block card-list review flexBox">
+        <div id="Review" class="content-block card-list review flexBox">
           <div class="rev-box flexBox" data-rating="4.2">
             <figure class="faceicon"><img src="img/icon_cycle.png" alt="#"></figure>
             <p class="rev-name">さいくりすと さん</p>
@@ -178,6 +178,16 @@
 <link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
 <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
 <script src="./js/sub.js"></script>
+
+<script src="./js/json_list.js"></script>
+<script src="./js/json_rev-list.js"></script>
+<script>
+/* 記入例：実行関数('jsonpのファイル名','掃き出し先id') */
+$(function(){
+    list('spot','#Spot');
+    review_list('review','#Review');
+});
+</script>
 <!-- /JS Area -->
 </body>
 </html>
