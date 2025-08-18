@@ -27,12 +27,12 @@ $(function() {
 });
 
 /* -- inview - row_list -- */
-$(function () {
+function bindInviewAnimationRowList() {
   $(".row_list").each(function () {
     const $row = $(this);
     const $items = $row.find("dl");
 
-    $row.on("inview", function (event, isInView) {
+    $row.off("inview").on("inview", function (event, isInView) {
       if (isInView) {
         $items.each(function (index) {
           const delay = index * 300;
@@ -44,26 +44,39 @@ $(function () {
       }
     });
   });
+}
+
+// 初期読み込み時
+$(function () {
+  bindInviewAnimationRowList();
 });
 
-/* -- inview - card-list -- */
-$(function () {
-  $(".card-list").each(function () {
-    const $cardList = $(this);
-    const $items = $cardList.children("div");
 
-    $cardList.on("inview", function (event, isInView) {
-      if (isInView) {
-        $items.each(function (index) {
-          const delay = index * 250;
-          const $this = $(this);
-          setTimeout(function () {
-            $this.addClass("inview");
-          }, delay);
-        });
-      }
+/* -- inview - card-list -- */
+function bindInviewAnimationCardList() {
+  $(function () {
+    $(".card-list").each(function () {
+      const $cardList = $(this);
+      const $items = $cardList.children("div");
+
+      $cardList.on("inview", function (event, isInView) {
+        if (isInView) {
+          $items.each(function (index) {
+            const delay = index * 250;
+            const $this = $(this);
+            setTimeout(function () {
+              $this.addClass("inview");
+            }, delay);
+          });
+        }
+      });
     });
   });
+}
+
+// 初期読み込み時
+$(function () {
+  bindInviewAnimationCardList();
 });
 /* -- /inview -- */
 

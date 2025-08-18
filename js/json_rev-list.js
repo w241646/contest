@@ -1,6 +1,6 @@
 // JavaScript Document
 /* List */
-function list(callback, append, loop){
+function review_list(callback, append, loop){
 var list = "";
     $.ajax({
         url: './js/json/' + callback + '.jsonp',
@@ -22,27 +22,21 @@ var list = "";
 
             for(var i=0; i < display_num; i++){
 
-                var caption = "";
-                if(json[i].cap){
-                    caption = '<span class="caption">' + json[i].cap + '</span>'
+                var image = "";
+                if(json[i].img){
+                    image = '<figure class="faceicon"><img class="img" src="' + json[i].img + '" /></figure>'
                 } else {
-                    caption = ''
+                    image = ''
                 }
 
-                var price = "";
-                if(json[i].price){
-                    price = '<p class="price">' + json[i].price + '<span>円</span></p>'
-                } else {
-                    price = ''
-                }
-
-                if(json[i].title){
-                    list = '<dl><dt><b>' + json[i].title + '</b></dt><dd><p>' + json[i].text + '</p></dd></dl>';
+                var list = "";
+                if(json[i].name){
+                    list = '<div class="rev-box flexBox" data-rating="' + json[i].rate + '">' + image + '<p class="rev-name">' + json[i].name + ' さん</p><p class="stars"></p><p class="note">' + json[i].note + '</p></div>';
                 } else {
                     list = '';
                 }
    				$(append).append(list);
-                bindInviewAnimationCardList();
+                bindInviewAnimationRowList();
    			}
 		}
     })
