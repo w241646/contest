@@ -6,9 +6,10 @@
 }
 
 main .intro figure img {
-  max-width: 700px;
-  height: 400px;
+  max-width: 800px;
+  height: 550px;
   border-radius: 57% 50% 74% 82% / 90% 67% 100% 78%;
+  object-fit: cover;
 }
 
 
