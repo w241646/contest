@@ -63,6 +63,9 @@ main .intro figure img {
 .review .empty-star {
   color: #ccc;
 }
+.review .rev-name small {
+  display: block;
+}
 
 @media screen and (max-width: 820px) {
   /* .card-list */
