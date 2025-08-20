@@ -213,7 +213,69 @@ window.addEventListener('resize', applyResponsiveStyles);
     <section id="Sec01" class="sec-scroll-point">
       <article class="inview fadeIn_up">
         <h3><span>自転車の原点を巡る</span><b>自転車発祥の地、埼玉</b></h3>
-        <img src="img/origin_main.jpg" alt="" class="#ph">
+        <!-- <img src="img/origin_main.jpg" alt="" class="#ph"> -->
+
+<!-- SwiperのHTML構造 -->
+<div class="carousel-wrapper">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/origin_main.jpg" alt="Image 1"></div>
+      <div class="swiper-slide"><img src="img/origin_main.jpg" alt="Image 2"></div>
+      <div class="swiper-slide"><img src="img/origin_main.jpg" alt="Image 3"></div>
+      <div class="swiper-slide"><img src="img/origin_main.jpg" alt="Image 3"></div>
+      <div class="swiper-slide"><img src="img/origin_main.jpg" alt="Image 3"></div>
+      <!-- 必要に応じて追加 -->
+    </div>
+
+    <!-- ナビゲーションボタン -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+<style>
+.carousel-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;         /* 中央に配置 */
+  padding: 0 20px;        /* 画面端との余白（任意） */
+  overflow: hidden;
+}
+.swiper-container {
+  width: 100%;
+  /* padding: 20px 0; */
+}
+.swiper-slide {
+  width: 80%; /* 中央のスライドを大きめに表示 */
+  box-sizing: border-box;
+}
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 90%;
+  }
+}
+</style>
+<script>
+const swiper = new Swiper('.swiper-container', {
+  centeredSlides: true,       // 中央にスライドを配置
+  slidesPerView: 'auto',      // スライド幅に応じて表示
+  spaceBetween: 20,           // スライド間の余白
+  loop: true,                 // ループさせる
+  autoplay: {
+    delay: 3000,              // 3秒ごとに自動再生
+    disableOnInteraction: false, // ユーザー操作後も自動再生を継続
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+</script>
+
         <p>日本で初めて自転車が走ったのは、ここ「埼玉」。歴史の息づく地を訪ね、自転車文化のはじまりに触れてみませんか？“ただの移動手段”を超えた物語が、ここにはあります。</p>
         <!--<a href="#" class="btn linkBtn"><span class="btnInner"><span class="btnTxt">リンクボタン</span></span></a>-->
         <a href="origin.html" class="btn linkBtn">この魅力をもっと知る</a>
