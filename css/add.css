@@ -26,24 +26,46 @@ a i.ex-link {
 /* (仮) */
 main .mainCnt section {
     margin: 0 auto;
-    padding: 200px 0 100px;
+    padding: 300px 0 200px;
 }
 main .mainCnt section#Sec04 {
-    padding-bottom: 100px;
+    padding-bottom: 200px;
 }
 .snsArea {
-    margin-top: 80px;
+    margin-top: 150px;
 }
 
+main .mainCnt section:nth-child(odd) {
+  background-color: #D8E4E5;
+  padding: 150px 0 100px;
+}
+main .mainCnt section:nth-child(odd):before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 100'><path d='M -224 41 C 96 41 96 10 416 10 C 736 10 736 59 1056 59 C 1376 59 1376 16 1696 16 L 1280 100 L 0 100 Z' fill='%23D8E4E5'/></svg>");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+}
 main .mainCnt section:nth-child(odd):after {
     content: "";
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: unset;
+    bottom: -100px;
     left: 0;
     right: 0;
-    background-color: #ECFCCD;
-    transform: skewY(-7deg);
+    /* background-color: #ECFCCD;
+    transform: skewY(-7deg); */
+background-color: unset;
+transform: rotate(180deg);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 100'><path d='M -224 41 C 96 41 96 10 416 10 C 736 10 736 59 1056 59 C 1376 59 1376 16 1696 16 L 1280 100 L 0 100 Z' fill='%23D8E4E5'/></svg>");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
 }
 
 /* h3 */
