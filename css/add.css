@@ -24,6 +24,17 @@ a i.ex-link {
 }
 
 /* (仮) */
+main .mainCnt section {
+    margin: 0 auto;
+    padding: 200px 0 100px;
+}
+main .mainCnt section#Sec04 {
+    padding-bottom: 100px;
+}
+.snsArea {
+    margin-top: 80px;
+}
+
 main .mainCnt section:nth-child(odd):after {
     content: "";
     position: absolute;
@@ -63,7 +74,29 @@ main .mainCnt section h3::before {
     transform: rotate(360deg);
   }
 }
-main .mainCnt section h3:after {
+main .mainCnt section h3::after {
+    content: "\f521";
+    display: block;
+    position: absolute;
+    top: -145px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: unset;
+    animation: shake 3s infinite;
+    font-family: "Font Awesome 5 Free";
+    text-align: center;
+    font-size: 0.75em;
+    color: #ba9f13;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+/* main .mainCnt section h3:after {
     top: 45%;
     left: 0;
     right: 0;
@@ -82,7 +115,7 @@ display: none;
     border-radius: 50px;
     top: 45%;
     opacity: .4;
-}
+} */
 main .mainCnt section h3 span {
     transform: unset;
     font-size: .5em;
