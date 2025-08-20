@@ -228,51 +228,56 @@ window.addEventListener('resize', applyResponsiveStyles);
     </div>
 
     <!-- ナビゲーションボタン -->
-    <div class="swiper-button-prev"></div>
+    <!-- <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
+    <div class="swiper-pagination"></div> -->
   </div>
 </div>
 <style>
 .carousel-wrapper {
   max-width: 1200px;
-  margin: 0 auto;         /* 中央に配置 */
-  padding: 0 20px;        /* 画面端との余白（任意） */
+  margin: 0 auto;
+  padding: 0 20px;
   overflow: hidden;
 }
-.swiper-container {
+.carousel-wrapper .swiper-container {
   width: 100%;
-  /* padding: 20px 0; */
 }
-.swiper-slide {
-  width: 80%; /* 中央のスライドを大きめに表示 */
+.carousel-wrapper .swiper-slide {
+  width: 80%;
+  max-width: 550px;
   box-sizing: border-box;
 }
-.swiper-slide img {
+.carousel-wrapper .swiper-slide img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   display: block;
 }
 @media (max-width: 768px) {
-  .swiper-slide {
+  .carousel-wrapper .swiper-slide {
     width: 90%;
   }
 }
 </style>
 <script>
 const swiper = new Swiper('.swiper-container', {
-  centeredSlides: true,       // 中央にスライドを配置
-  slidesPerView: 'auto',      // スライド幅に応じて表示
-  spaceBetween: 20,           // スライド間の余白
-  loop: true,                 // ループさせる
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  spaceBetween: 20,
+  loop: true,
   autoplay: {
-    delay: 3000,              // 3秒ごとに自動再生
-    disableOnInteraction: false, // ユーザー操作後も自動再生を継続
+    delay: 4000,
+    disableOnInteraction: false,
   },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
   },
+  // navigation: {
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+  // },
 });
 </script>
 
