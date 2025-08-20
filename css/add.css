@@ -164,6 +164,11 @@ main .mainCnt section h3 b::before {
 main .mainCnt section h3 b::after {
   right: -.3em;
 }
+
+main .mainCnt section h3::after {
+    top: -135px;
+    font-size: 1em;
+}
 }
 
 
