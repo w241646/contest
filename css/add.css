@@ -415,7 +415,8 @@ a.btn {
   border-bottom: 4px solid #999;
 }
 .content-block dl.talk dd p {
-  background: #e5fbfd;
+  /* background: #e5fbfd; */
+  background: #ddf5de;
 }
 /* .content-block dl.talk dt b::after { 
   content: "ですか？";
@@ -465,7 +466,8 @@ a.btn {
 }
 .content-block dl.talk dd p:before {
   right: -26px;
-  border-left: 22px solid #e5fbfd;
+  /* border-left: 22px solid #e5fbfd; */
+  border-left: 22px solid #ddf5de;
 }
 
 dl.talk dt {
