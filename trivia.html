@@ -409,17 +409,26 @@
     font-size: 1.4em;
     font-weight: 600;
 }
-.ac-parent:before {
+/* .ac-parent:before {
     content: "Q";
     top: 12px;
+} */
+.ac-parent:before {
+    content: "";
+    top: 1em;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
 }
-.ac-child:before {
+/* .ac-child:before {
     content: "A";
     top: 25px;
-}
+} */
 .ac-parent p,
 .ac-child p {
-    padding: 0 5% 0 13%;
+    padding: 0 5% 0 10%;
     /* font-size: 1.4rem; */
     text-align: left;
 }
@@ -487,12 +496,12 @@ p.read_txt {
 .ac-parent p, .ac-child p {
     padding: 0 10% 0 15%;
 }
-.ac-parent:before {
+/* .ac-parent:before {
     top: 10px;
 }
 .ac-child:before {
     top: 5px;
-}
+} */
 }
 </style>
 
