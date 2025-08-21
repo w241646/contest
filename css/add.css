@@ -282,6 +282,16 @@ a.btn {
   margin-top: 10px;
 }
 
+/* .leadTxt */
+p.leadTxt::first-letter {
+  float: left;
+  padding: 0 .2em 0 .1em;
+  color: #736c6c;
+  font-size: 6rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
 /* .row_list */
 .row_list dl {
   padding: 20px;
