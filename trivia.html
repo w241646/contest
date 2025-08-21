@@ -261,7 +261,7 @@
           </dl>
         </div>
 
-        <div class="content-block row_list">
+        <!-- <div class="content-block row_list">
           <dl>
             <dt><b>＊＊＊＊＊</b></dt>
             <dd><p>＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊</p></dd>
@@ -298,11 +298,204 @@
             <dt><b>並進の禁止</b></dt>
             <dd><p>自転車の並進（並んで走ること）は原則禁止されています。道幅が狭くなり、歩行者や車との接触事故の原因になります。安全に走行するためには、一列で間隔を保ち、周囲に配慮することが大切です。ルールを守って快適な自転車利用を心がけましょう。</p></dd>
           </dl>
-        </div>
+        </div> -->
 
         <!-- json include -->
-        <div class="content-block" id="Trivia">
-        </div>
+        <!-- <div class="content-block" id="Trivia">
+        </div> -->
+
+<div class="content-block">
+<ul class="faqNavi flexBox">
+<li><a href="#Faq01">歴史・文化</a></li>
+<li><a href="#Faq02">メンテナンス</a></li>
+<li><a href="#Faq03">安全・マナー・法律</a></li>
+<li><a href="#Faq04">エンタメ</a></li>
+</ul>
+</div>
+
+<div class="content-block" id="Trivia">
+<div id="Faq01" class="row_list">
+<dl>
+<dt><b>歴史・文化</b></dt>
+<dd><dl id="Faq01_list" class="ac"></dl></dd>
+</dl>
+</div>
+
+<div id="Faq02" class="row_list">
+<dl>
+<dt><b>メンテナンス</b></dt>
+<dd><dl id="Faq02_list" class="ac"></dl></dd>
+</dl>
+</div>
+
+<div id="Faq03" class="row_list">
+<dl>
+<dt><b>安全・マナー・法律</b></dt>
+<dd><dl id="Faq03_list" class="ac"></dl></dd>
+</dl>
+</div>
+
+<div id="Faq04" class="row_list">
+<dl>
+<dt><b>エンタメ</b></dt>
+<dd><dl id="Faq04_list" class="ac"></dl></dd>
+</dl>
+</div>
+</div>
+
+<style>
+/***** #Trivia *****/
+#Trivia div + div {
+  margin-top: 18px;
+}
+#Trivia.content-block dl dd {
+  margin-top: 18px;
+}
+#Trivia.content-block dl dd dl {
+  padding: 0;
+}
+
+/***** .faqNavi *****/
+.faqNavi {
+    width: 100%;
+    margin: 0 auto 50px;
+}
+.faqNavi li {
+    width: calc(100% / 4 - 2%);
+    margin: 0 1%;
+}
+.faqNavi li a {
+    display: block;
+    padding: 5% 0;
+    background: #fdfdfd;
+    border: 2px solid #c3c3c3;
+    text-align: center;
+    /* font-size: 1.3rem; */
+    font-weight: 600;
+}
+
+/***** ＊＊＊＊＊ *****/
+/* .ac */
+.ac {
+    width: 100%;
+    /* max-width: 800px; */
+    margin: 1% auto;
+}
+/* .ac-parent */
+.ac-parent {
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    background: #eee;
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+}
+/* .ac-child */
+.ac-child {
+    position: relative;
+    display: none;
+    margin-top: 0 !important;
+    margin-bottom: 3%;
+    padding: 2%;
+    background-color: #fefefe;
+    text-align: center;
+    transition-duration: unset;
+}
+.ac-parent:before,
+.ac-child:before {
+    position: absolute;
+    left: 6%;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+.ac-parent:before {
+    content: "Q";
+    top: 13px;
+}
+.ac-child:before {
+    content: "A";
+    top: 15px;
+}
+.ac-parent p,
+.ac-child p {
+    padding: 0 5% 0 13%;
+    /* font-size: 1.4rem; */
+    text-align: left;
+}
+.ac-child p a {
+    color: #0000ff;
+    text-decoration: underline;
+    letter-spacing: normal;
+}
+
+/* .ac-parent p:before */
+.ac-parent p:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 10px;
+    height: 2px;
+    background: #333;
+    transform: translateY(-50%);
+}
+/* .ac-parent p:after */
+.ac-parent p:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 2px;
+    height: 10px;
+    background: #333;
+    transform: translateY(-50%);
+    transition: .3s;
+}
+/* .ac-parent.open p:after */
+.ac-parent.open p:after {
+    top: 40%;
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+/* SP */
+/* ============================================ */
+@media screen and (max-width: 786px) {
+p.read_txt {
+    text-align: left;
+    width: 90%;
+    margin: 5% auto 0;
+    /* font-size: 1.4rem; */
+    /* line-height: 1.8; */
+}
+
+/***** .faqNavi *****/
+.faqNavi {
+    width: 100%;
+}
+.faqNavi li {
+    width: calc(100% / 2 - 2%);
+    margin: 0 1% 4%;
+}
+
+/***** .ac-parent *****/
+.ac-parent {
+    padding: 4% 2%;
+    border-bottom: 4px solid #fff;
+}
+.ac-parent p, .ac-child p {
+    padding: 0 10% 0 15%;
+}
+.ac-parent:before {
+    top: 10px;
+}
+.ac-child:before {
+    top: 5px;
+}
+}
+</style>
+
       </article>
     </section>
 
@@ -338,12 +531,18 @@
 <script src="./js/sub.js"></script>
 
 <script src="./js/json_list.js"></script>
+<script src="./js/json_faq.js"></script>
 <script>
 /* 記入例：実行関数('jsonpのファイル名','掃き出し先id') */
 $(function(){
-    list('trivia','#Trivia');
+    // list('trivia','#Trivia');
+
+    faqli('faq01','#Faq01_list');
+    faqli('faq02','#Faq02_list');
+    faqli('faq03','#Faq03_list');
+    faqli('faq04','#Faq04_list');
 });
 </script>
 <!-- /JS Area -->
 </body>
-</html>
+</html> 
