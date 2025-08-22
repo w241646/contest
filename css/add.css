@@ -366,6 +366,13 @@ p.leadTxt::first-letter {
 .row_list .image img {
   height: auto;
 }
+.row_list ul.images {
+  gap: 1em;
+  justify-content: center;
+}
+.row_list ul.images li {
+  padding: 7px;
+}
 .row_list ul.images li img {
   height: 75px;
 }
@@ -548,6 +555,9 @@ p.leadTxt::first-letter {
 }
 .faceicon img {
     height: 50px;
+}
+.content-block dl.talk {
+  overflow: hidden;
 }
 .content-block dl.talk dt b,
 .content-block dl.talk dd p {

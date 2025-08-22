@@ -83,6 +83,14 @@ b.title {
 .review.flexBox > div + div {
   margin-top: 20px;
 }
+
+.review.card-list.flexBox > div .faceicon {
+  width: 20%;
+  height: 20%;
+}
+.review.card-list.flexBox > div .faceicon img {
+  height: auto;
+}
 }
 
 
