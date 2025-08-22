@@ -36,8 +36,37 @@ var list = "";
                     price = ''
                 }
 
+                var tags = "";
+                if (json[i].tag && Array.isArray(json[i].tag)) {
+                    tags = '<ul class="tags">';
+                    for (var j = 0; j < json[i].tag.length; j++) {
+                        tags += '<li>' + json[i].tag[j] + '</li>';
+                    }
+                    tags += '</ul>';
+                } else {
+                    tags = "";
+                }
+
+                var image = "";
+                if (json[i].image) {
+                    image = '<div class="image"><img src="' + json[i].image + '" alt="' + json[i].title + '"></div>';
+                } else {
+                    image = "";
+                }
+
+                var images = "";
+                if (json[i].images && Array.isArray(json[i].images)) {
+                    images = '<ul class="images">';
+                    for (var j = 0; j < json[i].images.length; j++) {
+                        images += '<li><a href="' + json[i].images[j] + '" data-lightbox="gallery" data-title="' + json[i].title + '"><img src="' + json[i].images[j] + '" alt="' + json[i].title + '"></a></li>';
+                    }
+                    images += '</ul>';
+                } else {
+                    images = "";
+                }
+
                 if(json[i].title){
-                    list = '<dl><dt><b>' + json[i].title + '</b></dt><dd><p>' + json[i].text + '</p></dd></dl>';
+                    list = '<dl><dt><b>' + json[i].title + '</b>' + image + tags + '</dt><dd><p>' + json[i].text + '</p>' + images + '</dd></dl>';
                 } else {
                     list = '';
                 }
