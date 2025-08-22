@@ -82,6 +82,15 @@ main .mainCnt section:nth-child(3n):after {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 100'><path d='M -224 41 C 96 41 96 10 416 10 C 736 10 736 59 1056 59 C 1376 59 1376 16 1696 16 L 1280 100 L 0 100 Z' fill='%23f6f1ff'/></svg>");
 }
 
+@media screen and (max-width: 820px) {
+main .mainCnt section {
+  padding: 250px 0 200px;
+}
+main .mainCnt section:nth-child(odd) {
+  padding: 150px 0 0;
+}
+}
+
 main .intro {
   margin-top: 50px;
   margin-bottom: 100px;
@@ -456,9 +465,7 @@ p.leadTxt::first-letter {
 .card-list.flexBox > div {
   width: calc(100% / 1 - 2%);
 }
-.card-list.flexBox > div:nth-child(3n+1):not(:first-child) {
-  margin-top: unset;
-}
+.card-list.flexBox > div:nth-child(3n+1):not(:first-child),
 .card-list.flexBox > div + div {
   margin-top: 15px;
 }
