@@ -375,7 +375,7 @@ p.leadTxt::first-letter {
 #lightbox * {
   transition-duration: unset;
 }
-.lb-image {
+.lightbox .lb-image {
   max-width: 65vw !important;
   max-height: 65vh !important;
 }
