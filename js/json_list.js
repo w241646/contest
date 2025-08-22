@@ -60,7 +60,7 @@ var list = "";
                     for (var j = 0; j < json[i].images.length; j++) {
                         images += '<li><a href="' + json[i].images[j] + '" data-lightbox="gallery" data-title="' + json[i].title + '"><img src="' + json[i].images[j] + '" alt="' + json[i].title + '"></a></li>';
                     }
-                    images += '</ul>';
+                    images += '</ul><p class="annotation">※ 画像をクリック／タップで拡大</p>';
                 } else {
                     images = "";
                 }
