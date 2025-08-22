@@ -89,11 +89,31 @@ main .mainCnt section {
 main .mainCnt section:nth-child(odd) {
   padding: 150px 0 0;
 }
+main .mainCnt section p {
+  width: 95%;
+  margin: 0 auto;
+}
+main .intro p.read_txt {
+  font-size: 1em;
+}
+main .intro figure img {
+  height: 300px;
+}
+.mainCnt section img {
+  height: 200px;
+}
 }
 
 main .intro {
   margin-top: 50px;
   margin-bottom: 100px;
+}
+
+/* h2 */
+@media screen and (max-width: 820px) {
+main .intro h2 {
+  font-size: 2.1em;
+}
 }
 
 /* h3 */
@@ -325,6 +345,11 @@ p.leadTxt::first-letter {
   font-weight: bold;
   line-height: 1;
 }
+@media screen and (max-width: 820px) {
+p.leadTxt::first-letter {
+  font-size: 3.5em;
+}
+}
 
 /* .row_list */
 .row_list dl {
@@ -370,6 +395,10 @@ p.leadTxt::first-letter {
   height: 120px;
   margin: 0 auto;
   object-fit: cover;
+}
+.row_list .annotation {
+  font-size: 0.85em;
+  color: #333;
 }
 @media screen and (max-width: 820px) {
 .row_list .image img {
@@ -557,8 +586,8 @@ p.leadTxt::first-letter {
 }
 
 .faceicon {
-    width: 20%;
-    height: 10vh;
+    width: 12%;
+    height: 6vh;
 }
 .faceicon img {
     height: 50px;
