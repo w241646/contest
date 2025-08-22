@@ -115,6 +115,9 @@ main .intro h2 {
   font-size: 2.1em;
   font-weight: 900;
 }
+main .intro h2 b {
+  margin-bottom: .3em;
+}
 }
 
 /* h3 */
