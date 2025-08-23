@@ -224,29 +224,33 @@ window.addEventListener('resize', applyResponsiveStyles);
       <div class="swiper-slide"><img src="./img/main_02.jpg" alt="Image 3"></div>
       <div class="swiper-slide"><img src="./img/main_03.jpg" alt="Image 4"></div>
       <div class="swiper-slide"><img src="./img/main_04.jpg" alt="Image 5"></div>
-      <!-- 必要に応じて追加 -->
+      <div class="swiper-slide"><img src="./img/main_03.jpg" alt="Image 4"></div>
     </div>
-
-    <!-- ナビゲーションボタン -->
-    <!-- <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-pagination"></div> -->
   </div>
 </div>
 <style>
 .carousel-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 10px 20px;
   overflow: hidden;
 }
 .carousel-wrapper .swiper-container {
   width: 100%;
 }
 .carousel-wrapper .swiper-slide {
-  width: 80%;
-  max-width: 550px;
+  width: 550px;
   box-sizing: border-box;
+}
+.carousel-wrapper .swiper-slide {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: scale(0.9);
+  opacity: 0.6;
+}
+.carousel-wrapper .swiper-slide-active {
+  transform: scale(1.05);
+  opacity: 1;
+  z-index: 2;
 }
 .carousel-wrapper .swiper-slide img {
   width: 100%;
@@ -256,16 +260,16 @@ window.addEventListener('resize', applyResponsiveStyles);
 }
 @media (max-width: 768px) {
   .carousel-wrapper .swiper-slide {
-    width: 90%;
+    width: 240px;
   }
 }
 </style>
 <script>
 const swiper = new Swiper('.swiper-container', {
+  loop: true,
   centeredSlides: true,
   slidesPerView: 'auto',
   spaceBetween: 20,
-  loop: true,
   autoplay: {
     delay: 4000,
     disableOnInteraction: false,
@@ -274,10 +278,6 @@ const swiper = new Swiper('.swiper-container', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  // navigation: {
-  //   nextEl: '.swiper-button-next',
-  //   prevEl: '.swiper-button-prev',
-  // },
 });
 </script>
 
