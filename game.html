@@ -146,6 +146,25 @@ canvas {
 
 <!-- JS Area -->
    <script>
+let gameStarted = false;
+function handleTouch(e) {
+  if (!gameStarted) return;
+
+  const touchX = e.touches[0].clientX - canvas.getBoundingClientRect().left;
+  let newX = touchX - bike.width / 2;
+
+  // 左端に出ないように
+  if (newX < 0) newX = 0;
+
+  // 右端に出ないように
+  if (newX + bike.width > canvas.width) {
+    newX = canvas.width - bike.width;
+  }
+
+  bike.x = newX;
+  e.preventDefault();
+}
+
 document.getElementById("startButton").addEventListener("click", () => {
   gameStarted = true;
   document.getElementById("startButton").style.display = "none";
@@ -218,8 +237,12 @@ let items = Array.from({ length: 5 }, () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // 自転車操作
-      if (keys["ArrowLeft"] && bike.x > 0) bike.x -= bike.speed;
-      if (keys["ArrowRight"] && bike.x < canvas.width - bike.width) bike.x += bike.speed;
+if (keys["ArrowLeft"]) {
+  bike.x = Math.max(0, bike.x - bike.speed);
+}
+if (keys["ArrowRight"]) {
+  bike.x = Math.min(canvas.width - bike.width, bike.x + bike.speed);
+}
 
       // アイテム処理
       items.forEach(item => {
@@ -274,9 +297,7 @@ if (score >= clearScore) {
 
   document.getElementById("restartButton").style.display = "block";
   return;
-}
-
- else {
+} else {
         requestAnimationFrame(gameLoop);
       }
     }
@@ -299,13 +320,6 @@ resizeCanvas(); // 初期化時にも呼び出す
 
 canvas.addEventListener("touchstart", handleTouch);
 canvas.addEventListener("touchmove", handleTouch);
-
-
-function handleTouch(e) {
-  const touchX = e.touches[0].clientX - canvas.getBoundingClientRect().left;
-  bike.x = touchX - bike.width / 2;
-  e.preventDefault();
-}
 
 ctx.font = `${canvas.width / 20}px sans-serif`;
   </script>
