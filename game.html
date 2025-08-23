@@ -71,6 +71,54 @@
             </dd>
           </dl>
         </div>
+
+<style>
+canvas {
+  background: #eef;
+  display: block;
+  margin: 30px auto;
+  border: 2px solid #333;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  aspect-ratio: 2 / 3;
+}
+#startButton,
+#restartButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 24px;
+  font-size: 18px;
+  z-index: 10;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  max-width: none;
+  text-align: center;
+}
+#restartButton {
+  top: 60%;
+}
+@media (max-width: 480px) {
+  canvas {
+    max-width: 100vw;
+    max-height: 100vh;
+    aspect-ratio: 2 / 3;
+  }
+}
+</style>
+        <div id="Game" class="content-block">
+<!-- ゲーム本体 -->
+<div style="position: relative; width: 100%; max-width: 400px; margin: auto;">
+  <canvas id="gameCanvas"></canvas>
+  <button id="startButton">ゲームスタート</button>
+  <button id="restartButton" style="display:none;">もう一度プレイする</button>
+</div>
+        </div>
       </article>
     </section>
 
@@ -97,6 +145,170 @@
 
 
 <!-- JS Area -->
+   <script>
+document.getElementById("startButton").addEventListener("click", () => {
+  gameStarted = true;
+  document.getElementById("startButton").style.display = "none";
+  resizeCanvas();
+  gameLoop();
+});
+
+document.getElementById("restartButton").addEventListener("click", () => {
+  score = 0;
+  bike.x = 180;
+  items = Array.from({ length: 5 }, () => {
+    const type = getRandomItemType();
+    return {
+      x: Math.random() * (canvas.width - 30),
+      y: Math.random() * -600,
+      type: type
+    };
+  });
+  document.getElementById("restartButton").style.display = "none";
+  gameLoop();
+});
+
+
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+
+// アイテムの種類と得点を定義
+const itemTypes = {
+  apple: { color: "green", score: 10 },
+  banana: { color: "yellow", score: 20 },
+  bomb: { color: "red", score: -15 },
+  star: { color: "gold", score: 50 }
+};
+
+function getRandomItemType() {
+  const keys = Object.keys(itemTypes);
+  return keys[Math.floor(Math.random() * keys.length)];
+}
+
+
+let bike = {
+  x: 180,
+  y: canvas.height - 60, // 高さに応じて調整（40pxキャラ＋余白20px）
+  width: 40,
+  height: 40,
+  speed: 6
+};
+    let keys = {};
+    let score = 0;
+
+    // 🏁クリア条件（ここでスコアを変更できます）
+    let clearScore = 500;
+
+// アイテム配列
+let items = Array.from({ length: 5 }, () => {
+  const type = getRandomItemType();
+  return {
+    x: Math.random() * 360,
+    y: Math.random() * -600,
+    type: type
+  };
+});
+
+    document.addEventListener("keydown", e => keys[e.key] = true);
+    document.addEventListener("keyup", e => keys[e.key] = false);
+
+    function gameLoop() {
+      if (!gameStarted) return;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // 自転車操作
+      if (keys["ArrowLeft"] && bike.x > 0) bike.x -= bike.speed;
+      if (keys["ArrowRight"] && bike.x < canvas.width - bike.width) bike.x += bike.speed;
+
+      // アイテム処理
+      items.forEach(item => {
+        item.y += 3;
+ctx.fillStyle = itemTypes[item.type].color;
+ctx.fillRect(item.x, item.y, 30, 30);
+
+        // 衝突判定
+if (
+  bike.x < item.x + 30 &&
+  bike.x + bike.width > item.x &&
+  bike.y < item.y + 30 &&
+  bike.y + bike.height > item.y
+) {
+  score += itemTypes[item.type].score;
+  const newType = getRandomItemType();
+  item.y = -40;
+  item.x = Math.random() * (canvas.width - 30);
+  item.type = newType;
+}
+
+if (item.y > canvas.height) {
+  const newType = getRandomItemType();
+  item.y = -40;
+  item.x = Math.random() * (canvas.width - 30);
+  item.type = newType;
+}
+      });
+
+      // 自転車描画
+      ctx.fillStyle = "blue";
+      ctx.fillRect(bike.x, bike.y, bike.width, bike.height);
+
+      // スコア表示
+      ctx.fillStyle = "black";
+      ctx.font = "20px sans-serif";
+      ctx.fillText("Score: " + score, 10, 30);
+
+      // 🎉クリア判定
+if (score >= clearScore) {
+  ctx.shadowColor = "gray";
+  ctx.shadowBlur = 1;
+  ctx.fillStyle = "black";
+  ctx.font = "bold 30px sans-serif";
+
+  const message = "🎉ゲームクリア！";
+  const textWidth = ctx.measureText(message).width;
+  const x = (canvas.width - textWidth) / 2;
+  const y = canvas.height / 2;
+
+  ctx.fillText(message, x, y);
+
+  document.getElementById("restartButton").style.display = "block";
+  return;
+}
+
+ else {
+        requestAnimationFrame(gameLoop);
+      }
+    }
+
+    gameLoop();
+
+
+function resizeCanvas() {
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width;
+  canvas.height = rect.height;
+
+  // キャラ位置を画面サイズに合わせて再設定
+  bike.x = (canvas.width - bike.width) / 2;
+  bike.y = canvas.height - bike.height - 20;
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas(); // 初期化時にも呼び出す
+
+canvas.addEventListener("touchstart", handleTouch);
+canvas.addEventListener("touchmove", handleTouch);
+
+
+function handleTouch(e) {
+  const touchX = e.touches[0].clientX - canvas.getBoundingClientRect().left;
+  bike.x = touchX - bike.width / 2;
+  e.preventDefault();
+}
+
+ctx.font = `${canvas.width / 20}px sans-serif`;
+  </script>
 <!-- /JS Area -->
 </body>
 </html>
