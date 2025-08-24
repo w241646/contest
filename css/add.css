@@ -5,6 +5,11 @@ body {
   color: #121212;
 }
 
+/*** .loading ***/
+.loading-animation img + p::first-letter {
+  all: unset;
+}
+
 /* header */
 header .navi ul li {
     width: calc(100% / 5 - .5%);
@@ -722,10 +727,10 @@ dl.talk dd.is-show {
 
 /* .point_area */
 .point_area {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .point_area ul {
-  margin-top: 10px;
+  margin-top: 15px;
   gap: 1em;
 }
 .point_area ul li {
