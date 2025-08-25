@@ -59,6 +59,7 @@ left: 17%;
     background: #e0ceff;
     border-radius: 30% 70% 35% 65% / 50% 50% 50% 50%;
 animation: floatRotate 10s ease-in-out infinite;
+z-index: -1;
 }
 @keyframes floatRotate {
   0%   { transform: translateY(0px) rotate(0deg) scale(1); }
