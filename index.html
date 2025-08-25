@@ -172,22 +172,50 @@ window.addEventListener('resize', applyResponsiveStyles);
 </section>
 <!-- // mainVI // -->
 
-<!-- 
-<nav class="navi sp_none">
-  <ul class="addList flexBox">
-    <li><a href="./origin.html" class="f__link">自転車発祥の地</a></li>
-    <li><a href="./cycling-road.html" class="f__link">サイクリングロード</a></li>
-    <li><a href="./saitama-criterium.html" class="f__link">サイクルイベント</a></li>
-    <li><a href="./trivia.html" class="f__link">自転車豆知識</a></li>
-    <li><a href="./game.html" class="f__link current">自転車ゲーム</a></li>
+
+<nav class="page__nav">
+  <ul class="flexBox">
+    <li><a href="#Sec01" class="">自転車の原点</a></li>
+    <li><a href="#Sec02" class="">日本一の絶景旅</a></li>
+    <li><a href="#Sec03" class="">埼玉が熱狂</a></li>
+    <li><a href="#Sec04" class="">知識を得る</a></li>
+    <li><a href="#Sec05" class="">遊び体験</a></li>
   </ul>
 </nav>
- -->
+<style>
+nav.page__nav {
+  width: 100%;
+  margin: 70px auto 0;
+  padding: 10px 0;
+  background: #eee;
+}
+nav.page__nav ul {
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1em;
+}
+nav.page__nav ul li {
+  flex: 1 1 auto;
+  text-align: center;
+}
+nav.page__nav ul li a {
+  display: block;
+  padding: 20px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+nav.page__nav ul li a:hover {
+  background: #333;
+  color: #fff;
+}
+
+</style>
+
 
 <main>
 <!-- <p class="responsive-box" style="width: 1000px;">AAAAああああ</p> -->
-
-
 <!-- // intro // -->
   <div class="intro inview fadeIn_up">
     <h2><b id="txt_radius1">彩りの輪の旅</b>ペダルで巡る<br class="pc_none">さいたま再発見！<span>Saitama on Two Wheels</span></h2>
