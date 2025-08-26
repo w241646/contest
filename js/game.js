@@ -88,6 +88,7 @@ let items = Array.from({ length: 5 }, () => ({
 }));
 
 let keys = {};
+let scorePopups = [];
 
 // 🎮 ゲーム開始
 document.getElementById("startButton").addEventListener("click", () => {
@@ -198,6 +199,21 @@ function gameLoop(currentTime) {
     ) {
       score += itemTypes[item.type].score;
 
+      const itemScore = itemTypes[item.type].score;
+      score += itemScore;
+
+      // 0点と爆弾以外のときだけ黒ポップアップを表示
+      if (itemScore !== 0 && item.type !== "bomb") {
+        // 通常得点ポップアップ（黒）
+        scorePopups.push({
+          x: item.x,
+          y: item.y,
+          text: (itemScore >= 0 ? "+" : "") + itemScore,
+          alpha: 1.0,
+          color: "black"
+        });
+      }
+
       // スコア保持
       if (score > highScore) {
         highScore = score;
@@ -210,20 +226,55 @@ function gameLoop(currentTime) {
         life--;
         damageFlash = true;
         flashTimer = 10;
+
+        // 💔 爆弾ポップアップ（濃い赤）
+        scorePopups.push({
+          x: item.x,
+          y: item.y,
+          text: "-15💔",
+          alpha: 1.0,
+          color: "darkred"
+        });
+
         if (life <= 0) {
           endGame("Game Over !");
           return;
         }
       }
 
-      // 🛡️回復処理
+      // 🛡️回復処理（ポップアップ（赤））
       if (item.type === "medkit") {
-        if (life < 5) life++; // 最大5まで回復
+        if (life < 5) {
+          life++;
+          scorePopups.push({
+            x: item.x,
+            y: item.y,
+            text: "+1❤️",
+            alpha: 1.0,
+            color: "red"
+          });
+        } else {
+          // ライフ満タンでもポップアップ表示（灰色などで）
+          scorePopups.push({
+            x: item.x,
+            y: item.y,
+            text: "❤️MAX",
+            alpha: 1.0,
+            color: "gray"
+          });
+        }
       }
 
-      // ⏳ 時間追加処理
+      // ⏳ 時間追加処理（ポップアップ（青））
       if (item.type === "clock") {
         timeLeft += itemTypes[item.type].timeBoost;
+        scorePopups.push({
+          x: item.x,
+          y: item.y,
+          text: "+" + itemTypes[item.type].timeBoost + "s",
+          alpha: 1.0,
+          color: "blue"
+        });
       }
 
       // アイテム再生成
@@ -239,6 +290,18 @@ function gameLoop(currentTime) {
     }
   });
 
+  // 得点ポップアップ描画
+  scorePopups.forEach(popup => {
+    ctx.fillStyle = `rgba(${getRGB(popup.color)}, ${popup.alpha})`;
+    ctx.font = "bold 18px sans-serif";
+    ctx.fillText(popup.text, popup.x, popup.y);
+    popup.y -= 1;
+    popup.alpha -= 0.02;
+  });
+
+  // 消えたポップアップを削除
+  scorePopups = scorePopups.filter(p => p.alpha > 0);
+
    // 🎯 最後にHUDを描画（最前面に表示される）
   drawHUD();
 
@@ -249,6 +312,18 @@ function gameLoop(currentTime) {
   }
 
   requestAnimationFrame(gameLoop);
+}
+
+// 色名 → RGB変換関数
+function getRGB(colorName) {
+  const colors = {
+    black: "0,0,0",
+    red: "255,0,0",
+    blue: "0,0,255",
+    darkred: "139,0,0",
+    gray: "128,128,128",
+  };
+  return colors[colorName] || "0,0,0";
 }
 
 // 🔄 アイテム再生成
