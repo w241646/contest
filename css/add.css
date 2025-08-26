@@ -521,6 +521,9 @@ p.leadTxt::first-letter {
     border-radius: 5px;
     font-size: 0.85em;
 }
+.row_list ul.tags li::before {
+  content: "# ";
+}
 
 /* .card-list */
 .card-list.flexBox {
