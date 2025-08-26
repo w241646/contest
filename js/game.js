@@ -4,9 +4,9 @@ const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
 // 🖼️ 画像読み込み
-const useImages = false; // ← true にすると画像表示に切り替わる
+const useImages = true; // ← true にすると画像表示に切り替わる
 const bikeImg = new Image();
-bikeImg.src = "images/bike.png"; // 自機画像
+bikeImg.src = "../img/game_bike.png"; // 自機画像
 
 const itemImages = {
   apple: new Image(),
@@ -16,12 +16,12 @@ const itemImages = {
   medkit: new Image(),
   clock: new Image()
 };
-itemImages.apple.src = "images/apple.png";
-itemImages.banana.src = "images/banana.png";
-itemImages.bomb.src = "images/bomb.png";
-itemImages.star.src = "images/star.png";
-itemImages.medkit.src = "images/medkit.png";
-itemImages.clock.src = "images/clock.png";
+itemImages.apple.src = "../img/game_negi.png";
+itemImages.banana.src = "../img/game_senbei.png";
+itemImages.bomb.src = "../img/game_bomb.png";
+itemImages.star.src = "../img/game_bonsai.png";
+itemImages.medkit.src = "../img/game_medkit.png";
+itemImages.clock.src = "../img/game_hourglass.png";
 
 // 🎯 ゲーム設定
 const timeLimit = 30;
