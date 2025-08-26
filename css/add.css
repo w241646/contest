@@ -522,7 +522,8 @@ p.leadTxt::first-letter {
     font-size: 0.85em;
 }
 .row_list ul.tags li::before {
-  content: "# ";
+    content: "#";
+    margin-right: .3em;
 }
 
 /* .card-list */

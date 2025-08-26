@@ -23,7 +23,7 @@
 }
 .loading-animation {
   opacity: 0;
-  transform: translateY(20px) scale(0.9);
+  transform: translateY(30px) scale(0.8);
   filter: blur(.7px);
   animation: softReveal .9s ease-out forwards;
   animation-delay: .9s;
