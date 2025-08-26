@@ -21,6 +21,20 @@
   display: block;
   font-size: .5em;
 }
+.loading-animation {
+  opacity: 0;
+  transform: translateY(40px) scale(0.7);
+  filter: blur(.7px);
+  animation: softReveal .9s ease-out forwards;
+  animation-delay: .9s;
+}
+@keyframes softReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
 
 /* .swiper-slide */
 .mainVI .swiper-slide img {
