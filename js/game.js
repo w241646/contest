@@ -29,6 +29,7 @@ let timeLeft = timeLimit;
 let timerInterval;
 let gameStarted = false;
 let score = 0;
+let topScores = JSON.parse(localStorage.getItem("topScores")) || [];
 let highScore = localStorage.getItem("highScore") || 0;
 let bombCount = 0;
 const maxBombs = 5;
@@ -141,6 +142,16 @@ function drawHUD() {
     ctx.closePath();
     ctx.fill();
   }
+
+  // 🏆 TOP3のスコア表示
+  ctx.font = "14px sans-serif";
+  ctx.fillStyle = "black";
+  ctx.fillText("Top Scores:", 10, 90);
+  topScores.slice(0, 3).forEach((entry, i) => {
+    const name = entry.name || "名無し";
+    const score = entry.score ?? 0;
+    ctx.fillText(`${i + 1}. 🧑 ${name} - ⭐ ${score}`, 10, 110 + i * 20);
+  });
 }
 
 // 🕹️ ゲームループ
@@ -333,6 +344,38 @@ function resetItem(item) {
   item.type = getRandomItemType();
 }
 
+// TOP5更新関数
+function updateTopScores(newScore, playerName) {
+  topScores.push({
+    name: playerName || "名無し",
+    score: newScore || 0,
+  });
+  topScores.sort((a, b) => b.score - a.score);
+  topScores.slice(3);
+  localStorage.setItem("topScores", JSON.stringify(topScores));
+
+  console.log("保存されるTOPスコア:", topScores);
+}
+
+// TOP5表示処理関数
+function displayTopScores() {
+  const list = document.getElementById("topScoresList");
+  list.innerHTML = "";
+
+  topScores.slice(0, 3).forEach((entry, index) => {
+    const name = entry.name || "名無し";
+    const score = entry.score ?? 0;
+    const li = document.createElement("li");
+    li.classList.add("flexBox", "ranking-item");
+    li.innerHTML = `
+      <span class="rank">${index + 1}.</span>
+      <span class="name">${name}</span>
+      <span class="score" style="color:blue">${score}</span>
+    `;
+    list.appendChild(li);
+  });
+}
+
 // 🧠 ゲーム開始処理
 function startGame() {
   gameStarted = true;
@@ -370,6 +413,9 @@ function resetGame() {
 function endGame(message) {
   gameStarted = false;
   clearInterval(timerInterval);
+  const playerName = document.getElementById("playerName").value.trim();
+  updateTopScores(score, playerName);
+  displayTopScores();
   ctx.fillStyle = "black";
   ctx.font = "bold 30px sans-serif";
   const textWidth = ctx.measureText(message).width;
@@ -390,3 +436,4 @@ function resizeCanvas() {
 
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
+displayTopScores();
