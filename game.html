@@ -72,24 +72,72 @@
           </dl>
         </div>
 
-        <div id="controls" class="content-block">
-          <h2>🎮 ゲームの操作方法</h2>
+        <div id="controls" class="content-block game-note inview fadeIn_up">
+          <h4>🎮 ゲームの操作方法</h4>
           <ul>
-            <li>「Game Start」でゲーム開始</li>
-            <li>「Play Again」で再挑戦</li>
-            <li>「時間切れ」でゲーム終了</li>
-            <li>「← →キー」で自転車を左右に移動</li>
-            <li> スマホではタッチで移動</li>
-            <li>「アイテム（<i style="color: green;">■</i> 緑色：+10・<i style="color: yellow;">■</i> 黄色：+20・<i style="color: gold;">■</i> 金色：+50）」をキャッチしてスコアアップ</li>
-            <li>「ダメージ（<i style="color: red;">■</i> 赤色：-15）」に当たるとライフ減少</li>
-            <li>「メディキット（<i style="color: pink;">■</i> 桃色：+1）」でライフ回復</li>
-            <li>「時計アイテム（<i style="color: cyan;">■</i> 水色：+5）」で時間延長</li>
+            <li><strong>Game Start：</strong> ゲームを開始します。</li>
+            <li><strong>Play Again：</strong> 再挑戦できます。</li>
+            <li><strong>終了条件：</strong> 制限時間またはライフがゼロになると終了です。</li>
+            <li><strong>操作方法（PC）：</strong> 「←」「→」キーで左右に移動します。</li>
+            <li><strong>操作方法（スマホ）：</strong> タッチで移動します。</li>
+            <li><strong>名前入力：</strong> プレーヤー名を入力すると、スコアと一緒にランキングに表示されます。</li>
+            <li><strong>アイテムをキャッチしてスコアアップ：</strong>
+              <ul>
+                <li>
+                  <img src="./img/game_negi.png" alt="深谷ネギ">
+                  <div class="flexBox item-text">
+                    <span class="item-name">深谷ネギ：+10点</span>
+                    <small class="item-desc">冬に甘みが増す、埼玉県深谷市の名産・深谷ネギ。柔らかくて旨みたっぷりの白ネギです。</small>
+                  </div>
+                </li>
+                <li>
+                  <img src="./img/game_senbei.png" alt="草加せんべい">
+                  <div class="flexBox item-text">
+                    <span class="item-name">草加せんべい：+20点</span>
+                    <small class="item-desc">草加市の名物。米と醤油で焼き上げた、香ばしくてパリッとした堅焼き煎餅。</small>
+                  </div>
+                 </li>
+                <li>
+                  <img src="./img/game_bonsai.png" alt="大宮盆栽">
+                  <div class="flexBox item-text">
+                    <span class="item-name">大宮盆栽：+50点</span>
+                    <small class="item-desc">小さな鉢に自然の美を宿す、大宮盆栽村発祥の伝統芸術。世界中の盆栽ファンを魅了する、日本の心です。</small>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li><strong>ダメージアイテム：</strong>
+              <ul>
+                <li>
+                  <img src="./img/game_bomb.png" alt="爆弾">
+                  <div class="flexBox item-text">
+                    <span class="item-name">爆弾：-15点、ライフ-1</span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li><strong>回復・補助アイテム：</strong>
+              <ul>
+                <li>
+                  <img src="./img/game_medkit.png" alt="救急箱">
+                  <div class="flexBox item-text">
+                    <span class="item-name">救急箱：ライフ+1</span>
+                  </div>
+                </li>
+                <li>
+                  <img src="./img/game_hourglass.png" alt="砂時計">
+                  <div class="flexBox item-text">
+                    <span class="item-name">砂時計：時間+10秒</span>
+                  </div>
+                </li>
+              </ul>
+            </li>
             <!-- <li>スコアが一定以上でゲームクリア</li> -->
           </ul>
         </div>
 <style>
 /* 操作説明セクション全体 */
-#controls {
+.game-note {
   max-width: 750px;
   margin: 30px auto;
   padding: 20px;
@@ -100,19 +148,25 @@
 }
 
 /* タイトル */
-#controls h2 {
-  font-size: 1.6em;
-  margin-bottom: 1em;
+.game-note h4 {
+  font-size: 1.6em !important;
+  margin-bottom: 1em !important;
+  padding: unset !important;
   text-align: center;
   font-weight: 600;
 }
+.game-note h4::before {
+  display: none;
+}
 
 /* リストスタイル */
-#controls ul {
+#controls.game-note ul,
+#Score.game-note ul {
   list-style: none;
   padding-left: 0;
 }
-#controls li {
+#controls.game-note li,
+#Score.game-note li {
   padding: 1em;
   margin-bottom: 8px;
   background: #fff;
@@ -128,7 +182,7 @@
   position: relative;
   padding-left: 2.5em;
 }
-#controls li:before {
+#controls.game-note li:before {
   content: "";
   position: absolute;
   top: 1.2em;
@@ -139,16 +193,106 @@
   border-radius: 50%;
   background: #ccc;
 }
+#controls.game-note li img {
+  display: inline-block;
+  margin: unset;
+  margin-right: .5em;
+  width: 1.5em;
+  max-width: unset;
+  height: auto;
+}
+#controls.game-note li ul {
+  margin-top: .5em;
+  padding-left: .5em;
+  list-style-type: disc;
+}
+#controls.game-note li ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: unset;
+  padding: .7em 0;
+}
+#controls.game-note li ul li::before {
+  display: none;
+}
+
+.item-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+  padding: 0.7em 0;
+}
+.item-detail img {
+  width: 2em;
+  height: auto;
+  flex-shrink: 0;
+}
+.item-text {
+  display: flex;
+  flex-direction: column;
+}
+.item-name {
+  font-weight: bold;
+}
+.item-desc {
+  margin-top: 0.2em;
+  color: #555;
+  font-size: 0.85em;
+  line-height: 1.4;
+}
+
 /* #controls li:hover {
   background: #eef6ff;
 } */
+
+#Score.game-note {
+  max-width: 440px;
+}
+.playerName {
+  padding: 1em;
+  background: #eef;
+  border: 2px solid #333;
+  text-align: center;
+}
+.playerName label {
+  display: block;
+  margin-bottom: .5em;
+}
+.playerName input {
+  width: 100%;
+  padding: .5em .8em;
+  text-align: center;
+}
+.ranking-item {
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.1em;
+}
+.ranking-item .rank {
+  width: 3em;
+  text-align: left;
+  font-weight: bold;
+}
+.ranking-item .name {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ranking-item .score {
+  width: 4em;
+  text-align: right;
+  color: blue;
+}
 </style>
 
 <style>
 canvas {
   background: #eef;
   display: block;
-  margin: 30px auto;
+  margin: 10px auto 30px;
   border: 2px solid #333;
   width: 100%;
   height: auto;
@@ -158,7 +302,7 @@ canvas {
 #startButton,
 #restartButton {
   position: absolute;
-  top: 50%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 12px 24px;
@@ -173,7 +317,7 @@ canvas {
   text-align: center;
 }
 #restartButton {
-  top: 60%;
+  top: 65%;
 }
 @media (max-width: 480px) {
   canvas {
@@ -183,12 +327,23 @@ canvas {
   }
 }
 </style>
-        <div id="Game" class="content-block">
+        <div id="Game" class="content-block inview fadeIn_up">
 <!-- ゲーム本体 -->
 <div style="position: relative; width: 100%; max-width: 400px; margin: auto;">
+  <div class="playerName">
+    <label for="playerName">名前（ランキングに表示されます）:</label>
+    <input type="text" id="playerName" placeholder="未入力なら「名無し」になります">
+  </div>
   <canvas id="gameCanvas"></canvas>
   <button id="startButton" aria-hidden="true" translate="no">Game Start</button>
   <button id="restartButton" aria-hidden="true" translate="no" style="display:none;">Play Again</button>
+</div>
+        </div>
+
+        <div id="Score" class="content-block game-note inview fadeIn_up">
+<div id="topScoresDisplay">
+  <h4>🏆 TOP 3 Scores</h4>
+  <ul id="topScoresList"></ul>
 </div>
         </div>
       </article>
