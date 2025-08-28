@@ -173,6 +173,9 @@ main .intro {
   margin-top: 50px;
   margin-bottom: 100px;
 }
+main .intro h2 b {
+  margin-bottom: .3em;
+}
 
 /* h2 */
 @media screen and (max-width: 820px) {
@@ -181,7 +184,7 @@ main .intro h2 {
   font-weight: 900;
 }
 main .intro h2 b {
-  margin-bottom: .3em;
+  margin-bottom: .7em;
 }
 }
 
