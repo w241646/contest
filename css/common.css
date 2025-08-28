@@ -64,16 +64,37 @@ a * {
   clear: both;
   display: block;
 }
-.flexBox {
-  display: flex;
-  flex-wrap: wrap;
-}
 .abbr {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   overflow: hidden;
-  margin: 5% auto 3% !important;
+}
+
+/*** .flexBox ***/
+.flexBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*** .grid ***/
+.grid {
+  display: grid;
+  gap: 20px;
+}
+/* 列数切り替え用クラス */
+.grid-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /*** .more_btn ***/
@@ -292,4 +313,7 @@ button.btn_menu.active .close {
 /* SP */
 /* ============================================ */
 @media screen and (max-width: 820px) {
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
 }

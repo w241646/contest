@@ -18,14 +18,15 @@ main .intro figure img {
 }
 
 /* .review */
-div#Review {
+#Review {
   gap: 3%;
   justify-content: start;
 }
-.review.card-list.flexBox > div .faceicon {
+
+.review.card-list.grid > div .faceicon {
   margin: 0 auto 20px;
 }
-.review.card-list.flexBox > div .faceicon img {
+.review.card-list.grid > div .faceicon img {
   height: 100px;
 }
 b.title {
