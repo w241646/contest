@@ -18,9 +18,12 @@ main .intro figure img {
 }
 
 /* .review */
-#Review {
+/* #Review {
   gap: 3%;
   justify-content: start;
+} */
+#Review.card-list.grid > div {
+  border-radius: 10px;
 }
 
 .review.card-list.grid > div .faceicon {
