@@ -794,6 +794,7 @@ header .navi ul li a:hover {
   margin-top: 25px;
   padding: 0 2%;
   color: #ccc;
+  line-height: 1.5;
 }
 #breadcrumb a {
   margin: 0 .4em;
