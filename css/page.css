@@ -34,6 +34,8 @@ main .intro figure img {
 }
 .review.card-list.grid > div .faceicon img {
   height: 100px;
+  margin: 0 0 0 2px;
+  padding: 15px;
 }
 b.title {
   margin: 0 auto;
