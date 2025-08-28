@@ -407,6 +407,10 @@ a.btn {
 }
 
 /* .leadTxt */
+p.leadTxt {
+  column-count: 2;
+  column-gap: 2.6em;
+}
 p.leadTxt::first-letter {
   float: left;
   padding: 0 .2em 0 .1em;
@@ -416,6 +420,9 @@ p.leadTxt::first-letter {
   line-height: 1;
 }
 @media screen and (max-width: 820px) {
+p.leadTxt {
+  column-count: 1;
+}
 p.leadTxt::first-letter {
   font-size: 3.5em;
 }
