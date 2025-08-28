@@ -397,6 +397,7 @@ a.btn {
 /* .content-block */
 .content-block {
     width: 80%;
+    max-width: 800px;
     margin: 20px auto 40px;
 }
 .content-block dl + dl {
