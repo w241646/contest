@@ -89,11 +89,11 @@ z-index: -1;
     overflow-y: visible;
     padding: 3% 0 15%;
   }
-  .swiper.mySwiper {
+  .mainVI .swiper.mySwiper {
     width: 135%;
     margin-left: -20%;
   }
-  .swiper-wrapper {
+  .mainVI .swiper-wrapper {
     padding-left: 10vw;
   }
 }
@@ -200,10 +200,10 @@ z-index: -1;
   left: 0;
 }
 .mainVI .mVI_txt {
-    /* bottom: -1%;
-    left: 50%;
+    /* left: 50%;
     right: 50%; */
-    font-size: 1.4em;
+    bottom: 7%;
+    font-size: 2em;
     /* width: 60%; */
 }
 }

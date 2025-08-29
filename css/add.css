@@ -170,6 +170,7 @@ main .intro p.read_txt {
 }
 main .intro figure img {
   height: 300px;
+  object-position: 80.5% 42%;
 }
 .mainCnt section img {
   height: 200px;
@@ -403,7 +404,7 @@ a.btn {
 }
 @media screen and (max-width: 820px) {
   a.btn {
-    width: 95%;
+    width: 85%;
   }
 }
 
@@ -677,6 +678,7 @@ p.leadTxt::first-letter {
 @media screen and (max-width: 820px) {
 .content-block {
     width: 95%;
+    margin: 0 auto 30px;
 }
 
 .faceicon {
@@ -815,6 +817,12 @@ header .navi ul li a:hover {
   background: rgba(0,0,0,.5);
   padding: 4px 10px;
   border-radius: 6px;
+  transition: opacity 1.3s ease, bottom 0.3s ease;
+  opacity: 1;
+}
+#Lang.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 #Lang > p {
   margin-bottom: 5px;
@@ -838,6 +846,14 @@ header .navi ul li a:hover {
 /* .skiptranslate {
   display: none;
 } */
+ @media screen and (max-width: 820px) {
+#Lang {
+  left: 10px;
+}
+#PageTop {
+  right: 10px;
+}
+}
 
 
 /***** #Trivia *****/
