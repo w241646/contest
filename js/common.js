@@ -167,3 +167,22 @@ function getMainTextFromH2() {
   return textParts[1] || textParts[0] || "現在地";
 }
 /* -- /breadcrumb -- */
+
+
+/* -- adjustFixedLangPosition -- */
+function adjustFixedLangPosition() {
+  const footer = document.querySelector('footer');
+  const fixedElement = document.querySelector('#Lang');
+  const footerTop = footer.getBoundingClientRect().top;
+  if (footerTop < window.innerHeight) {
+    fixedElement.classList.add('hidden');
+  } else {
+    fixedElement.classList.remove('hidden');
+  }
+}
+
+// スマホサイズのみでイベント登録
+if (window.innerWidth <= 600) {
+  window.addEventListener('scroll', adjustFixedLangPosition);
+}
+/* -- /adjustFixedLangPosition -- */
