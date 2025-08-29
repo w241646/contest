@@ -1,6 +1,6 @@
 // JavaScript Document
 
-/* -- swiper -- */
+/* -- mainVI -- */
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.mySwiper', {
     loop: true,
@@ -22,4 +22,22 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 });
-/* -- /swiper -- */
+/* -- /mainVI -- */
+
+
+/* -- /carousel -- */
+const swiper = new Swiper('.swiper-container', {
+  loop: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  spaceBetween: 20,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
+/* -- /carousel -- */
