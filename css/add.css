@@ -189,8 +189,33 @@ main .intro {
   margin-top: 50px;
   margin-bottom: 100px;
 }
-main .intro h2 b {
+/* main .intro h2 b {
   margin-bottom: .3em;
+  font-size: .4em;
+} */
+h2 b {
+  position: relative;
+  margin: 1.5em 0;
+  padding: 10px 0;
+  color: #757575;
+  font-size: .4em;
+  text-align: center;
+  letter-spacing: .1em;
+}
+h2 b:before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  width: 5em;
+  height: 3em;
+  border-radius: 50%;
+  border: 5px solid #13ba7c;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  opacity: .4;
 }
 
 /* h2 */
@@ -201,6 +226,9 @@ main .intro h2 {
 }
 main .intro h2 b {
   margin-bottom: .7em;
+}
+main .intro h2 b:before {
+  top: -2px;
 }
 }
 
