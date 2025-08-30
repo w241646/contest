@@ -1,9 +1,9 @@
 #Page {
   margin-top: 120px;
 }
-#Page h2 b {
+/* #Page h2 b {
   font-size: .6em;
-}
+} */
 
 main .intro figure img {
   max-width: 800px;
@@ -103,7 +103,6 @@ b.title {
 } */
 .review.card-list.grid > div .faceicon img {
   height: auto;
-  margin: 3px auto 0 1px;
   padding: 4px;
 }
 }
