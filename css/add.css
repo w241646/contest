@@ -1091,3 +1091,27 @@ p.read_txt {
     width: 240px;
   }
 }
+
+
+/* .cr_map */
+.cr_map a {
+  display: block;
+  color: #36c;
+}
+.cr_map a + a {
+  margin-top: 18px;
+}
+.cr_map a img {
+  margin: 0 auto;
+}
+.cr_map a span {
+  display: block;
+  margin-top: 8px;
+}
+.pdf::before {
+  content: "\f1c1";
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #121212;
+}
