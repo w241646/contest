@@ -9,17 +9,19 @@ const bikeImg = new Image();
 bikeImg.src = "./img/game_bike.png"; // 自機画像
 
 const itemImages = {
-  apple: new Image(),
-  banana: new Image(),
-  bomb: new Image(),
+  negi: new Image(),
+  senbei: new Image(),
+  manju: new Image(),
   star: new Image(),
+  bomb: new Image(),
   medkit: new Image(),
   clock: new Image()
 };
-itemImages.apple.src = "./img/game_negi.png";
-itemImages.banana.src = "./img/game_senbei.png";
-itemImages.bomb.src = "./img/game_bomb.png";
+itemImages.negi.src = "./img/game_negi.png";
+itemImages.senbei.src = "./img/game_senbei.png";
+itemImages.manju.src = "./img/game_manju.png";
 itemImages.star.src = "./img/game_bonsai.png";
+itemImages.bomb.src = "./img/game_bomb.png";
 itemImages.medkit.src = "./img/game_medkit.png";
 itemImages.clock.src = "./img/game_hourglass.png";
 
@@ -53,19 +55,21 @@ let bike = {
 
 // 🍎 アイテム設定
 const itemTypes = {
-  apple: { color: "green", score: 10 },
-  banana: { color: "yellow", score: 20 },
-  bomb: { color: "red", score: -15 },
+  negi: { color: "green", score: 10 },
+  senbei: { color: "yellow", score: 20 },
+  manju: { color: "brown", score: 30 },
   star: { color: "gold", score: 50 },
+  bomb: { color: "red", score: -15 },
   medkit: { color: "pink", score: 0, heal: 1 },
   clock: { color: "cyan", score: 0, timeBoost: 10 },
 };
 
 const itemWeights = {
-  apple: 2,
-  banana: 2,
-  bomb: 17,
+  negi: 2,
+  senbei: 2,
+  manju: 1,
   star: 1,
+  bomb: 17,
   medkit: 0.8,
   clock: 0.8,
 };
@@ -226,10 +230,12 @@ function gameLoop(currentTime) {
       }
 
       // スコア保持
+/*
       if (score > highScore) {
         highScore = score;
         localStorage.setItem("highScore", highScore);
       }
+*/
 
       // 💣爆弾処理
       if (item.type === "bomb") {
@@ -414,6 +420,10 @@ function endGame(message) {
   gameStarted = false;
   clearInterval(timerInterval);
   const playerName = document.getElementById("playerName").value.trim();
+  if (score > highScore) {
+    highScore = score;
+    localStorage.setItem("highScore", highScore);
+  }
   updateTopScores(score, playerName);
   displayTopScores();
   ctx.fillStyle = "black";
