@@ -1104,11 +1104,15 @@ p.read_txt {
 .cr_map a img {
   margin: 0 auto;
 }
-.cr_map a span {
+.cr_map ul {
   display: block;
   margin-top: 8px;
 }
-.pdf::before {
+.cr_map ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.pdf::after {
   content: "\f1c1";
   font-family: "Font Awesome 5 Free";
   font-size: 1.1em;
