@@ -112,3 +112,207 @@ main .mainCnt section#Sec03 h4:before {
     content: "\f521";
     color: #c5b358;
 }
+
+
+/* 操作説明セクション全体 */
+.game-note {
+  max-width: 750px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f9f9fc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* タイトル */
+.game-note h4 {
+  font-size: 1.6em !important;
+  margin-bottom: 1em !important;
+  padding: unset !important;
+  text-align: center;
+  font-weight: 600;
+}
+.game-note h4::before {
+  display: none;
+}
+
+/* リストスタイル */
+#controls.game-note ul,
+#Score.game-note ul {
+  list-style: none;
+  padding-left: 0;
+}
+#controls.game-note li,
+#Score.game-note li {
+  padding: 1em;
+  margin-bottom: 8px;
+  background: #fff;
+  /* border-top: 1px solid #4a90e2;
+  border-bottom: 1px solid #4a90e2;
+  border-left: 5px solid #4a90e2;
+  border-right: 5px solid #4a90e2;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #444; */
+  transition: background 0.3s;
+
+  position: relative;
+  padding-left: 2.5em;
+}
+#controls.game-note li:before {
+  content: "";
+  position: absolute;
+  top: 1.2em;
+  left: 1.2em;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+}
+#controls.game-note li img {
+  display: inline-block;
+  margin: unset;
+  margin-right: .5em;
+  width: 1.5em;
+  max-width: unset;
+  height: auto;
+}
+#controls.game-note li ul {
+  margin-top: .5em;
+  padding-left: .5em;
+  list-style-type: disc;
+}
+#controls.game-note li ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: unset;
+  padding: .7em 0;
+}
+#controls.game-note li ul li::before {
+  display: none;
+}
+
+.item-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+  padding: 0.7em 0;
+}
+.item-detail img {
+  width: 2em;
+  height: auto;
+  flex-shrink: 0;
+}
+.item-text {
+  display: flex;
+  flex-direction: column;
+}
+.item-name {
+  font-weight: bold;
+}
+.item-desc {
+  margin-top: 0.2em;
+  color: #555;
+  font-size: 0.85em;
+  line-height: 1.4;
+}
+
+/* #controls li:hover {
+  background: #eef6ff;
+} */
+
+#Score.game-note {
+  max-width: 440px;
+}
+.playerName {
+  padding: 1em;
+  background: #eef;
+  border: 2px solid #333;
+  text-align: center;
+}
+.playerName label {
+  display: block;
+  margin-bottom: .5em;
+}
+.playerName input {
+  width: 100%;
+  padding: .5em .8em;
+  text-align: center;
+}
+.ranking-item {
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  margin: 0 auto !important;
+  padding: unset !important;
+  padding-bottom: 1em !important;
+  font-size: 1.1em;
+  background: unset !important;
+  border-bottom: 1px solid #ccc;
+}
+.ranking-item + .ranking-item {
+  margin-top: 1em !important;
+}
+.ranking-item span {
+  padding: 1em;
+  background: #fff;
+  border-radius: 10px;
+}
+.ranking-item .rank {
+  width: 3em;
+  text-align: left;
+  font-weight: bold;
+}
+.ranking-item .name {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ranking-item .score {
+  width: 4em;
+  text-align: right;
+  color: blue;
+}
+
+
+canvas {
+  background: #eef;
+  display: block;
+  margin: 10px auto 30px;
+  border: 2px solid #333;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  aspect-ratio: 2 / 3;
+}
+#startButton,
+#restartButton {
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 24px;
+  font-size: 18px;
+  z-index: 10;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  max-width: none;
+  text-align: center;
+}
+#restartButton {
+  top: 65%;
+}
+@media (max-width: 480px) {
+  canvas {
+    max-width: 100vw;
+    max-height: 100vh;
+    aspect-ratio: 2 / 3;
+  }
+}
