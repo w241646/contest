@@ -8,26 +8,15 @@ $(function () {
 
 
 /* -- inview -- */
-$(function(){
-  $(".inview").on("inview", function (event, isInView) {
+$(function () {
+  // 共通の inview クラス処理
+  $(".inview, .inview_re").on("inview", function (event, isInView) {
     if (isInView) {
       $(this).stop().addClass("is-show");
     }
   });
-});
 
-
-/* -- inview - talk -- */
-$(function() {
-  $(".inview_re").on("inview",function(event,isInView,visiblepartX,visiblepartY) {
-    if(isInView){
-      $(this).stop().addClass("is-show");
-    }
-  });
-});
-
-/* -- inview - row_list -- */
-function bindInviewAnimationRowList() {
+  // row_list のアニメーション処理
   $(".row_list").each(function () {
     const $row = $(this);
     const $items = $row.find("dl");
@@ -44,39 +33,24 @@ function bindInviewAnimationRowList() {
       }
     });
   });
-}
 
-// 初期読み込み時
-$(function () {
-  bindInviewAnimationRowList();
-});
+  // card-list のアニメーション処理
+  $(".card-list").each(function () {
+    const $cardList = $(this);
+    const $items = $cardList.children("div");
 
-
-/* -- inview - card-list -- */
-function bindInviewAnimationCardList() {
-  $(function () {
-    $(".card-list").each(function () {
-      const $cardList = $(this);
-      const $items = $cardList.children("div");
-
-      $cardList.on("inview", function (event, isInView) {
-        if (isInView) {
-          $items.each(function (index) {
-            const delay = index * 250;
-            const $this = $(this);
-            setTimeout(function () {
-              $this.addClass("inview");
-            }, delay);
-          });
-        }
-      });
+    $cardList.on("inview", function (event, isInView) {
+      if (isInView) {
+        $items.each(function (index) {
+          const delay = index * 250;
+          const $this = $(this);
+          setTimeout(function () {
+            $this.addClass("inview");
+          }, delay);
+        });
+      }
     });
   });
-}
-
-// 初期読み込み時
-$(function () {
-  bindInviewAnimationCardList();
 });
 /* -- /inview -- */
 
