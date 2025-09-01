@@ -488,9 +488,11 @@ p.leadTxt::first-letter {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 .row_list dl {
+  position: relative;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: transform, opacity;
 }
 .row_list dl.inview {
   opacity: 1;
