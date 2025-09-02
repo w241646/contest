@@ -350,7 +350,7 @@ function resetItem(item) {
   item.type = getRandomItemType();
 }
 
-// TOP5更新関数
+// TOP3更新関数
 function updateTopScores(newScore, playerName) {
   topScores.push({
     name: playerName || "名無し",
@@ -363,7 +363,7 @@ function updateTopScores(newScore, playerName) {
   console.log("保存されるTOPスコア:", topScores);
 }
 
-// TOP5表示処理関数
+// TOP3表示処理関数
 function displayTopScores() {
   const list = document.getElementById("topScoresList");
   list.innerHTML = "";
@@ -376,7 +376,7 @@ function displayTopScores() {
     li.innerHTML = `
       <span class="rank">${index + 1}.</span>
       <span class="name">${name}</span>
-      <span class="score" style="color:blue">${score}</span>
+      <span class="score">${score}</span>
     `;
     list.appendChild(li);
   });
