@@ -258,6 +258,7 @@ ul#topScoresList li {
   height: 2.8em; */
   border: 2px solid;
   color: transparent;
+  background: #fff;
 }
 #topScoresList li:first-child .rank,
 #topScoresList li:first-child .name,
@@ -313,8 +314,7 @@ ul#topScoresList li {
   align-items: center;
   gap: 1em;
   margin: 0 auto !important;
-  padding: unset !important;
-  padding-bottom: 1em !important;
+  padding: 0 2.5em 1em !important;
   font-size: 1.1em;
   background: unset !important;
   border-bottom: 1px solid #ccc;
@@ -324,7 +324,6 @@ ul#topScoresList li {
 }
 .ranking-item span {
   padding: 1em;
-  background: #fff;
   border-radius: 10px;
 }
 /* .ranking-item .rank {
@@ -336,16 +335,26 @@ ul#topScoresList li {
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
+  text-align: center;
   text-overflow: ellipsis;
-  border: 2px solid;
+  /* border: 2px solid; */
 }
 .ranking-item .score {
-  width: 4em;
-  text-align: right;
-  color: blue;
-  border: 2px solid;
+  flex: .2;
+  /* color: blue; */
+  text-align: center;
+  /* border: 2px solid; */
+}
+@media (max-width: 480px) {
+.ranking-item {
+  padding: 0 1em 1em !important;
+}
 }
 
+#controls h4 i,
+#topScoresDisplay h4 i {
+  margin-right: .6em;
+}
 
 canvas {
   background: #eef;
