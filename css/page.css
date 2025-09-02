@@ -175,7 +175,7 @@ main .mainCnt section#Sec03 h4:before {
   display: inline-block;
   margin: unset;
   margin-right: .5em;
-  width: 1.5em;
+  width: 3.5em;
   max-width: unset;
   height: auto;
 }
@@ -344,6 +344,8 @@ ul#topScoresList li {
   /* color: blue; */
   text-align: center;
   /* border: 2px solid; */
+  font-weight: 600;
+  letter-spacing: .03em;
 }
 @media (max-width: 480px) {
 .ranking-item {
