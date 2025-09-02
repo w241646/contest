@@ -15,8 +15,10 @@ $(function () {
       $(this).stop().addClass("is-show");
     }
   });
+});
 
-  // row_list のアニメーション処理
+// row_list のアニメーション処理
+$(function bindInviewAnimationRowList() {
   $(".row_list").each(function () {
     const $row = $(this);
     const $items = $row.find("dl");
@@ -33,8 +35,10 @@ $(function () {
       }
     });
   });
+});
 
-  // card-list のアニメーション処理
+// card-list のアニメーション処理
+$(function bindInviewAnimationCardList() {
   $(".card-list").each(function () {
     const $cardList = $(this);
     const $items = $cardList.children("div");
