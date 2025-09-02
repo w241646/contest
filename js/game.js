@@ -5,8 +5,8 @@ const ctx = canvas.getContext("2d");
 
 // 🖼️ 画像読み込み
 const useImages = true; // ← true にすると画像表示に切り替わる
-const bikeImg = new Image();
-bikeImg.src = "./img/game_bike.png"; // 自機画像
+const bicycleImg = new Image();
+bicycleImg.src = "./img/game_bicycle.png"; // 自機画像
 
 const itemImages = {
   negi: new Image(),
@@ -45,7 +45,7 @@ let useClearScore = false;
 let clearScore = 500;
 
 // 🚲 プレイヤー設定
-let bike = {
+let bicycle = {
   x: 180,
   y: canvas.height - 60,
   width: 40,
@@ -113,8 +113,8 @@ canvas.addEventListener("touchmove", handleTouch);
 function handleTouch(e) {
   if (!gameStarted) return;
   const touchX = e.touches[0].clientX - canvas.getBoundingClientRect().left;
-  let newX = touchX - bike.width / 2;
-  bike.x = Math.max(0, Math.min(canvas.width - bike.width, newX));
+  let newX = touchX - bicycle.width / 2;
+  bicycle.x = Math.max(0, Math.min(canvas.width - bicycle.width, newX));
   e.preventDefault();
 }
 
@@ -169,7 +169,7 @@ function gameLoop(currentTime) {
 
   // 自機描画（ダメージ時は赤く点滅）
   if (useImages) {
-    ctx.drawImage(bikeImg, bike.x, bike.y, bike.width, bike.height);
+    ctx.drawImage(bicycleImg, bicycle.x, bicycle.y, bicycle.width, bicycle.height);
   } else {
     if (damageFlash && flashTimer > 0) {
       ctx.fillStyle = "red";
@@ -178,13 +178,13 @@ function gameLoop(currentTime) {
     } else {
       ctx.fillStyle = "blue";
     }
-    ctx.fillRect(bike.x, bike.y, bike.width, bike.height);
+    ctx.fillRect(bicycle.x, bicycle.y, bicycle.width, bicycle.height);
   }
 
   // 🚲 自転車移動
-  const moveSpeed = bike.speed * 60; // bike.speed は「フレームベース」なので60FPS換算
-  if (keys["ArrowLeft"]) bike.x = Math.max(0, bike.x - moveSpeed * deltaTime);
-  if (keys["ArrowRight"]) bike.x = Math.min(canvas.width - bike.width, bike.x + moveSpeed * deltaTime);
+  const moveSpeed = bicycle.speed * 60; // bicycle.speed は「フレームベース」なので60FPS換算
+  if (keys["ArrowLeft"]) bicycle.x = Math.max(0, bicycle.x - moveSpeed * deltaTime);
+  if (keys["ArrowRight"]) bicycle.x = Math.min(canvas.width - bicycle.width, bicycle.x + moveSpeed * deltaTime);
 
   // 🍎 アイテム処理
   const itemSpeed = 550; // ピクセル/秒（調整可能）
@@ -207,10 +207,10 @@ function gameLoop(currentTime) {
 
     // 衝突判定
     if (
-      bike.x < item.x + 30 &&
-      bike.x + bike.width > item.x &&
-      bike.y < item.y + 30 &&
-      bike.y + bike.height > item.y
+      bicycle.x < item.x + 30 &&
+      bicycle.x + bicycle.width > item.x &&
+      bicycle.y < item.y + 30 &&
+      bicycle.y + bicycle.height > item.y
     ) {
       score += itemTypes[item.type].score;
 
@@ -406,7 +406,7 @@ function startGame() {
 function resetGame() {
   score = 0;
   bombCount = 0;
-  bike.x = 180;
+  bicycle.x = 180;
   life = 5;
   items = Array.from({ length: 5 }, () => ({
     x: Math.random() * (canvas.width - 30),
@@ -440,8 +440,8 @@ function resizeCanvas() {
   const rect = canvas.getBoundingClientRect();
   canvas.width = rect.width;
   canvas.height = rect.height;
-  bike.x = (canvas.width - bike.width) / 2;
-  bike.y = canvas.height - bike.height - 20;
+  bicycle.x = (canvas.width - bicycle.width) / 2;
+  bicycle.y = canvas.height - bicycle.height - 20;
 }
 
 window.addEventListener("resize", resizeCanvas);
