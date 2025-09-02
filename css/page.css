@@ -227,6 +227,9 @@ main .mainCnt section#Sec03 h4:before {
 #Score.game-note {
   max-width: 440px;
 }
+.fa-trophy {
+  color: #c5b358;
+}
 .playerName {
   padding: 1em;
   background: #eef;
