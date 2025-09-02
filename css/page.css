@@ -245,6 +245,69 @@ main .mainCnt section#Sec03 h4:before {
   padding: .5em .8em;
   text-align: center;
 }
+ul#topScoresList {
+  counter-reset: item;
+}
+ul#topScoresList li {
+  counter-increment: item;
+}
+#topScoresList .rank {
+  position: relative;
+  display: inline-block;
+  /* width: 2.8em;
+  height: 2.8em; */
+  border: 2px solid;
+  color: transparent;
+}
+#topScoresList li:first-child .rank,
+#topScoresList li:first-child .name,
+#topScoresList li:first-child .score {
+  border-color: #c5a46d;
+}
+#topScoresList li:nth-child(2) .rank,
+#topScoresList li:nth-child(2) .name,
+#topScoresList li:nth-child(2) .score {
+  border-color: #b4b4b4;
+}
+#topScoresList li:last-child .rank,
+#topScoresList li:last-child .name,
+#topScoresList li:last-child .score {
+  border-color: #8c5e3c;
+}
+#topScoresList li .rank::before {
+  content: counter(item);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: .9em;
+  font-weight: bold;
+  color: #fff;
+  z-index: 1;
+}
+#topScoresList .rank::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 2.8em;
+    height: 2.8em;
+    background-color: #ccc;
+    -webkit-mask-image: url("../img/medal.svg");
+    mask-image: url("../img/medal.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+#topScoresList li:first-child .rank::after {
+  background-color: #c5a46d;
+}
+#topScoresList li:nth-child(2) .rank::after {
+  background-color: #b4b4b4;
+}
+#topScoresList li:last-child .rank::after {
+  background-color: #8c5e3c;
+}
 .ranking-item {
   justify-content: space-between;
   align-items: center;
@@ -264,21 +327,23 @@ main .mainCnt section#Sec03 h4:before {
   background: #fff;
   border-radius: 10px;
 }
-.ranking-item .rank {
+/* .ranking-item .rank {
   width: 3em;
   text-align: left;
   font-weight: bold;
-}
+} */
 .ranking-item .name {
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  border: 2px solid;
 }
 .ranking-item .score {
   width: 4em;
   text-align: right;
   color: blue;
+  border: 2px solid;
 }
 
 
