@@ -18,7 +18,7 @@ $(function () {
 });
 
 // row_list のアニメーション処理
-$(function bindInviewAnimationRowList() {
+function bindInviewAnimationRowList() {
   $(".row_list").each(function () {
     const $row = $(this);
     const $items = $row.find("dl");
@@ -35,10 +35,10 @@ $(function bindInviewAnimationRowList() {
       }
     });
   });
-});
+};
 
 // card-list のアニメーション処理
-$(function bindInviewAnimationCardList() {
+function bindInviewAnimationCardList() {
   $(".card-list").each(function () {
     const $cardList = $(this);
     const $items = $cardList.children("div");
@@ -55,7 +55,7 @@ $(function bindInviewAnimationCardList() {
       }
     });
   });
-});
+};
 
 // 初期読み込み時
 $(function () {
