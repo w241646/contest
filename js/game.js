@@ -370,7 +370,7 @@ function displayTopScores() {
 
   topScores.slice(0, 3).forEach((entry, index) => {
     const name = entry.name || "名無し";
-    const score = entry.score ?? 0;
+    const score = (entry.score ?? 0).toLocaleString();
     const li = document.createElement("li");
     li.classList.add("flexBox", "ranking-item");
     li.innerHTML = `
