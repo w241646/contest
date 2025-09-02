@@ -71,98 +71,98 @@
             </dd>
           </dl>
         </div>
-
-        <div id="controls" class="content-block game-note inview fadeIn_up">
-          <h4><i class="fas fa-gamepad"></i> ゲームの操作方法</h4>
-          <ul>
-            <li><strong>Game Start：</strong> ゲームを開始します。</li>
-            <li><strong>Play Again：</strong> 再挑戦できます。</li>
-            <li><strong>終了条件：</strong> 制限時間またはライフがゼロになると終了です。</li>
-            <li><strong>操作方法（PC）：</strong> 「←」「→」キーで左右に移動します。</li>
-            <li><strong>操作方法（スマホ）：</strong> タッチで移動します。</li>
-            <li><strong>名前入力：</strong> プレーヤー名を入力すると、スコアと一緒にランキングに表示されます。</li>
-            <li><strong>アイテムをキャッチしてスコアアップ：</strong>
-              <ul>
-                <li>
-                  <img src="./img/game_negi.png" alt="深谷ネギ">
-                  <div class="flexBox item-text">
-                    <span class="item-name">深谷ネギ：+10点</span>
-                    <small class="item-desc">埼玉県深谷市の特産・深谷ネギは、寒さが増す冬に甘みが際立つブランド野菜。白く太い根の部分は繊維が細かく、加熱するととろけるような柔らかさと濃厚な旨みが広がります。糖度は果物並みに高く、すき焼きや鍋料理に欠かせない存在として、地元はもちろん全国でも高い評価を受けています。</small>
-                  </div>
-                </li>
-                <li>
-                  <img src="./img/game_senbei.png" alt="草加せんべい">
-                  <div class="flexBox item-text">
-                    <span class="item-name">草加せんべい：+20点</span>
-                    <small class="item-desc">埼玉県草加市の名物・草加せんべいは、うるち米を使った堅焼きの煎餅で、パリッとした食感と香ばしい醤油の風味が特徴。江戸時代、日光街道の宿場町として栄えた草加で誕生し、保存食としての団子を乾かして焼いたのが始まりとされています。</small>
-                  </div>
-                </li>
-                <li>
-                  <img src="./img/game_manju.png" alt="十万石饅頭">
-                  <div class="flexBox item-text">
-                    <span class="item-name">十万石饅頭：+30点</span>
-                    <small class="item-desc">埼玉県行田市の名物・十万石饅頭は、しっとりとした薯蕷（じょうよ）生地に、北海道産のこしあんを包んだ上品な和菓子。もちもちとした食感と、なめらかな甘さが特徴です。地元では「うまい、うますぎる！」のCMで知られ、埼玉県民に親しまれています。</small>
-                  </div>
-                </li>
-                <li>
-                  <img src="./img/game_bonsai.png" alt="大宮盆栽">
-                  <div class="flexBox item-text">
-                    <span class="item-name">大宮盆栽：+50点</span>
-                    <small class="item-desc">埼玉県さいたま市で育まれる大宮盆栽は、小さな鉢に自然の美を宿す、大宮盆栽村で受け継がれてきた伝統芸術。樹木の生命力と四季の移ろいを表現する繊細な技術が特徴で、国内外の愛好家から高い評価を受けています。「BONSAI」として世界中の盆栽ファンを魅了する、日本文化の象徴として、世界に誇れる芸術です。</small>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <li><strong>ダメージアイテム：</strong>
-              <ul>
-                <li>
-                  <img src="./img/game_bomb.png" alt="爆弾">
-                  <div class="flexBox item-text">
-                    <span class="item-name">爆弾：-15点、ライフ-1</span>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <li><strong>回復・補助アイテム：</strong>
-              <ul>
-                <li>
-                  <img src="./img/game_medkit.png" alt="救急箱">
-                  <div class="flexBox item-text">
-                    <span class="item-name">救急箱：ライフ+1</span>
-                  </div>
-                </li>
-                <li>
-                  <img src="./img/game_hourglass.png" alt="砂時計">
-                  <div class="flexBox item-text">
-                    <span class="item-name">砂時計：時間+10秒</span>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <!-- <li>スコアが一定以上でゲームクリア</li> -->
-          </ul>
-        </div>
-
-        <div id="Game" class="content-block inview fadeIn_up">
-          <!-- ゲーム本体 -->
-          <div style="position: relative; width: 100%; max-width: 400px; margin: auto;">
-            <div class="playerName">
-              <label for="playerName">名前（ランキングに表示されます）:</label>
-              <input type="text" id="playerName" placeholder="未入力なら「名無し」になります">
-            </div>
-            <canvas id="gameCanvas"></canvas>
-            <button id="startButton" aria-hidden="true" translate="no">Game Start</button>
-            <button id="restartButton" aria-hidden="true" translate="no" style="display:none;">Play Again</button>
-          </div>
-        </div>
-
-        <div id="Score" class="content-block game-note inview fadeIn_up">
-          <div id="topScoresDisplay">
-            <h4><i class="fas fa-trophy"></i> TOP 3 Scores</h4>
-            <ul id="topScoresList"></ul>
-          </div>
-        </div>
       </article>
+
+      <div id="controls" class="content-block game-note inview fadeIn_up">
+        <h4><i class="fas fa-gamepad"></i> ゲームの操作方法</h4>
+        <ul>
+          <li><strong>Game Start：</strong> ゲームを開始します。</li>
+          <li><strong>Play Again：</strong> 再挑戦できます。</li>
+          <li><strong>終了条件：</strong> 制限時間またはライフがゼロになると終了です。</li>
+          <li><strong>操作方法（PC）：</strong> 「←」「→」キーで左右に移動します。</li>
+          <li><strong>操作方法（スマホ）：</strong> タッチで移動します。</li>
+          <li><strong>名前入力：</strong> プレーヤー名を入力すると、スコアと一緒にランキングに表示されます。</li>
+          <li><strong>アイテムをキャッチしてスコアアップ：</strong>
+            <ul>
+              <li>
+                <img src="./img/game_negi.png" alt="深谷ネギ">
+                <div class="flexBox item-text">
+                  <span class="item-name">深谷ネギ：+10点</span>
+                  <small class="item-desc">埼玉県深谷市の特産・深谷ネギは、寒さが増す冬に甘みが際立つブランド野菜。白く太い根の部分は繊維が細かく、加熱するととろけるような柔らかさと濃厚な旨みが広がります。糖度は果物並みに高く、すき焼きや鍋料理に欠かせない存在として、地元はもちろん全国でも高い評価を受けています。</small>
+                </div>
+              </li>
+              <li>
+                <img src="./img/game_senbei.png" alt="草加せんべい">
+                <div class="flexBox item-text">
+                  <span class="item-name">草加せんべい：+20点</span>
+                  <small class="item-desc">埼玉県草加市の名物・草加せんべいは、うるち米を使った堅焼きの煎餅で、パリッとした食感と香ばしい醤油の風味が特徴。江戸時代、日光街道の宿場町として栄えた草加で誕生し、保存食としての団子を乾かして焼いたのが始まりとされています。</small>
+                </div>
+              </li>
+              <li>
+                <img src="./img/game_manju.png" alt="十万石饅頭">
+                <div class="flexBox item-text">
+                  <span class="item-name">十万石饅頭：+30点</span>
+                  <small class="item-desc">埼玉県行田市の名物・十万石饅頭は、しっとりとした薯蕷（じょうよ）生地に、北海道産のこしあんを包んだ上品な和菓子。もちもちとした食感と、なめらかな甘さが特徴です。地元では「うまい、うますぎる！」のCMで知られ、埼玉県民に親しまれています。</small>
+                </div>
+              </li>
+              <li>
+                <img src="./img/game_bonsai.png" alt="大宮盆栽">
+                <div class="flexBox item-text">
+                  <span class="item-name">大宮盆栽：+50点</span>
+                  <small class="item-desc">埼玉県さいたま市で育まれる大宮盆栽は、小さな鉢に自然の美を宿す、大宮盆栽村で受け継がれてきた伝統芸術。樹木の生命力と四季の移ろいを表現する繊細な技術が特徴で、国内外の愛好家から高い評価を受けています。「BONSAI」として世界中の盆栽ファンを魅了する、日本文化の象徴として、世界に誇れる芸術です。</small>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li><strong>ダメージアイテム：</strong>
+            <ul>
+              <li>
+                <img src="./img/game_bomb.png" alt="爆弾">
+                <div class="flexBox item-text">
+                  <span class="item-name">爆弾：-15点、ライフ-1</span>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li><strong>回復・補助アイテム：</strong>
+            <ul>
+              <li>
+                <img src="./img/game_medkit.png" alt="救急箱">
+                <div class="flexBox item-text">
+                  <span class="item-name">救急箱：ライフ+1</span>
+                </div>
+              </li>
+              <li>
+                <img src="./img/game_hourglass.png" alt="砂時計">
+                <div class="flexBox item-text">
+                  <span class="item-name">砂時計：時間+10秒</span>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- <li>スコアが一定以上でゲームクリア</li> -->
+        </ul>
+      </div>
+
+      <div id="Game" class="content-block inview fadeIn_up">
+        <!-- ゲーム本体 -->
+        <div style="position: relative; width: 100%; max-width: 400px; margin: auto;">
+          <div class="playerName">
+            <label for="playerName">名前（ランキングに表示されます）:</label>
+            <input type="text" id="playerName" placeholder="未入力なら「名無し」になります">
+          </div>
+          <canvas id="gameCanvas"></canvas>
+          <button id="startButton" aria-hidden="true" translate="no">Game Start</button>
+          <button id="restartButton" aria-hidden="true" translate="no" style="display:none;">Play Again</button>
+        </div>
+      </div>
+
+      <div id="Score" class="content-block game-note inview fadeIn_up">
+        <div id="topScoresDisplay">
+          <h4><i class="fas fa-trophy"></i> TOP 3 Scores</h4>
+          <ul id="topScoresList"></ul>
+        </div>
+      </div>
     </section>
 
 
