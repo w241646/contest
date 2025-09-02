@@ -24,7 +24,7 @@ $(function () {
     $row.off("inview").on("inview", function (event, isInView) {
       if (isInView) {
         $items.each(function (index) {
-          const delay = index * 300;
+          const delay = index * 100;
           const $this = $(this);
           setTimeout(function () {
             $this.addClass("inview");
@@ -51,6 +51,12 @@ $(function () {
       }
     });
   });
+});
+
+// 初期読み込み時
+$(function () {
+  bindInviewAnimationRowList();
+  bindInviewAnimationCardList();
 });
 /* -- /inview -- */
 
