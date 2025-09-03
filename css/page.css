@@ -343,6 +343,7 @@ ul#topScoresList li {
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
+  padding: 1em .3em;
   text-align: center;
   text-overflow: ellipsis;
   /* border: 2px solid; */
@@ -350,6 +351,7 @@ ul#topScoresList li {
 .ranking-item .score {
   flex: .2;
   /* color: blue; */
+  padding: 1em .3em;
   text-align: center;
   /* border: 2px solid; */
   font-weight: 600;
@@ -358,6 +360,7 @@ ul#topScoresList li {
 @media (max-width: 480px) {
 .ranking-item {
   padding: 0 1em 1em !important;
+  gap: .5em;
 }
 }
 
