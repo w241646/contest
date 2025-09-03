@@ -4,8 +4,15 @@
 
 /* FONT */
 /* ============================================ */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+/* Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+/* Noto Sans JP */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+/* Pacifico */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* DotGothic16 */
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 @font-face {
   font-family: 'HonokaMincho';
@@ -17,6 +24,7 @@
   --ttl-sub-font: "Pacifico", cursive;
   --font-en-gothic: "Inter", sans-serif;
   --ttl-font: 'HonokaMincho', serif;
+  --game-font: 'DotGothic16', sans-serif;;
 }
 
 
