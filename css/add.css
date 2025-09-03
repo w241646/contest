@@ -181,9 +181,9 @@ main .intro figure img {
   height: 300px;
   object-position: 80.5% 42%;
 }
-.mainCnt section img {
+/* .mainCnt section img {
   height: 200px;
-}
+} */
 }
 
 main .intro {
