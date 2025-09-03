@@ -237,9 +237,16 @@ main .mainCnt section#Sec03 h4:before {
   text-align: center;
 }
 .playerName label {
-  display: block;
-  margin-bottom: .5em;
-  font-weight: 600;
+    display: inline-block;
+    margin-bottom: .8em;
+    padding: 5px 0;
+    font-weight: 600;
+    border-bottom: 1px solid #666;
+}
+.playerName label i {
+  margin-right: .6em;
+  color: #666;
+  font-size: 1.2em;
 }
 .playerName input {
   width: 100%;
