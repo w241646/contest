@@ -369,6 +369,10 @@ ul#topScoresList li {
   margin-right: .6em;
 }
 
+
+canvas#gameCanvas {
+  font-family: var(--game-font);
+}
 canvas {
   background: #eef;
   display: block;
