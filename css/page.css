@@ -7,7 +7,7 @@
 
 main .intro figure img {
   max-width: 800px;
-  height: 550px;
+  height: auto;
   border-radius: 57% 50% 74% 82% / 90% 67% 100% 78%;
   object-fit: cover;
 }
@@ -16,7 +16,7 @@ main .intro figure img {
   margin-top: 100px;
 }
 main .intro figure img {
-  height: 300px;
+  height: auto;
 }
 }
 
@@ -217,7 +217,7 @@ main .mainCnt section#Sec03 h4:before {
   margin-top: 0.2em;
   color: #555;
   font-size: 0.85em;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 /* #controls li:hover {
