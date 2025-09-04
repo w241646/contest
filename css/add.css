@@ -1048,8 +1048,11 @@ p.read_txt {
     padding: 4% 2%;
     border-bottom: 4px solid #fff;
 }
-.ac-parent p, .ac-child p {
-    padding: 0 10% 0 15%;
+.ac-parent p {
+    padding: 0 10% 0 10%;
+}
+.ac-child p {
+    padding: 0 5% 0 10%;
 }
 /* .ac-parent:before {
     top: 10px;
