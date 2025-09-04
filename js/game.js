@@ -5,8 +5,11 @@ const ctx = canvas.getContext("2d");
 
 // 🖼️ 画像読み込み
 const useImages = true; // ← true にすると画像表示に切り替わる
+
 const bicycleImg = new Image();
 bicycleImg.src = "./img/game_bicycle.png"; // 自機画像
+const bgImg = new Image();
+bgImg.src = "./img/game_background.png";
 
 const itemImages = {
   negi: new Image(),
@@ -39,6 +42,8 @@ let life = 5;
 let damageFlash = false;
 let flashTimer = 0;
 let lastTime = performance.now();
+let bgY = 0;
+let bgSpeed = 350; // 背景・アイテムスピード
 
 // スコアの設定
 let useClearScore = false; 
@@ -148,14 +153,24 @@ function drawHUD() {
   }
 
   // 🏆 TOP3のスコア表示
-  ctx.font = "14px sans-serif";
-  ctx.fillStyle = "black";
-  ctx.fillText("Top Scores:", 10, 90);
-  topScores.slice(0, 3).forEach((entry, i) => {
-    const name = entry.name || "名無し";
-    const score = entry.score ?? 0;
-    ctx.fillText(`${i + 1}. 🧑 ${name} - ⭐ ${score}`, 10, 110 + i * 20);
-  });
+  // ctx.font = "14px sans-serif";
+  // ctx.fillStyle = "black";
+  // ctx.fillText("Top Scores:", 10, 90);
+  // topScores.slice(0, 3).forEach((entry, i) => {
+  //   const name = entry.name || "名無し";
+  //   const score = entry.score ?? 0;
+  //   ctx.fillText(`${i + 1}. 🧑 ${name} - ⭐ ${score}`, 10, 110 + i * 20);
+  // });
+}
+
+function drawBackground(deltaTime) {
+  const scrollSpeed = bgSpeed;
+  bgY += scrollSpeed * deltaTime;
+  bgY %= canvas.height;
+
+  // 2枚分描画してループさせる
+  ctx.drawImage(bgImg, 0, bgY - canvas.height, canvas.width, canvas.height);
+  ctx.drawImage(bgImg, 0, bgY, canvas.width, canvas.height);
 }
 
 // 🕹️ ゲームループ
@@ -166,6 +181,9 @@ function gameLoop(currentTime) {
   lastTime = currentTime;
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+   // 🎨 背景描画をここに追加
+  drawBackground(deltaTime);
 
   // 自機描画（ダメージ時は赤く点滅）
   if (useImages) {
@@ -187,7 +205,7 @@ function gameLoop(currentTime) {
   if (keys["ArrowRight"]) bicycle.x = Math.min(canvas.width - bicycle.width, bicycle.x + moveSpeed * deltaTime);
 
   // 🍎 アイテム処理
-  const itemSpeed = 550; // ピクセル/秒（調整可能）
+  const itemSpeed = bgSpeed;
   items.forEach(item => {
     item.y += itemSpeed * deltaTime;
 
