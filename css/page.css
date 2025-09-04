@@ -24,7 +24,11 @@ main .intro figure img {
 .page-eyecatch {
   border: 8px solid;
 }
-.page-01 .page-eyecatch {
+.media-cover {
+  border: 6px solid;
+}
+.page-01 .page-eyecatch,
+.page-01 .media-cover {
   border-color: var(--p1-clr);
 }
 .page-02 .page-eyecatch {
@@ -39,7 +43,6 @@ main .intro figure img {
 .page-05 .page-eyecatch {
   border-color: var(--p5-clr);
 }
-
 
 /* .review */
 /* #Review {
