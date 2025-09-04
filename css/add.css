@@ -82,6 +82,17 @@ header h1.logo .sIcon {
 }
 }
 
+
+/* .page-(n) */
+:root {
+  --p1-clr: #95897c;
+  --p2-clr: #92a79f;
+  --p3-clr: #dd9393;
+  --p4-clr: #5d7e9f;
+  --p5-clr: #a38cad;
+}
+
+
 /* (仮) */
 .mainCnt section img {
     max-width: 800px;

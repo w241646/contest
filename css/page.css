@@ -20,6 +20,27 @@ main .intro figure img {
 }
 }
 
+/* .page-(n) */
+.page-eyecatch {
+  border: 8px solid;
+}
+.page-01 .page-eyecatch {
+  border-color: var(--p1-clr);
+}
+.page-02 .page-eyecatch {
+  border-color: var(--p2-clr);
+}
+.page-03 .page-eyecatch {
+  border-color: var(--p3-clr);
+}
+.page-04 .page-eyecatch {
+  border-color: var(--p4-clr);
+}
+.page-05 .page-eyecatch {
+  border-color: var(--p5-clr);
+}
+
+
 /* .review */
 /* #Review {
   gap: 3%;
