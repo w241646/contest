@@ -31,16 +31,20 @@ main .intro figure img {
 .page-01 .media-cover {
   border-color: var(--p1-clr);
 }
-.page-02 .page-eyecatch {
+.page-02 .page-eyecatch,
+.page-02 .media-cover {
   border-color: var(--p2-clr);
 }
-.page-03 .page-eyecatch {
+.page-03 .page-eyecatch,
+.page-03 .media-cover {
   border-color: var(--p3-clr);
 }
-.page-04 .page-eyecatch {
+.page-04 .page-eyecatch,
+.page-04 .media-cover {
   border-color: var(--p4-clr);
 }
-.page-05 .page-eyecatch {
+.page-05 .page-eyecatch,
+.page-05 .media-cover {
   border-color: var(--p5-clr);
 }
 
@@ -151,11 +155,12 @@ main .mainCnt section#Sec03 h4:before {
 
 /* タイトル */
 .game-note h4 {
-  font-size: 1.6em !important;
   margin-bottom: 1em !important;
   padding: unset !important;
-  text-align: center;
+  font-family: var(--game-font);
+  font-size: 1.6em !important;
   font-weight: 600;
+  text-align: center;
 }
 .game-note h4::before {
   display: none;
