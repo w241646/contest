@@ -482,6 +482,22 @@ p.leadTxt::first-letter {
   font-weight: bold;
   line-height: 1;
 }
+.page-01 p.leadTxt::first-letter {
+  color: var(--p1-clr);
+}
+.page-02 p.leadTxt::first-letter {
+  color: var(--p2-clr);
+}
+.page-03 p.leadTxt::first-letter {
+  color: var(--p3-clr);
+}
+.page-04 p.leadTxt::first-letter {
+  color: var(--p4-clr);
+}
+.page-05 p.leadTxt::first-letter {
+  color: var(--p5-clr);
+}
+
 @media screen and (max-width: 820px) {
 p.leadTxt {
   column-count: 1;
