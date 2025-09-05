@@ -939,16 +939,16 @@ header .navi ul li a:hover {
   padding: 0;
 }
 
-/***** .faqNavi *****/
-.faqNavi {
+/***** .TriviaNavi *****/
+.TriviaNavi {
     width: 100%;
     margin: 0 auto 40px;
 }
-.faqNavi li {
+.TriviaNavi li {
     width: calc(100% / 4 - 2%);
     margin: 0 1%;
 }
-.faqNavi li a {
+.TriviaNavi li a {
     display: block;
     padding: 5% 0;
     background: #fdfdfd;
@@ -1066,11 +1066,11 @@ p.read_txt {
     /* line-height: 1.8; */
 }
 
-/***** .faqNavi *****/
-.faqNavi {
+/***** .TriviaNavi *****/
+.TriviaNavi {
     width: 100%;
 }
-.faqNavi li {
+.TriviaNavi li {
     width: calc(100% / 2 - 2%);
     margin: 0 1% 4%;
 }
