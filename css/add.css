@@ -644,7 +644,7 @@ p.leadTxt::first-letter {
 }
 .card-list.grid > div img {
   width: 100%;
-  height: 150px;
+  height: auto;
   object-fit: cover;
 }
 .card-list > div {
