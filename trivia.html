@@ -236,7 +236,7 @@
 
     <section id="Sec03" class="sec-scroll-point">
       <article class="inview fadeIn_up">
-        <h3><span>Bicycle Trivia</span><b>自転車の豆知識集</b></h3>
+        <h3><span>Fun Bike Trivia</span><b>自転車の豆知識集</b></h3>
         <figure><img src="./img/trivia_03.jpg" alt="自転車の豆知識集" class="media-cover #ph"></figure>
         <div class="content-block">
           <p class="leadTxt clearfix">
@@ -307,39 +307,39 @@
 
       <div class="content-block">
         <ul class="faqNavi flexBox">
-          <li><a href="#Faq01">歴史・文化</a></li>
-          <li><a href="#Faq02">メンテナンス</a></li>
-          <li><a href="#Faq03">安全・マナー・法律</a></li>
-          <li><a href="#Faq04">エンタメ</a></li>
+          <li><a href="#Trivia01">歴史・文化</a></li>
+          <li><a href="#Trivia02">メンテナンス</a></li>
+          <li><a href="#Trivia03">安全・マナー・法律</a></li>
+          <li><a href="#Trivia04">エンタメ</a></li>
         </ul>
       </div>
 
       <div class="content-block" id="Trivia">
-        <div id="Faq01" class="row_list">
+        <div id="Trivia01" class="row_list">
           <dl>
             <dt><b>歴史・文化</b></dt>
-            <dd><dl id="Faq01_list" class="ac"></dl></dd>
+            <dd><dl id="Trivia01_list" class="ac"></dl></dd>
           </dl>
         </div>
 
-        <div id="Faq02" class="row_list">
+        <div id="Trivia02" class="row_list">
           <dl>
             <dt><b>メンテナンス</b></dt>
-            <dd><dl id="Faq02_list" class="ac"></dl></dd>
+            <dd><dl id="Trivia02_list" class="ac"></dl></dd>
           </dl>
         </div>
 
-        <div id="Faq03" class="row_list">
+        <div id="Trivia03" class="row_list">
           <dl>
             <dt><b>安全・マナー・法律</b></dt>
-            <dd><dl id="Faq03_list" class="ac"></dl></dd>
+            <dd><dl id="Trivia03_list" class="ac"></dl></dd>
           </dl>
         </div>
 
-        <div id="Faq04" class="row_list">
+        <div id="Trivia04" class="row_list">
           <dl>
             <dt><b>エンタメ</b></dt>
-            <dd><dl id="Faq04_list" class="ac"></dl></dd>
+            <dd><dl id="Trivia04_list" class="ac"></dl></dd>
           </dl>
         </div>
       </div>
@@ -369,15 +369,15 @@
 
 <!-- JS Area -->
 <script src="./js/json_list.js"></script>
-<script src="./js/json_faq.js"></script>
+<script src="./js/json_accordion_list.js"></script>
 <script>
 /* 記入例：実行関数('jsonpのファイル名','掃き出し先id') */
 $(function(){
     list('trivia','#Trivia');
-    faqli('faq01','#Faq01_list');
-    faqli('faq02','#Faq02_list');
-    faqli('faq03','#Faq03_list');
-    faqli('faq04','#Faq04_list');
+    accordionli('bikeTrivia01','#Trivia01_list');
+    accordionli('bikeTrivia02','#Trivia02_list');
+    accordionli('bikeTrivia03','#Trivia03_list');
+    accordionli('bikeTrivia04','#Trivia04_list');
 });
 </script>
 <!-- /JS Area -->
