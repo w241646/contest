@@ -22,10 +22,10 @@ main .intro figure img {
 
 /* .page-(n) */
 .page-eyecatch {
-  border: 8px solid;
+  border: 6px solid;
 }
 .media-cover {
-  border: 6px solid;
+  border: 4px solid;
 }
 .page-01 .page-eyecatch,
 .page-01 .media-cover {
