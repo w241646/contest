@@ -932,9 +932,9 @@ header .navi ul li a:hover {
 #Trivia div + div {
   margin-top: 18px;
 }
-#Trivia.content-block dl dd {
+/* #Trivia.content-block dl dd {
   margin-top: 18px;
-}
+} */
 #Trivia.content-block dl dd dl {
   padding: 0;
 }
