@@ -141,6 +141,7 @@ z-index: -1;
   display: inline-block;
   width: 100%;
   /* border-top: 1px solid #fff; */
+  font-family: var(--ttl-sub-font);
   font-size: .4em;
 }
 .mainVI .mVI_txt span::before {
