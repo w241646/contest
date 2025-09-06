@@ -44,6 +44,7 @@ let flashTimer = 0;
 let lastTime = performance.now();
 let bgY = 0;
 let bgSpeed = 350; // 背景・アイテムスピード
+const itemMarginWidth = 15;
 
 // スコアの設定
 let useClearScore = false; 
@@ -92,7 +93,7 @@ function getRandomItemType() {
 }
 
 let items = Array.from({ length: 5 }, () => ({
-  x: Math.random() * 360,
+  x: itemMarginWidth + Math.random() * (canvas.width - 30 - itemMarginWidth * 2),
   y: Math.random() * -600,
   type: getRandomItemType()
 }));
@@ -201,8 +202,9 @@ function gameLoop(currentTime) {
 
   // 🚲 自転車移動
   const moveSpeed = bicycle.speed * 60; // bicycle.speed は「フレームベース」なので60FPS換算
-  if (keys["ArrowLeft"]) bicycle.x = Math.max(0, bicycle.x - moveSpeed * deltaTime);
-  if (keys["ArrowRight"]) bicycle.x = Math.min(canvas.width - bicycle.width, bicycle.x + moveSpeed * deltaTime);
+  const moveMargin = 15;
+  if (keys["ArrowLeft"]) bicycle.x = Math.max(moveMargin, bicycle.x - moveSpeed * deltaTime);
+  if (keys["ArrowRight"]) bicycle.x = Math.min(canvas.width - bicycle.width - moveMargin, bicycle.x + moveSpeed * deltaTime);
 
   // 🍎 アイテム処理
   const itemSpeed = bgSpeed;
@@ -315,7 +317,7 @@ function gameLoop(currentTime) {
       // アイテム再生成
       const newType = getRandomItemType();
       item.y = -40;
-      item.x = Math.random() * (canvas.width - 30);
+      item.x = Math.random() * (canvas.width - 30 - itemMarginWidth * 2);
       item.type = newType;
     }
 
@@ -364,7 +366,7 @@ function getRGB(colorName) {
 // 🔄 アイテム再生成
 function resetItem(item) {
   item.y = -40;
-  item.x = Math.random() * (canvas.width - 30);
+  item.x = itemMarginWidth + Math.random() * (canvas.width - 30 - itemMarginWidth * 2);
   item.type = getRandomItemType();
 }
 
