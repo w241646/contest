@@ -49,6 +49,7 @@ jQuery(function($) {
         $('.bg').fadeToggle();
         $('#hamMenu nav').toggleClass('open');
         // $('body').css('position', 'fixed');
+        $('nav.anchors').fadeToggle();
     })
     $('.ham_list a').click(function() {
         $('.bg').fadeToggle();
