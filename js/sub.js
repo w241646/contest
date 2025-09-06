@@ -82,6 +82,8 @@ $(function () {
   const navItems = document.querySelectorAll('.anchors li');
   const mainArea = document.querySelector('main');
   const mainTop = mainArea.getBoundingClientRect().top + window.scrollY;
+  const prevBtn = document.querySelector('.anchors .prev');
+  const nextBtn = document.querySelector('.anchors .next');
 
   // 選択状態を更新する関数（余裕を持たせた判定）
   function updateSelectedNav() {
@@ -105,6 +107,27 @@ $(function () {
             li.classList.add('selected');
           }
         });
+
+        // 前後ボタンの表示制御（visibility + pointer-events）
+        const current = document.querySelector('.anchors li.selected');
+        const prev = current?.previousElementSibling;
+        const next = current?.nextElementSibling;
+
+        if (prev && prev.tagName === 'LI') {
+          prevBtn.style.visibility = 'visible';
+          prevBtn.style.pointerEvents = 'auto';
+        } else {
+          prevBtn.style.visibility = 'hidden';
+          prevBtn.style.pointerEvents = 'none';
+        }
+
+        if (next && next.tagName === 'LI') {
+          nextBtn.style.visibility = 'visible';
+          nextBtn.style.pointerEvents = 'auto';
+        } else {
+          nextBtn.style.visibility = 'hidden';
+          nextBtn.style.pointerEvents = 'none';
+        }
       }
     }
   }
