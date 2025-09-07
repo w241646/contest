@@ -598,4 +598,7 @@ canvas {
   .anchors li.hov:hover {
     color: unset;
   }
+  .anchors ul li + li {
+      margin-top: 20px;
+  }
 }
