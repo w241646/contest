@@ -493,14 +493,14 @@ nav.page__nav {
 }
 
 .mainVI .mVI_txt {
-  top: 55%;
+  top: 60%;
   width: 95%;
   padding: 10% 2% 5%;
   background-color: rgba(255 255 255 / 85%);
 }
   
 .mVI_icon {
-  top: 33%;
+  top: 30%;
   left: 50%;
   right: unset;
   bottom: unset;
