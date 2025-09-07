@@ -200,3 +200,37 @@ $(function () {
   });
 });
 /* -- /PageScroll -- */
+
+
+/* -- LanguageBarArea -- */
+$(function () {
+  let headerTag = null;
+  let buttonMenu = null;
+
+  function checkHeaderAndTranslateBar() {
+    // インクルードされた要素がまだ読み込まれていない場合は再取得
+    if (!headerTag) headerTag = document.querySelector('#header header');
+    if (!buttonMenu) buttonMenu = document.querySelector('#header .btn_menu');
+    if (!headerTag || !buttonMenu) return;
+
+    // 翻訳バーの検出
+    const bars = document.querySelectorAll('div.skiptranslate');
+    for (const bar of bars) {
+      const iframe = bar.querySelector('iframe.skiptranslate');
+      if (iframe && bar.getAttribute('style') === '') {
+        // 翻訳バーが表示されたとき
+        headerTag.style.top = '40px';
+        buttonMenu.style.top = '40px';
+        return;
+      }
+    }
+
+    // 翻訳バーが消えたとき
+    headerTag.style.top = '';
+    buttonMenu.style.top = '';
+  }
+
+  // 1秒ごとにチェック
+  setInterval(checkHeaderAndTranslateBar, 1000);
+});
+/* -- /LanguageBarArea -- */
