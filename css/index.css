@@ -260,3 +260,18 @@ nav.page__nav {
   margin: 0 auto;
 }
 }
+
+
+@keyframes slideUpFadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+.loading-animation.slide-up {
+  animation: slideUpFadeOut 1s ease forwards;
+}
