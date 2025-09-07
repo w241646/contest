@@ -74,6 +74,89 @@
   </p>
 </div>
 
+<div class="mVI_icon">
+  <ul class="flexBox">
+    <li><a href="./origin.html"><i class="fas fa-bicycle"></i><p>Bicycle Culture<span>自転車文化</span></p></a></li>
+    <li><a href="./cycling-road.html"><i class="fas fa-road"></i><p>Cycling Road<span>サイクリングロード</span></p></a></li>
+    <li><a href="./saitama-criterium.html"><i class="fas fa-trophy"></i><p>Cycle Event<span>サイクルイベント</span></p></a></li>
+  </ul>
+</div>
+<style>
+.mVI_icon {
+  position: absolute;
+  top: 9%;
+  left: 7%;
+  z-index: 2;
+}
+.mVI_icon ul {
+  gap: 1.4em;
+}
+.mVI_icon li a {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fdfdfd;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #3f3f3f;
+}
+.mVI_icon li i {
+  margin-bottom: 5px;
+  font-size: 3em;
+  text-align: center;
+}
+.mVI_icon li p {
+  font-family: var(--ttl-sub-font);
+  /* font-size: .4em; */
+  line-height: normal;
+  text-align: center;
+}
+.mVI_icon li p span {
+  display: block;
+  font-family: var(--ttl-font);
+  font-size: .5em;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}
+/* .mVI_icon li:first-child a {
+  border: 4px solid #95897c;
+  color: #95897c;
+}
+.mVI_icon li:nth-child(2) a {
+  border: 4px solid #92a79f;
+  color: #92a79f;
+}
+.mVI_icon li:last-child a {
+  border: 4px solid #dd9393;
+  color: #dd9393;
+} */
+/* .mVI_icon li a {
+  border: 4px solid #81ccc4;
+  color: #81ccc4;
+} */
+ .mVI_icon li a::before {
+  content: "";
+  position: absolute;
+  width: 130px; /* 少し小さめにして内側に配置 */
+  height: 130px;
+  border-radius: 50%;
+  border: 2px solid rgba(63, 63, 63, 0.2); /* 半透明のライン */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* クリックを妨げないように */
+}
+</style>
+
   <!-- Swiper コンテナ -->
 <div class="swiper mySwiper masked-area">
   <div class="swiper-wrapper">
