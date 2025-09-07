@@ -364,11 +364,11 @@ nav.page__nav {
   align-items: center;
   color: #3f3f3f;
 }
-.mVI_icon li a:hover {
+/* .mVI_icon li a:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
   opacity: 1;
-}
+} */
 
 @keyframes pulseEffect {
   0%, 100% { transform: scale(.9); }
@@ -379,10 +379,26 @@ nav.page__nav {
   50%  { transform: translateY(-5px); }
   100% { transform: translateY(0); }
 }
-.mVI_icon li a {
+/* .mVI_icon li a { */
   /* animation: pulseEffect 5s ease-in-out infinite; */
+  /* animation: floatEffect 2.5s ease-in-out infinite;
+} */
+/* 通常状態のスタイル */
+.mVI_icon li a {
   animation: floatEffect 2.5s ease-in-out infinite;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(0); /* 初期位置 */
+  opacity: 0.8;
+  position: relative; /* top調整用 */
 }
+
+/* ホバー時のスタイル */
+.mVI_icon li a:hover {
+  animation: none; /* アニメーションを止める */
+  transform: scale(1.05); /* 拡大 */
+  opacity: 1;
+}
+
 .mVI_icon li:nth-child(1) a {
   animation-delay: 1s;
   top: -10%;
