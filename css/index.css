@@ -46,6 +46,9 @@
 }
 
 /* .mainVI */
+.mainVI {
+  transform: translateY(0);
+}
 .mainVI::before {
   content: "";
   height: 700px;
@@ -208,12 +211,26 @@ z-index: -1;
   left: 0;
 }
 .mainVI .mVI_txt {
+    top: 50%;
+    left: 50%;
+    right: unset;
+    bottom: unset;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    padding: 5% 2%;
+    font-size: 2em;
+    text-align: center;
+}
+.mainVI .mVI_txt b {
+  margin-bottom: 10px;
+}
+/* .mainVI .mVI_txt { */
     /* left: 50%;
     right: 50%; */
-    bottom: 7%;
-    font-size: 2em;
+    /* bottom: 7%;
+    font-size: 2em; */
     /* width: 60%; */
-}
+/* } */
 }
 
 main .intro figure img {
