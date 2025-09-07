@@ -127,6 +127,7 @@ z-index: -1;
     1px -1px 0 #505050,
     -1px 1px 0 #505050,
     1px 1px 0 #505050; */
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
 }
 .mainVI .mVI_txt p {
   line-height: normal;
