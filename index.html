@@ -103,7 +103,7 @@
   z-index: 2;
 }
 .mVI_icon ul {
-  gap: 1.4em;
+  gap: 1.8em;
 }
 .mVI_icon li a {
   position: relative;
@@ -122,6 +122,38 @@
   align-items: center;
   color: #3f3f3f;
 }
+.mVI_icon li a:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  opacity: 1;
+}
+
+@keyframes pulseEffect {
+  0%, 100% { transform: scale(.9); }
+  50%      { transform: scale(1.05); }
+}
+@keyframes floatEffect {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+.mVI_icon li a {
+  /* animation: pulseEffect 5s ease-in-out infinite; */
+  animation: floatEffect 2.5s ease-in-out infinite;
+}
+.mVI_icon li:nth-child(1) a {
+  animation-delay: 1s;
+  top: -10%;
+}
+.mVI_icon li:nth-child(2) a {
+  animation-delay: 0.6s;
+}
+.mVI_icon li:nth-child(3) a {
+  animation-delay: 1.5s;
+  top: 10%;
+}
+
+
 .mVI_icon li i {
   margin-bottom: 5px;
   font-size: 3em;
@@ -231,6 +263,13 @@
 }
 .mVI_icon li p {
   font-size: .7em;
+}
+.mVI_icon li a {
+  animation: unset;
+}
+.mVI_icon li:nth-child(1) a,
+.mVI_icon li:nth-child(3) a {
+  top: unset;
 }
 }
 </style>
