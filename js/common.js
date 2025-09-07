@@ -50,6 +50,7 @@ jQuery(function($) {
         $('#hamMenu nav').toggleClass('open');
         // $('body').css('position', 'fixed');
         $('nav.anchors').fadeToggle();
+        $('.mainVI .mVI_txt').toggle();
     })
     $('.ham_list a').click(function() {
         $('.bg').fadeToggle();
