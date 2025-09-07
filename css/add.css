@@ -40,7 +40,7 @@ header h1.logo .sIcon {
   order: 2;
 }
 header h1.logo a {
-  padding: .2em .4em .2em 3em;
+  padding: .2em .4em .2em 3.2em;
   color: #3f3f3f;
   font-size: .8em;
   border: 5px solid rgba(0,0,0,.1);
@@ -49,24 +49,30 @@ header h1.logo a::before {
   content: "";
   display: block;
   position: absolute;
-  left: 13.5%;
+  left: 30px;
   top: 50%;
-  bottom: 50%;
+  /* bottom: 50%; */
   transform: translate(-50%, -50%);
-  width: 1.8em;
-  height: 1.8em;
-  background: #c8e6c9;
-  border-radius: 50%;
+  width: 2.2em;
+  height: 2.2em;
+  /* background: #c8e6c9; */
+  /* border-radius: 50%; */
+  background-image: url("../img/wheel_icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 header h1.logo a::after {
-  content: "";
+  content: "\f521";
   display: block;
-  background: #e0ceff;
+  /* background: #e0ceff; */
   position: absolute;
-  left: 20.5%;
-  bottom: 10%;
-  width: .7em;
-  height: .7em;
+  left: 20%;
+  bottom: 3px;
+  /* width: .7em;
+  height: .7em; */
+  color: #d4d59d;
+  font-family: "Font Awesome 5 Free";
+  font-size: 22px;
 }
 header h1.logo a span {
   position: unset;
@@ -82,8 +88,14 @@ header h1.logo {
   padding-top: 1.2%;
   font-size: 1.7em;
 }
+header h1.logo a {
+  padding: .2em .4em .2em 3.5em;
+}
 header h1.logo .sIcon {
   width: 60px;
+}
+header h1.logo a span {
+  letter-spacing: .01em;
 }
 }
 
