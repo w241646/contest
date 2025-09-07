@@ -118,7 +118,7 @@ z-index: -1;
   -ms-transform: translate(-50%, -50%); */
   /* color: #fff; */
   /* text-align: center; */
-  /* z-index: 2; */
+  z-index: 2;
   font-size: 2.7em;
 
   background: rgba(255 255 255 / 70%);
