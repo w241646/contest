@@ -1,5 +1,39 @@
 // JavaScript Document
 
+/* -- loading -- */
+$(function () {
+  var webStorage = function () {
+    if (sessionStorage.getItem('access')) {
+      /* 2回目以降アクセス時の処理 */
+      $(".loading").addClass('is-active');
+
+      // 少し待ってからフェードアウトアニメーションを開始
+      setTimeout(function () {
+        $(".loading").addClass('slide-up');
+      }, 1000); // 表示後1秒でアニメーション開始
+      
+    } else {
+      /* 初回アクセス時の処理 */
+      sessionStorage.setItem('access', 'true'); // sessionStorageにデータを保存
+      $(".loading-animation").addClass('is-active'); // loadingアニメーションを表示
+
+      setTimeout(function () {
+        $(".loading").addClass('is-active');
+        $(".loading-animation").removeClass('is-active');
+
+        // ローディング表示後にフェードアウトアニメーションを開始
+        setTimeout(function () {
+          $(".loading-animation").addClass('slide-up');
+        }, 0);
+
+      }, 2000); // ローディングを表示する時間
+    }
+  }
+  webStorage();
+});
+/* -- /loading -- */
+
+
 /* -- applyResponsiveStyles -- */
 function applyResponsiveStyles() {
   const width = window.innerWidth;
@@ -35,3 +69,4 @@ applyResponsiveStyles();
 
 // リサイズ時にも更新
 window.addEventListener('resize', applyResponsiveStyles);
+/* -- /applyResponsiveStyles -- */
