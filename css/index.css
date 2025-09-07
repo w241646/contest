@@ -300,3 +300,27 @@ nav.page__nav {
 .loading-animation.slide-up {
   animation: slideUpFadeOut 1s ease forwards;
 }
+
+
+#Sec01 img,
+#Sec02 img,
+#Sec03 img,
+#Sec04 img,
+#Sec05 img {
+    border: 6px solid;
+}
+#Sec01 img {
+    border-color: var(--p1-clr);
+}
+#Sec02 img {
+    border-color: var(--p2-clr);
+}
+#Sec03 img {
+    border-color: var(--p3-clr);
+}
+#Sec04 img {
+    border-color: var(--p4-clr);
+}
+#Sec05 img {
+    border-color: var(--p5-clr);
+}
