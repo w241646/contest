@@ -461,7 +461,7 @@ function resizeCanvas() {
   canvas.width = rect.width;
   canvas.height = rect.height;
   bicycle.x = (canvas.width - bicycle.width) / 2;
-  bicycle.y = canvas.height - bicycle.height - 20;
+  bicycle.y = canvas.height - bicycle.height - 40;
 }
 
 window.addEventListener("resize", resizeCanvas);
