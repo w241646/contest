@@ -112,7 +112,7 @@ z-index: -1;
   position: absolute;
   /* top: 50%; */
   bottom: 7%;
-  right: 10%;
+  right: 0;
   /* width: 45%; */
   /* transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -323,6 +323,17 @@ nav.page__nav {
     border-color: var(--p5-clr);
 }
 
+/* .mVoverlay */
+.mVoverlay {
+  position: absolute;
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
 
 .mainVI .mVI_txt {
   padding: 2%;
@@ -341,7 +352,7 @@ nav.page__nav {
 .mVI_icon {
   position: absolute;
   top: 9%;
-  left: 8.5%;
+  left: 0;
   z-index: 2;
 }
 .mVI_icon ul {
