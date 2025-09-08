@@ -96,7 +96,7 @@ div.circle {
   width: 100%;
   text-align: center;
   bottom: -70px;
-　line-height: 1.3em;
+  line-height: 1.3em;
   left: 0;
   color: #756F61;
 }
@@ -782,7 +782,7 @@ footer p.copy {
 
 /* Header */
 /* ============================================ */
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1210px) {
 #hamMenu {
   display: block;
 }
