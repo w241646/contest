@@ -1149,7 +1149,7 @@ p.read_txt {
 }
 @media (max-width: 768px) {
   .carousel-wrapper .swiper-slide {
-    width: 240px;
+    width: 300px;
   }
 }
 
