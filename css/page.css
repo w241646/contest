@@ -634,7 +634,7 @@ canvas {
   justify-content: center;
   align-items: center;
   color: #3f3f3f;
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease, top 0.6s ease;
 }
 .floating_link a::before {
   content: "";
