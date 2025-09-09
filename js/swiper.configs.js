@@ -39,5 +39,15 @@ const swiper = new Swiper('.swiper-container', {
     el: '.swiper-pagination',
     clickable: true,
   },
+  breakpoints: {
+    // 画面幅が768px以下の場合
+    768: {
+      spaceBetween: 10,
+    },
+    // 画面幅が480px以下の場合
+    480: {
+      spaceBetween: 5,
+    },
+  },
 });
 /* -- /carousel -- */
