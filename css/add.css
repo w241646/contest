@@ -1148,6 +1148,8 @@ p.read_txt {
   display: block;
 }
 @media (max-width: 768px) {
+}
+@media (max-width: 480px) {
   .carousel-wrapper .swiper-slide {
     width: 300px;
   }
