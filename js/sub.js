@@ -234,3 +234,24 @@ $(function () {
   setInterval(checkHeaderAndTranslateBar, 1000);
 });
 /* -- /LanguageBarArea -- */
+
+
+/* -- Game Button -- */
+$(function () {
+  let timeout;
+  window.addEventListener('scroll', function () {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      const gameSection = document.querySelector('#Game');
+      const floatingButton = document.querySelector('.floating_link a');
+      if (!gameSection || !floatingButton) return;
+
+      const rect = gameSection.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+      floatingButton.classList.toggle('slide-out', isVisible);
+      floatingButton.classList.toggle('slide-in', !isVisible);
+    }, 100);
+  });
+});
+/* -- /Game Button -- */
