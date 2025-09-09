@@ -206,11 +206,13 @@ $(function () {
 $(function () {
   let headerTag = null;
   let buttonMenu = null;
+  let floatingLink = null;
 
   function checkHeaderAndTranslateBar() {
     // インクルードされた要素がまだ読み込まれていない場合は再取得
     if (!headerTag) headerTag = document.querySelector('#header header');
     if (!buttonMenu) buttonMenu = document.querySelector('#header .btn_menu');
+    if (!floatingLink) floatingLink = document.querySelector('.floating_link a');
     if (!headerTag || !buttonMenu) return;
 
     // 翻訳バーの検出
@@ -221,6 +223,7 @@ $(function () {
         // 翻訳バーが表示されたとき
         headerTag.style.top = '40px';
         buttonMenu.style.top = '40px';
+        floatingLink.style.top = '15%';
         return;
       }
     }
@@ -228,6 +231,7 @@ $(function () {
     // 翻訳バーが消えたとき
     headerTag.style.top = '';
     buttonMenu.style.top = '';
+    floatingLink.style.top = '';
   }
 
   // 1秒ごとにチェック
