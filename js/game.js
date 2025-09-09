@@ -119,8 +119,9 @@ canvas.addEventListener("touchmove", handleTouch);
 function handleTouch(e) {
   if (!gameStarted) return;
   const touchX = e.touches[0].clientX - canvas.getBoundingClientRect().left;
+  const moveMargin = 15;
   let newX = touchX - bicycle.width / 2;
-  bicycle.x = Math.max(0, Math.min(canvas.width - bicycle.width, newX));
+  bicycle.x = Math.max(moveMargin, Math.min(canvas.width - bicycle.width - moveMargin, newX));
   e.preventDefault();
 }
 
