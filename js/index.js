@@ -70,3 +70,24 @@ applyResponsiveStyles();
 // リサイズ時にも更新
 window.addEventListener('resize', applyResponsiveStyles);
 /* -- /applyResponsiveStyles -- */
+
+
+/* -- loop-slider -- */
+window.addEventListener('load', () => {
+  const track = document.getElementById('sliderTrack');
+  const images = Array.from(track.children);
+
+  // 複製して追加
+  images.forEach(img => {
+    const clone = img.cloneNode(true);
+    track.appendChild(clone);
+  });
+
+  // DOMが更新された後に幅を取得
+  requestAnimationFrame(() => {
+    const totalWidth = track.scrollWidth / 2;
+    track.style.animationDuration = `${totalWidth / 50}s`; // 速度調整
+    track.style.setProperty('--scroll-distance', `-${totalWidth}px`);
+  });
+});
+/* -- /loop-slider -- */
