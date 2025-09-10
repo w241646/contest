@@ -249,6 +249,9 @@ z-index: -1;
 /* } */
 }
 
+main .intro p.read_txt {
+  max-width: 900px;
+}
 main .intro figure img {
   max-width: 800px;
   height: 550px;
