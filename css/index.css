@@ -565,3 +565,31 @@ nav.page__nav {
   top: unset;
 }
 }
+
+
+/* .infinite-slider */
+main .intro {
+  max-width: 100%;
+}
+.infinite-slider {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 30px;
+}
+.slider-track {
+  display: flex;
+  --scroll-distance: -1000px;
+  animation: scroll linear infinite;
+}
+.slider-track img {
+  width: 380px;
+  height: 100%;
+  object-fit: cover;
+}
+.slider-track img + img {
+  margin-left: 10px;
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(var(--scroll-distance)); }
+}
