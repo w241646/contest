@@ -258,10 +258,13 @@ h2 b:before {
 }
 
 /* h2 */
+main .intro h2 {
+  font-size: 2.8em;
+}
 @media screen and (max-width: 820px) {
 main .intro h2 {
   font-size: 2.1em;
-  font-weight: 900;
+  font-weight: 700;
 }
 main .intro h2 b {
   margin-bottom: .7em;
@@ -784,13 +787,6 @@ p.leadTxt::first-letter {
 .faceicon img {
     height: 50px;
 }
-.content-block dl.talk {
-  overflow: hidden;
-}
-.content-block dl.talk dt b,
-.content-block dl.talk dd p {
-    width: 80%;
-}
 }
 
 /* .says p{
@@ -848,6 +844,17 @@ dl.talk dd.is-show {
 }
 .delay_b {
   transition-delay: 8.0s;
+}
+
+@media screen and (max-width: 820px) {
+.content-block dl.talk {
+  overflow: hidden;
+}
+.content-block dl.talk dt b,
+.content-block dl.talk dd p {
+    width: 80%;
+    font-size: .9em;
+}
 }
 
 
@@ -1257,9 +1264,4 @@ iframe[src*="youtube-nocookie.com"] {
     margin: 0 auto;
     border: unset;
   }
-}
-
-
-main .intro h2 {
-  font-size: 2.8em;
 }
