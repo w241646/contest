@@ -72,7 +72,7 @@ header h1.logo a::after {
   /* background: #e0ceff; */
   position: absolute;
   left: 19%;
-  bottom: 2px;
+  bottom: -2px;
   /* width: .7em;
   height: .7em; */
   color: #d4d59d;
