@@ -222,7 +222,7 @@ $(function () {
       if (iframe && bar.getAttribute('style') === '') {
         // 翻訳バーが表示されたとき
         headerTag.style.top = '40px';
-        buttonMenu.style.top = '40px';
+        buttonMenu.style.top = '50px';
         floatingLink.style.top = '15%';
         return;
       }
