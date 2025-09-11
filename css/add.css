@@ -1226,7 +1226,7 @@ p.read_txt {
 }
 .movie_wrap {
   margin: auto 60px auto 30px;
-  border: 2px solid #333;
+  /* border: 2px solid #333; */
   aspect-ratio: 2 / 3;
   padding-top: calc(56.25%);
 }
