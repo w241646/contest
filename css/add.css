@@ -84,6 +84,8 @@ header h1.logo a span {
   text-align: left;
   font-size: 10%;
   /* letter-spacing: .01em; */
+  font-family: var(--ttl-sub-font);
+  font-weight: 500;
 }
 header h1.logo a p::first-letter {
   all: unset;
@@ -988,6 +990,16 @@ header .navi ul li a:hover {
     text-align: center;
     /* font-size: 1.3rem; */
     font-weight: 600;
+}
+.TriviaNavi li a::after {
+  content: "\f077";
+  display: block;
+  margin-top: 5px;
+  font-family: "Font Awesome 5 Free";
+  transform: rotate(180deg);
+}
+.TriviaNavi li a:hover {
+  transform: scale(1.05);
 }
 
 /***** ＊＊＊＊＊ *****/
