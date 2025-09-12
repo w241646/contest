@@ -879,7 +879,7 @@ dl.talk dd.is-show {
 
 .row_list h4:before {
   content: "\f02d" !important;
-  color: #b59a78 !important;
+  color: var(--p4-clr) !important;
 }
 
 
