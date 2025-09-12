@@ -20,8 +20,10 @@
 }
 .loading p span {
   display: block;
+  font-family: var(--ttl-sub-font);
   font-size: .3em;
-  font-weight: 400;
+  font-weight: 600;
+  color: #6d6d6d;
 }
 .loading-animation {
   opacity: 0;

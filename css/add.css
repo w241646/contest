@@ -85,7 +85,8 @@ header h1.logo a span {
   font-size: 10%;
   /* letter-spacing: .01em; */
   font-family: var(--ttl-sub-font);
-  font-weight: 500;
+  font-weight: 600;
+  color: #6d6d6d;
 }
 header h1.logo a p::first-letter {
   all: unset;
