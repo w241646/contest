@@ -1270,9 +1270,9 @@ iframe[src*="youtube-nocookie.com"] {
 
 .showMoreBtn {
   display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 16px;
+  margin: 35px auto;
+  padding: 15px 30px;
+  font-size: 1em;
   background-color: #0078D7;
   color: #fff;
   border: none;
