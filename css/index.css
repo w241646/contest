@@ -32,6 +32,14 @@
   animation: softReveal .9s ease-out forwards;
   animation-delay: .9s;
 }
+.loading-animation {
+  background: url(../img/saitama.svg);
+  background-size: 30% 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, .3);
+  background-blend-mode: lighten;
+}
 @keyframes softReveal {
   to {
     opacity: 1;
