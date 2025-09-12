@@ -20,7 +20,8 @@
 }
 .loading p span {
   display: block;
-  font-size: .5em;
+  font-size: .3em;
+  font-weight: 400;
 }
 .loading-animation {
   opacity: 0;
@@ -624,12 +625,4 @@ nav.page__nav {
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(var(--scroll-distance)); }
-}
-
-
-header h1.logo a p {
-  background: linear-gradient(90deg, #ff26fb, #00beff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-
 }

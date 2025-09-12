@@ -1284,3 +1284,12 @@ iframe[src*="youtube-nocookie.com"] {
   background-color: #005bb5;
   transform: scale(1.05);
 }
+
+
+header h1.logo a p,
+.loading p i {
+  background: linear-gradient(90deg, #ff26fb, #00beff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: normal;
+}
