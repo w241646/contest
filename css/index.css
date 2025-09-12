@@ -626,3 +626,16 @@ nav.page__nav {
   0% { transform: translateX(0); }
   100% { transform: translateX(var(--scroll-distance)); }
 }
+
+
+main {
+  margin: 40px auto 0;
+}
+.snsArea {
+  margin: 0 auto;
+  padding: 60px 0 80px;
+  background: #eee;
+  background-image: linear-gradient(0deg, rgba(200, 200, 180, 0.3) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(200, 200, 180, 0.3) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
