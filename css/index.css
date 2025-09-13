@@ -134,6 +134,7 @@ z-index: -1;
   }
 }
 
+
 /* .mVI_txt */
 .mainVI .mVI_txt {
   position: absolute;
@@ -162,6 +163,19 @@ z-index: -1;
 }
 .mainVI .mVI_txt p {
   line-height: normal;
+}
+.mainVI .mVI_txt p::before {
+    content: url("../img/saitama.svg");
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    width: 300px;
+    height: auto;
+    z-index: -1;
+    /* color: #000; */
+    mix-blend-mode: exclusion;
+    opacity: 0.2;
 }
 .mainVI .mVI_txt b {
   display: block;
@@ -261,6 +275,9 @@ z-index: -1;
 }
 .mainVI .mVI_txt b {
   margin-bottom: 10px;
+}
+.mainVI .mVI_txt p::before {
+    width: 220px;
 }
 /* .mainVI .mVI_txt { */
     /* left: 50%;
