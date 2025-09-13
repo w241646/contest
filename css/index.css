@@ -342,7 +342,7 @@ nav.page__nav ul li a::after {
   margin-left: 8px;
   font-family: 'Font Awesome 5 Free';
   vertical-align: top;
-  background: #fff;
+  background: #eee;
   border-radius: 50%;
   transform: rotate(180deg);
 }
