@@ -630,6 +630,13 @@ canvas {
   }
 }
 
+@media screen and (max-width: 420px) {
+  .anchors.fixed {
+    display: none;
+  }
+}
+
+
 
 /* .floating_link */
 .page-05 main {
