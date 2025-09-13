@@ -367,6 +367,7 @@ main .mainCnt section h3 span {
 font-weight: 900;
 margin-top: 0;
 margin-bottom: 15px;
+opacity: .5;
 }
 .page-01 .mainCnt section h3 span {
   color: var(--p1-clr);

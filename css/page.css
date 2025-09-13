@@ -440,19 +440,30 @@ canvas {
   top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 12px 24px;
+  padding: 16px 32px;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
   font-size: 18px;
+  font-weight: 600;
+  letter-spacing: .03em;
   z-index: 10;
-  background-color: #fff;
-  border: 2px solid #333;
-  border-radius: 8px;
+  color: #fff;
+  background: linear-gradient(145deg, #2c2f36 0%, #3a3d45 40%, #2c2f36 100%);
+  border: none;
+  border-radius: 12px;
   cursor: pointer;
   white-space: nowrap;
   max-width: none;
   text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 #restartButton {
-  top: 62%;
+  top: 62.5%;
+}
+#startButton:hover,
+#restartButton:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 480px) {
   canvas {
