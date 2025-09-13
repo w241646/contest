@@ -4,10 +4,31 @@
 /* #Page h2 b {
   font-size: .6em;
 } */
+#Page main .intro h2 > span {
+  font-family: var(--ttl-sub-font);
+  margin-top: 32px;
+  letter-spacing: .05em;
+}
+#Page.page-01 main .intro h2 > span {
+  color: var(--p1-clr);
+}
+#Page.page-02 main .intro h2 > span {
+  color: var(--p2-clr);
+}
+#Page.page-03 main .intro h2 > span {
+  color: var(--p3-clr);
+}
+#Page.page-04 main .intro h2 > span {
+  color: var(--p4-clr);
+}
+#Page.page-05 main .intro h2 > span {
+  color: var(--p5-clr);
+}
 
 main .intro figure img {
   max-width: 800px;
   height: auto;
+  margin-top: 13px;
   border-radius: 57% 50% 74% 82% / 90% 67% 100% 78%;
   object-fit: cover;
 }
