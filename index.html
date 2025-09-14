@@ -72,7 +72,7 @@
     <div class="mVI_txt">
       <p>
         <b>彩りの輪と走る、<br>さいたま自転車物語</b>
-        <span>Ride with Saitama's Colors</span>
+        <span translate="no">Ride with Saitama's Colors</span>
       </p>
     </div>
 
@@ -139,6 +139,44 @@
 <!-- <p class="responsive-box" style="width: 1000px;">AAAAああああ</p> -->
 <!-- // intro // -->
   <div class="intro inview fadeIn_up">
+
+<div class="bicycle-illust stay">
+  <img src="./img/illust_bicycle_01.png">
+  <img src="./img/illust_bicycle_03.png">
+</div>
+<style>
+.bicycle-illust.stay img {
+  width: 150px;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+.bicycle-illust.stay img[src$="_01.png"] {
+  top: 10px;
+  left: calc((100vw - 950px) / 2 - 30px);
+  transform: rotate(10deg);
+}
+.bicycle-illust.stay img[src$="_03.png"] {
+  max-width: 130px;
+  right: calc((100vw - 950px) / 2);
+  transform: rotate(-5deg);
+}
+@media screen and (max-width: 820px) {
+.bicycle-illust.stay img[src$="_01.png"] {
+  max-width: 100px;
+  top: -25px;
+  left: 10px;
+  transform: rotate(10deg);
+}
+.bicycle-illust.stay img[src$="_03.png"] {
+  width: 80px;
+  top: -25px;
+  right: 30px;
+  transform: rotate(-6deg);
+}
+}
+</style>
+
     <h2><b>彩りの輪の旅</b>ペダルで巡る<br class="pc_none">さいたま再発見！<span translate="no">Saitama on Two Wheels</span></h2>
 
 <!-- infinite-slider -->
@@ -200,7 +238,7 @@
           <a href="origin.html">
             <h4><span translate="no">Bicycle Culture</span><b>自転車文化の源流<br>「陸船車<small>（りくせんしゃ）</small>」</b></h4>
             <img src="./img/origin_01.jpg" alt="">
-            <p>日本の自転車文化にゆかりのある地、ここ「埼玉」。歴史の息づく地を訪ね、自転車文化のはじまりに触れてみませんか？「ただの移動手段」を超えた物語が、ここにはあります。</p>
+            <p>自転車文化にゆかりある埼玉。自転車の歴史に触れ、ただの移動手段を超えた物語が待っています。</p>
             <!-- <a href="origin.html" class="btn linkBtn">この魅力をもっと知る</a> -->
           </a>
         </div>
@@ -208,7 +246,7 @@
           <a href="cycling-road.html">
             <h4><span translate="no">Cycling Road</span><b>日本最長の川沿い<br>サイクリングロード</b></h4>
             <img src="./img/cycling_main.jpg" alt="">
-            <p>群馬・埼玉・千葉・東京を結ぶ利根川・江戸川サイクリングロードは、自然と街並みが織りなす絶景が魅力。雄大な川沿いを駆け抜ける爽快感は、関東屈指のサイクリングルートです。</p>
+            <p>関東屈指の絶景ルート、利根川・江戸川サイクリングロード。自然と街並みを駆け抜ける爽快な旅へ。</p>
             <!-- <a href="cycling-road.html" class="btn linkBtn">この魅力をもっと知る</a> -->
           </a>
         </div>
@@ -216,7 +254,7 @@
           <a href="saitama-criterium.html">
             <h4><span translate="no">Cycle Event</span><b>ツール・ド・フランス<br>さいたまクリテリウム</b></h4>
             <img src="./img/criterium_main.jpg" alt="">
-            <p>世界最大級の自転車レース「ツール・ド・フランス」が、ここさいたまの街を彩る！トップ選手の疾走を間近で体感できるチャンスに、街全体がサイクリングフェスへと変貌。</p>
+            <p>さいたまが沸く！ツール・ド・フランスの熱狂が街を包み、世界のトップライダーが駆け抜ける一日。</p>
             <!-- <a href="saitama-criterium.html" class="btn linkBtn">この魅力をもっと知る</a> -->
           </a>
         </div>
@@ -257,7 +295,7 @@
                 <li class="ttlicon"><p><span translate="no">Fun Bike Trivia</span></p></li>
                 <li>
                   <h4><b>自転車豆知識</b></h4>
-                  <p>埼玉の自転車豆知識から、自転車に乗るときの基本ルールや、「ブレーキってどんな種類があるの？」など、自転車の安全利用が身につく豆知識集。知れば、あなたの自転車ライフはもっと快適で楽しくなる！</p>
+                  <p>埼玉の自転車豆知識や、乗るときの基本ルールをまとめた豆知識集。知れば、自転車ライフがもっと快適で楽しくなる！</p>
                 </li>
               </ul>
             </a>
@@ -268,7 +306,7 @@
                 <li class="ttlicon"><p><span translate="no">Catch Treasures Game</span></p></li>
                 <li>
                   <h4><b>自転車ゲーム</b></h4>
-                  <p>「埼玉の特産アイテム」を拾いながら、サイクリングでハイスコアを目指すゲーム！反射神経も学びもフル活用、遊びながら地元の魅力を再発見。大人も子どもも夢中になる、疾走アクション体験！</p>
+                  <p>「埼玉の特産アイテム」を拾いながら、ハイスコアを目指すゲーム！遊びながら地元の魅力を再発見。</p>
                 </li>
               </ul>
             </a>
@@ -363,6 +401,59 @@
     </section> -->
 
 
+<div class="bicycle-illust move">
+  <img src="./img/illust_bicycle_06.png">
+</div>
+<style>
+@keyframes moveRight {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px));
+  }
+}
+@keyframes shake {
+  0%   { transform: translateX(0) rotate(0deg); }
+  25%  { transform: translateX(-2px) rotate(-1deg); }
+  50%  { transform: translateX(2px) rotate(1deg); }
+  75%  { transform: translateX(-2px) rotate(-1deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+@keyframes moveAndShake {
+  0%   { transform: translateX(0) rotate(0deg); }
+  10%  { transform: translateX(calc(10vw + 15px)) rotate(-5deg); }
+  20%  { transform: translateX(calc(20vw + 30px)) rotate(0deg); }
+  30%  { transform: translateX(calc(30vw + 45px)) rotate(-5deg); }
+  40%  { transform: translateX(calc(40vw + 60px)) rotate(0deg); }
+  50%  { transform: translateX(calc(50vw + 75px)) rotate(-5deg); }
+  60%  { transform: translateX(calc(60vw + 90px)) rotate(0deg); }
+  70%  { transform: translateX(calc(70vw + 105px)) rotate(-5deg); }
+  80%  { transform: translateX(calc(80vw + 120px)) rotate(0deg); }
+  90%  { transform: translateX(calc(90vw + 135px)) rotate(-5deg); }
+  100% { transform: translateX(calc(100vw + 150px)) rotate(0deg); }
+}
+.bicycle-illust {
+  position: relative;
+}
+.bicycle-illust.move {
+  width: 100%;
+}
+.bicycle-illust.move img {
+  width: 150px;
+  position: absolute;
+  top: -100px;
+  left: -150px;
+  /* animation: moveRight 18s linear infinite,
+             shake 0.3s ease-in-out infinite; */
+  animation: moveAndShake 18s linear infinite;
+}
+@media screen and (max-width: 820px) {
+.bicycle-illust.move img {
+  top: 50px;
+}
+}
+</style>
 <!-- // snsArea // -->
     <div class="snsArea sec-scroll-point">
       <div class="inview fadeIn_up">
