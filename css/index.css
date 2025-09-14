@@ -811,6 +811,7 @@ section#Sec02 {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 3em;
+  color: #555;
 }
 #TopMainList > div:nth-child(2) h4::before {
   content: "\f018";
@@ -819,11 +820,12 @@ section#Sec02 {
   content: "\f091";
 }
 #TopMainList a img {
+  margin: 0 auto;
   border: none;
 }
 #TopMainList a p {
-  width: 90%;
-  margin: 20px auto 0;
+  width: 95%;
+  margin: 15px auto 0;
   text-align: left;
 }
 
@@ -882,6 +884,7 @@ section#Sec02 {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 3em;
+  color: #555;
 }
 #TopSubList div:first-child ul.grid li:first-child::before {
   content: "\f02d";
