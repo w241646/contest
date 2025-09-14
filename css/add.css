@@ -746,11 +746,11 @@ p.leadTxt::first-letter {
   background-position: center;
   overflow: hidden;
 }
-.icon-a,
+/* .icon-a,
 .icon-b {
   background-color: rgba(255, 255, 255, 0.15);
   background-blend-mode: overlay;
-}
+} */
 .icon-a {
   background-image: url("../img/icon_a.png");
 }
