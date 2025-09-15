@@ -309,7 +309,7 @@ nav.page__nav {
   width: 100%;
   margin: 0 auto;
   padding: 15px 0;
-  background: #eee;
+  background: #f5f7fa;
 }
 nav.page__nav ul {
   max-width: 800px;
@@ -325,13 +325,14 @@ nav.page__nav ul li {
 nav.page__nav ul li a {
   display: block;
   padding: 18px;
-  background: #ddd;
+  background: #658099;
+  color: #fff;
   font-weight: 600;
   transition: background-color 0.3s, color 0.3s;
   border-radius: 15px;
 }
 nav.page__nav ul li a:hover {
-  background: #333;
+  background: #6b8197;
   color: #fff;
 }
 nav.page__nav ul li a::after {
@@ -342,7 +343,8 @@ nav.page__nav ul li a::after {
   margin-left: 8px;
   font-family: 'Font Awesome 5 Free';
   vertical-align: top;
-  background: #eee;
+  background: #f5f7fa;
+  color: #6b8197;
   border-radius: 50%;
   transform: rotate(180deg);
 }
