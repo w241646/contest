@@ -767,7 +767,7 @@ section#Sec02 {
   display: block;
   margin: 20px auto;
   text-align: center;
-  font-size: .8em;
+  font-size: .9em;
 }
 #TopMainList h4 > * {
   display: block;
@@ -867,6 +867,7 @@ section#Sec02 {
 }
 #TopSubList h4 {
   padding-left: unset;
+  font-size: 1.08em;
 }
 #TopSubList h4::before {
   display: none;
@@ -878,11 +879,11 @@ section#Sec02 {
 #TopSubList ul.grid {
   grid-template-columns: 1.5fr 2.5fr;
   align-items: center;
-  font-size: .8em;
 }
 #TopSubList div ul.grid li:first-child {
   position: relative;
   font-family: var(--ttl-sub-font);
+  font-size: .9em;
   text-align: center;
 }
 #TopSubList div ul.grid li:first-child::before {
