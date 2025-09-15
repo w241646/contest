@@ -44,6 +44,7 @@ main .intro figure::before,
 main .intro figure::after {
   width: 500px;
   /* max-width: var(--after-width, 1300px); */
+  filter: saturate(55%);
 }
 main .intro figure::before {
   content: "";
