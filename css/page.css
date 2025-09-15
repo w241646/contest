@@ -40,14 +40,19 @@ main .intro figure {
   position: relative;
   transform: translateY(0);
 }
+main .intro figure::before,
+main .intro figure::after {
+  width: 500px;
+  /* max-width: var(--after-width, 1300px); */
+}
 main .intro figure::before {
   content: "";
-  height: 400px;
+  height: 450px;
   display: block;
   /* display: none; */
   position: absolute;
-  top: -8%;
-  left: 0;
+  top: -15%;
+  left: 5%;
   mix-blend-mode: multiply;
   opacity: .3;
   background: #c8e6c9;
@@ -59,12 +64,13 @@ main .intro figure::after {
   content: "";
 /* width: 100%;
 max-width: 1440px; */
-    height: 500px;
+  width: 30%;
+    height: 350px;
     display: block;
   /* display: none; */
     position: absolute;
-top: 70%;
-right: 0;
+top: 65%;
+right: 5%;
   mix-blend-mode: multiply;
   opacity: .3;
     background: #e0ceff;
@@ -79,11 +85,6 @@ z-index: -2;
   75%  { transform: translateY(-5px) rotate(2deg) scale(1.02); }
   100% { transform: translateY(0px) rotate(0deg) scale(1); }
 }
-main .intro figure::before,
-main .intro figure::after {
-  width: 50%;
-  /* max-width: var(--after-width, 1300px); */
-}
 
 @media screen and (max-width: 820px) {
 #Page {
@@ -94,12 +95,27 @@ main .intro figure img {
 }
 main .intro figure::before,
 main .intro figure::after {
+  width: 250px;
   height: 250px;
 }
+}
+@media screen and (max-width: 480px) {
+main .intro figure::before,
 main .intro figure::after {
-  right: 10px;
+  width: 150px;
+  height: 150px;
+}
+main .intro figure::before{
+  top: -20%;
+  left: 3%;
+}
+main .intro figure::after {
+  top: 75%;
+  right: 3%;
+  height: 100px;
 }
 }
+
 
 /* .page-(n) */
 .page-eyecatch {
