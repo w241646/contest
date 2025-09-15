@@ -289,7 +289,7 @@ z-index: -1;
 }
 
 main .intro p.read_txt {
-  max-width: 900px;
+  max-width: 500px;
 }
 main .intro figure img {
   max-width: 800px;
