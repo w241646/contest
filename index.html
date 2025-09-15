@@ -237,9 +237,11 @@
     <section id="Sec01" class="sec-scroll-point">
       <article class="inview fadeIn_up">
         <h3><span>自転車王国・埼玉</span><b>知られざる魅力</b></h3>
-        <div class="content-block grid grid-2">
+        <div class="overview content-block grid grid-2">
           <p>風を切る爽快感と、景色との一体感が味わえる埼玉県は、そんな自転車の魅力を満喫できる“自転車王国”として注目を集めています。知られざる魅力も満載で、車輪が回るたびに、彩り豊かな埼玉の表情が見えてきます。</p>
-          <img src="./img/origin_01.jpg" alt="">
+          <figure>
+            <img src="./img/illust_japan.svg" alt="">
+          </figure>
         </div>
       </article>
 
@@ -270,6 +272,37 @@
         </div>
       </article>
 
+<style>
+/* #TopMainList {
+  margin-top: 50px;
+} */
+#Sec01 .overview {
+  position: relative;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 10px;
+}
+#Sec01 .overview figure {
+  position: absolute;
+  top: -265px;
+  right: -150px;
+  width: 100%;
+  max-width: 500px;
+}
+#Sec01 .overview figure img {
+  border: none !important;
+  width: 100%;
+  max-width: 500px;
+}
+
+@media screen and (max-width: 820px) {
+#Sec01 .overview {
+  gap: 30px;
+}
+#Sec01 .overview figure {
+  position: unset;
+}
+}
+</style>
 
 
       <!-- <img src="img/origin_main.jpg" alt="" class="#ph"> -->
