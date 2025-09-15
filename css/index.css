@@ -744,7 +744,7 @@ section#Sec02 {
   border-color: var(--p2-clr);
   top: 10%;
 }
-  #TopMainList > div:last-child {
+#TopMainList > div:last-child {
   border-color: var(--p3-clr);
   top: 20%;
 }
@@ -767,6 +767,7 @@ section#Sec02 {
   display: block;
   margin: 20px auto;
   text-align: center;
+  font-size: .8em;
 }
 #TopMainList h4 > * {
   display: block;
@@ -781,8 +782,8 @@ section#Sec02 {
   z-index: -1;
   position: absolute;
   background-color: #fff;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   top: -15px;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -795,8 +796,8 @@ section#Sec02 {
   position: absolute;
   background-color: #ddd;
   /* background-color: #81ccc4; */
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   top: -15px;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -877,6 +878,7 @@ section#Sec02 {
 #TopSubList ul.grid {
   grid-template-columns: 1.5fr 2.5fr;
   align-items: center;
+  font-size: .8em;
 }
 #TopSubList div ul.grid li:first-child {
   position: relative;
@@ -911,8 +913,8 @@ section#Sec02 {
     z-index: -1;
     position: absolute;
     background-color: #fff;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -925,8 +927,8 @@ section#Sec02 {
     position: absolute;
     background-color: #ddd;
     /* background-color: #81ccc4; */
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
