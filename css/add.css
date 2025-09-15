@@ -817,7 +817,6 @@ p.leadTxt::first-letter {
     width: 95%;
     margin: 0 auto 30px;
 }
-
 .faceicon {
     width: 10vw;
     height: 10vw;
@@ -841,13 +840,16 @@ p.leadTxt::first-letter {
 /*   margin-top:-3px;  */
 }
 .content-block dl.talk dt b:before {
-  left: -26px;
-  border-right: 22px solid #e8ebf0;
+  /* left: -26px;
+  border-right: 22px solid #e8ebf0; */
+  left: -20px;
+  border-right: 16px solid #e8ebf0;
 }
 .content-block dl.talk dd p:before {
-  right: -26px;
+  /* right: -26px; */
   /* border-left: 22px solid #e5fbfd; */
-  border-left: 22px solid #d0efd5;
+  right: -20px;
+  border-left: 16px solid #d0efd5;
 }
 
 dl.talk dt {
@@ -857,31 +859,33 @@ dl.talk dt {
 }
 dl.talk dt.is-show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 dl.talk dd {
   opacity: 0;
   transform: translateX(-50px);
-  transition: .6s;
+  transition: .6s ease-out;
 }
 dl.talk dd.is-show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 .fadein {
   opacity: 0;
   transform: translateY(100%);
-  transition: .6s;
+  transition: .6s ease-out;
 }
 .fadein.is-show {
   opacity: 1;
   transform: translateY(0);
 }
 .delay_a {
-  transition-delay: 2.0s;
+  /* transition-delay: 2.0s; */
+  transition-delay: .8s;
 }
 .delay_b {
-  transition-delay: 8.0s;
+  /* transition-delay: 8.0s; */
+  transition-delay: 1.6s;
 }
 
 @media screen and (max-width: 820px) {
@@ -890,8 +894,9 @@ dl.talk dd.is-show {
 }
 .content-block dl.talk dt b,
 .content-block dl.talk dd p {
-    width: 80%;
-    font-size: .9em;
+  width: 85%;
+  padding: 15px 18px;
+  font-size: .9em;
 }
 }
 
