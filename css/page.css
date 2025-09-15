@@ -41,11 +41,11 @@ main .intro figure {
 }
 main .intro figure::before {
   content: "";
-  height: 600px;
+  height: 400px;
   display: block;
   /* display: none; */
   position: absolute;
-  top: -5%;
+  top: -8%;
   left: 0;
   mix-blend-mode: multiply;
   opacity: .3;
@@ -80,7 +80,7 @@ z-index: -2;
 }
 main .intro figure::before,
 main .intro figure::after {
-  width: 60%;
+  width: 50%;
   /* max-width: var(--after-width, 1300px); */
 }
 
