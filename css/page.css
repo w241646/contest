@@ -532,7 +532,7 @@ canvas {
   z-index: 10;
   color: #fff;
   background: linear-gradient(145deg, #2c2f36 0%, #3a3d45 40%, #2c2f36 100%);
-  border: none;
+  border: 2px solid #fff;
   border-radius: 12px;
   cursor: pointer;
   white-space: nowrap;
