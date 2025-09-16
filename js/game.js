@@ -14,16 +14,18 @@ bgImg.src = "./img/game_background.png";
 const itemImages = {
   negi: new Image(),
   senbei: new Image(),
+  washi: new Image(),
   manju: new Image(),
-  star: new Image(),
+  bonsai: new Image(),
   bomb: new Image(),
   medkit: new Image(),
   clock: new Image()
 };
 itemImages.negi.src = "./img/game_negi.png";
 itemImages.senbei.src = "./img/game_senbei.png";
+itemImages.washi.src = "./img/game_washi.png";
 itemImages.manju.src = "./img/game_manju.png";
-itemImages.star.src = "./img/game_bonsai.png";
+itemImages.bonsai.src = "./img/game_bonsai.png";
 itemImages.bomb.src = "./img/game_bomb.png";
 itemImages.medkit.src = "./img/game_medkit.png";
 itemImages.clock.src = "./img/game_hourglass.png";
@@ -63,8 +65,9 @@ let bicycle = {
 const itemTypes = {
   negi: { color: "green", score: 10 },
   senbei: { color: "yellow", score: 20 },
-  manju: { color: "brown", score: 30 },
-  star: { color: "gold", score: 50 },
+  washi: { color: "white", score: 30 },
+  manju: { color: "brown", score: 40 },
+  bonsai: { color: "gold", score: 50 },
   bomb: { color: "red", score: -15 },
   medkit: { color: "pink", score: 0, heal: 1 },
   clock: { color: "cyan", score: 0, timeBoost: 10 },
@@ -73,8 +76,9 @@ const itemTypes = {
 const itemWeights = {
   negi: 2,
   senbei: 2,
+  washi: 2,
   manju: 1,
-  star: 1,
+  bonsai: 0.9,
   bomb: 17,
   medkit: 0.8,
   clock: 0.8,
