@@ -234,11 +234,18 @@ b.title {
 }
 
 
-main .mainCnt section#Sec03 h4:before {
-    content: "\f521";
-    color: #c5b358;
+.page-04 main .mainCnt section#Sec02 h4 {
+  font-size: 1.1em;
 }
-
+main .mainCnt section#Sec03 h4:before {
+  content: "\f521";
+  color: #c5b358;
+}
+@media screen and (max-width: 480px) {
+.page-04 main .mainCnt section#Sec02 h4 small {
+  display: block;
+}
+}
 
 /* 操作説明セクション全体 */
 .game-note {
