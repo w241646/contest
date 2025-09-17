@@ -29,13 +29,6 @@ var list = "";
                     caption = ''
                 }
 
-                var price = "";
-                if(json[i].price){
-                    price = '<p class="price">' + json[i].price + '<span>円</span></p>'
-                } else {
-                    price = ''
-                }
-
                 var tags = "";
                 if (json[i].tag && Array.isArray(json[i].tag)) {
                     tags = '<ul class="tags">';
@@ -58,7 +51,7 @@ var list = "";
                 if (json[i].images && Array.isArray(json[i].images)) {
                     images = '<ul class="images">';
                     for (var j = 0; j < json[i].images.length; j++) {
-                        images += '<li><a href="' + json[i].images[j] + '" data-lightbox="gallery" data-title="' + json[i].title + '"><img src="' + json[i].images[j] + '" alt="' + json[i].title + '"></a></li>';
+                        images += '<li><a href="' + json[i].images[j] + '" data-lightbox="gallery' + i + '" data-title="' + json[i].title + '"><img src="' + json[i].images[j] + '" alt="' + json[i].title + '"></a></li>';
                     }
                     images += '</ul><p class="annotation">※ 画像をクリック／タップで拡大</p>';
                 } else {
