@@ -184,9 +184,6 @@ a.more_btn:hover {
   font-weight: 900;
   color: #000;
 }
-.loading-animation img + p::first-letter {
-    color: #e693f7;
-}
 .loading-animation.is-active {
   opacity: 1;
   visibility: visible;

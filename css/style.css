@@ -155,11 +155,6 @@ header h1.logo a p {
   font-weight: 900;
   line-height: normal;
 }
-header h1.logo a p::first-letter {
-  display: block;
-  font-size: 1.5em;
-  color: #e693f7;
-}
 
 header .navi {
   width: 850px;
@@ -351,27 +346,6 @@ main .mainCnt section dl.flexBox dt {
   margin-right: 1em;
 }
 
-main .mainCnt section .grow .contents > * {
-  width: 100%;
-}
-.grow.flexBox {
-  justify-content: space-between;
-  align-items: baseline;
-}
-.grow.flexBox > div {
-  width: calc(100% / 3 - 2%);
-}
-main .mainCnt section .grow.flexBox > .contents + .contents {
-  margin-top: 0;
-}
-.grow.flexBox > div figure {
-  margin-bottom: 30px;
-}
-main .mainCnt section .grow .contents .textArea {
-  padding: 20px;
-  background: rgb(249 249 249 / 70%);
-  border-radius: 30px;
-}
 
 .singleArea {
   margin-top: 40px;
@@ -504,83 +478,6 @@ main .mainCnt section#Sec04 h4:before {
   width: 50%;
 }
 
-/*** .tableArea ***/
-.tableArea {
-  margin-bottom: 50px;
-  overflow-y: hidden;
-  overflow-x: scroll;
-  scrollbar-width: none;
-}
-.graph-table {
-  width: 100%;
-  margin: 0;
-  border: 1px solid #eaedf2;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-.graph-th, .graph-td {
-  background: #fff;
-}
-.graph-th:nth-child(even),
-.graph-td:nth-child(even) {
-  background: #f8f9fa;
-}
-.theader .graph-th {
-  background: #79bc5d;
-  color: #fff;
-}
-table th, table td {
-  border: 1px solid #eaedf2;
-  padding: 10px;
-}
-table th {
-  white-space: nowrap;
-}
-table th:first-child {
-  border-right: 3px solid #eaedf2;
-}
-.graph-td {
-  position: relative;
-}
-.term {
-  position: absolute;
-  top: calc(50% - 3px);
-  left: 0;
-  width: 100%;
-  height: 6px;
-  padding: 0 0 0 1px;
-  background:#e693f7;
-}
-.seed .term.sA {
-  left: unset;
-  right: 0;
-  width: 25%;
-}
-.seed .term.sB {
-  width: 25%;
-}
-
-/*** .chara ***/
-main .mainCnt section .contents.chara {
-  justify-content: space-between;
-  align-items: center;
-}
-.chara > * {
-  width: calc((100% - 50px) / 2);
-}
-.chara figure {
-  background: #fafafa;
-}
-.chara img {
-  width: 100%;
-  max-width: 250px;
-  height: auto !important;
-  margin: 0 auto;
-}
-.chara dl dd {
-  margin-top: 15px;
-}
-
 /*** .source ***/
 .source {
   margin-top: 25px;
@@ -618,118 +515,6 @@ main .mainCnt section .contents.chara {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-/*** .access ***/
-.access {
-  margin-top: 30px;
-  padding: 30px 45px;
-  border: 1px solid #5bad39;
-}
-.access dl + dl {
-  margin-top: 15px;
-}
-.access dl dt {
-  width: 10%;
-}
-.access dl dd {
-  width: 85%;
-}
-.map {
-  position: relative;
-  overflow: hidden;
-  width: 100% !important;
-  height: 600px;
-  margin-top: 30px;
-}
-
-/*** .route ***/
-.route li {
-  position: relative;
-  padding-left: 1em;
-}
-.route li:before {
-  content: "";
-  position: absolute;
-  top: 0.8em;
-  left: 0;
-  display: block;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #5d5d5d;
-}
-.route li + li {
-  margin-top: 15px;
-}
-.route li > p {
-  margin-bottom: 5px;
-}
-.route li > p span {
-  margin-right: .5em;
-  padding: 2px 8px;
-  border: 1px solid #ccc;
-}
-.route li div {
-  font-size: 90%;
-}
-.route li div p {
-  position: relative;
-  display: inline-block;
-  padding: 0 15px;
-  color: #fff;
-}
-.route li div p:before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: 120%;
-  height: 30px;
-  background: #549ba3;
-}
-.route li div p i {
-  margin-right: .5em;
-}
-.route li div:before,
-.route li div:after,
-.route li div p span:after {
-  content: "";
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #eee;
-  vertical-align: middle;
-  font-size: .8em;
-  line-height: 60px;
-  text-align: center;
-  font-weight: 900;
-}
-.route li div:before {
-  content: "駅";
-}
-.route li:first-child div:before {
-  content: "西浦和駅";
-}
-.route li:nth-child(2) div:before {
-  content: "浦和駅";
-}
-.route li:last-child div:before {
-  content: "志木駅";
-}
-.route li div p span:after {
-  content: "バス停";
-  margin: 0 15px;
-  background: #8eaacd;
-}
-.route li div:after {
-  content: "田島ヶ原";
-  color: #fff;
-  background: #dfa1d2;
 }
 
 /*** .snsArea ***/
@@ -939,22 +724,6 @@ main .mainCnt section .contents .textArea {
   width: 95%;
   margin: 30px auto 0;
 }
-.varieties ul {
-  padding: 25px 20px;
-}
-.grow.flexBox > div {
-  width: 95%;
-  margin: 0 auto;
-}
-main .mainCnt section .grow.flexBox > .contents + .contents {
-  margin-top: 40px;
-}
-.grow.flexBox > div figure {
-  margin-bottom: 20px;
-}
-main .mainCnt section .grow .contents .textArea {
-  margin-top: 10px;  
-}
 
 /*** .img_move ***/
 .img_move img:last-child {
@@ -962,55 +731,10 @@ main .mainCnt section .grow .contents .textArea {
   width: 55%;
 }
 
-/*** .tableArea ***/
-.tableArea {
-  scrollbar-width: auto;
-}
-
 /*** .movie_wrap ***/
 .movie_wrap {
 /*  margin-top: 30px !important;*/
   padding-top: 56.25%;
-}
-
-/*** .access ***/
-.access {
-  padding: 25px 20px;
-}
-.access dl dt,
-.access dl dd {
-  width: 100%;
-}
-.access dl dd {
-  margin-top: 8px;
-}
-.map {
-  height: 400px;
-}
-.map iframe {
-  height: 400px;
-}
-
-/*** .route ***/
-.route li div {
-  font-size: .7em;
-}
-.route li div p {
-  padding: 0 5px;
-}
-.route li > p span {
-  display: table;
-  margin-right: unset;
-}
-.route li div p span:after {
-  margin: 0 5px;
-}
-.route li div:before,
-.route li div:after,
-.route li div p span:after {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
 }
 
 /*** footer ***/
