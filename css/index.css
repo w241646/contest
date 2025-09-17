@@ -950,3 +950,105 @@ section#Sec02 {
     display: none;
   }
 }
+
+
+.bicycle-illust img {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+  filter: saturate(30%);
+}
+.bicycle-illust.stay img {
+  width: 150px;
+  position: absolute;
+  top: 180px;
+  transform: translate(-50%, -50%);
+}
+.bicycle-illust.stay img[src$="_01.png"] {
+  top: 300px;
+  left: calc((100vw - 950px) / 2);
+  transform: rotate(-7deg);
+}
+.bicycle-illust.stay img[src$="_03.png"] {
+  max-width: 120px;
+  right: calc((100vw - 950px) / 2 + 35px);
+  transform: rotate(8deg) scaleX(-1);
+}
+@media screen and (max-width: 820px) {
+.bicycle-illust.stay img[src$="_01.png"] {
+  max-width: 100px;
+  top: -25px;
+  left: calc((100vw - 370px) / 2);
+  /* transform: rotate(10deg); */
+}
+.bicycle-illust.stay img[src$="_03.png"] {
+  width: 80px;
+  top: -25px;
+  right: calc((100vw - 345px) / 2);
+  /* transform: rotate(-6deg); */
+}
+}
+
+
+#Sec01 .overview {
+  position: relative;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 10px;
+}
+#Sec01 .overview figure {
+  position: absolute;
+  top: -265px;
+  right: -150px;
+  width: 100%;
+  max-width: 500px;
+}
+#Sec01 .overview figure img {
+  border: none !important;
+  width: 100%;
+  max-width: 500px;
+}
+
+@media screen and (max-width: 820px) {
+#Sec01 .overview {
+  gap: 30px;
+}
+#Sec01 .overview figure {
+  position: unset;
+}
+}
+
+
+@keyframes moveAndShake {
+  0%   { transform: translateX(0) rotate(0deg); }
+  10%  { transform: translateX(calc(10vw + 15px)) rotate(-5deg); }
+  20%  { transform: translateX(calc(20vw + 30px)) rotate(0deg); }
+  30%  { transform: translateX(calc(30vw + 45px)) rotate(-5deg); }
+  40%  { transform: translateX(calc(40vw + 60px)) rotate(0deg); }
+  50%  { transform: translateX(calc(50vw + 75px)) rotate(-5deg); }
+  60%  { transform: translateX(calc(60vw + 90px)) rotate(0deg); }
+  70%  { transform: translateX(calc(70vw + 105px)) rotate(-5deg); }
+  80%  { transform: translateX(calc(80vw + 120px)) rotate(0deg); }
+  90%  { transform: translateX(calc(90vw + 135px)) rotate(-5deg); }
+  100% { transform: translateX(calc(100vw + 150px)) rotate(0deg); }
+}
+.bicycle-illust {
+  position: relative;
+}
+.bicycle-illust.move {
+  width: 100%;
+}
+.bicycle-illust.move img {
+  position: absolute;
+  top: -100px;
+  left: -150px;
+  width: 150px;
+  /* animation: moveRight 18s linear infinite,
+             shake 0.3s ease-in-out infinite; */
+  animation: moveAndShake 18s linear infinite;
+}
+@media screen and (max-width: 820px) {
+.bicycle-illust.move img {
+  top: 60px;
+  width: 130px;
+}
+}
