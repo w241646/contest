@@ -1,6 +1,6 @@
 // JavaScript Document
 /* Accordion List */
-function accordionli(callback,append,loop){
+function accordionli(callback, append, loop){
 	var list = "";
     $.ajax({
         url: './js/json/' + callback + '.jsonp',
@@ -8,7 +8,7 @@ function accordionli(callback,append,loop){
         dataType:"jsonp",
 		jsonpCallback: callback,
         error:function() {
-			//alert("ロード失敗");
+			// alert("ロード失敗");
         },
         success: function(json){
 	 		var len = json.length;
@@ -21,20 +21,10 @@ function accordionli(callback,append,loop){
         	}
 
     		for(var i=0; i < display_num; i++){
-				if((!json[i].flag)) {
-					if(json[i].faq_m != "") {
-						list = '<dt class="ac-parent"><p>' + json[i].title + '</p></dt><dd class="ac-child"><p>' + json[i].faq_m + '</p></dd>';
-					} else if(json[i].faq_r != "") {
-						list = '<dt class="ac-parent"><p>' + json[i].title + '</p></dt><dd class="ac-child"><p>' + json[i].faq_r + '</p></dd>';
-					} else {
-						list = '';
-					}
+				if(json[i].title) {
+					list = '<dt class="ac-parent"><p>' + json[i].title + '</p></dt><dd class="ac-child"><p>' + json[i].text + '</p></dd>';
 				} else {
-					if(json[i].flag == "m" || json[i].flag == "pm" ) {
-						list = '<dt class="ac-parent"><p>' + json[i].title + '</p></dt><dd class="ac-child"><p>' + json[i].faq_m + '</p></dd>';
-					} else {
-						list = '';
-					}
+					list = '';
 				}
 				$(append).append(list);
 			}
