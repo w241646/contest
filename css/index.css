@@ -970,7 +970,7 @@ section#Sec02 {
   left: calc((100vw - 950px) / 2);
   transform: rotate(-7deg);
 }
-.bicycle-illust.stay img[src$="_03.png"] {
+.bicycle-illust.stay img[src$="_02.png"] {
   max-width: 120px;
   right: calc((100vw - 950px) / 2 + 35px);
   transform: rotate(8deg) scaleX(-1);
@@ -982,7 +982,7 @@ section#Sec02 {
   left: calc((100vw - 370px) / 2);
   /* transform: rotate(10deg); */
 }
-.bicycle-illust.stay img[src$="_03.png"] {
+.bicycle-illust.stay img[src$="_02.png"] {
   width: 80px;
   top: -25px;
   right: calc((100vw - 345px) / 2);
