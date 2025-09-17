@@ -110,22 +110,31 @@ $(function () {
 /* -- breadcrumb -- */
 function generateBreadcrumbs() {
   const breadcrumbContainer = document.getElementById("breadcrumb");
-  const pathArray = window.location.pathname.split("/").filter(Boolean);
-  const currentLabel = getMainTextFromH2();
+
+  // 要素が存在しない場合は何もしない
+  if (!breadcrumbContainer) return;
+
+  // TOPページ（ルートパスまたは index.html）なら何もしない
+  const path = window.location.pathname;
+  if (path === "/" || path === "/index.html") return;
+
+  const pathArray = path.split("/").filter(Boolean);
+  const currentLabel = getMainTextFromH2() || "現在地";
 
   let breadcrumbHTML = `<a href="/">Home</a>`;
-  let path = "";
+  let accumulatedPath = "";
   pathArray.forEach((segment, index) => {
-    path += `/${segment}`;
+    accumulatedPath += `/${segment}`;
     if (index === pathArray.length - 1) {
       breadcrumbHTML += ` &gt; <span>${currentLabel}</span>`;
     } else {
-      breadcrumbHTML += ` &gt; <a href="${path}">${decodeURIComponent(segment)}</a>`;
+      breadcrumbHTML += ` &gt; <a href="${accumulatedPath}">${decodeURIComponent(segment)}</a>`;
     }
   });
 
   breadcrumbContainer.innerHTML = breadcrumbHTML;
 }
+
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", generateBreadcrumbs);
 } else {
@@ -137,13 +146,11 @@ function getMainTextFromH2() {
   const h2 = document.querySelector("h2");
   if (!h2) return null;
 
-  // h2の子ノードを走査して、テキストノードだけを抽出
   const textParts = Array.from(h2.childNodes)
     .filter(node => node.nodeType === Node.TEXT_NODE)
     .map(node => node.textContent.trim())
     .filter(text => text.length > 0);
 
-  // 複数ある場合は2番目を取得（今回の構造に合わせて）
   return textParts[1] || textParts[0] || "現在地";
 }
 /* -- /breadcrumb -- */
@@ -166,3 +173,69 @@ if (window.innerWidth <= 600) {
   window.addEventListener('scroll', adjustFixedLangPosition);
 }
 /* -- /adjustFixed_LangPosition -- */
+
+
+/* -- ShowMoreToList -- */
+window.addEventListener('load', function () {
+  const targetNodes = document.querySelectorAll('.moreList');
+  const initialCount = 4;
+  const maxAttempts = 60;
+  const intervalMs = 500;
+
+  targetNodes.forEach((targetNode, index) => {
+    let attemptCount = 0;
+
+    const checkAndSetup = () => {
+      const dlElements = targetNode.querySelectorAll('dl');
+
+      if (dlElements.length >= initialCount) {
+        // 初期状態：initialCount未満は表示＆inview付与、それ以外は非表示＆inview除去
+        dlElements.forEach((dl, i) => {
+          if (i < initialCount) {
+            dl.style.display = '';
+            dl.classList.add('inview');
+          } else {
+            dl.style.display = 'none';
+            dl.classList.remove('inview');
+          }
+        });
+
+        // ボタンが未生成なら追加
+        if (!targetNode.querySelector('.showMoreBtn')) {
+          const btn = document.createElement('button');
+          btn.className = 'showMoreBtn';
+          btn.textContent = 'もっと見る';
+
+          btn.addEventListener('click', function () {
+            const hiddenItems = Array.from(dlElements).slice(initialCount);
+            hiddenItems.forEach(dl => {
+              dl.style.display = 'block';
+              dl.classList.remove('inview');
+            });
+
+            setTimeout(() => {
+              hiddenItems.forEach(dl => {
+                dl.classList.add('inview');
+              });
+            }, 50);
+
+            btn.style.display = 'none';
+          });
+
+          targetNode.appendChild(btn);
+        }
+
+        clearInterval(retryTimer);
+      }
+
+      attemptCount++;
+      if (attemptCount >= maxAttempts) {
+        clearInterval(retryTimer);
+        console.warn('DL要素の生成が確認できませんでした');
+      }
+    };
+
+    const retryTimer = setInterval(checkAndSetup, intervalMs);
+  });
+});
+/* -- /ShowMoreToList -- */

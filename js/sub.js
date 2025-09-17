@@ -134,10 +134,12 @@ $(function () {
 
   // スクロールイベントでナビ固定と選択状態を更新
   window.addEventListener('scroll', () => {
-    if (window.scrollY >= mainTop) {
-      anchorsNav.classList.add('fixed');
-    } else {
-      anchorsNav.classList.remove('fixed');
+    if(anchorsNav) {
+      if (window.scrollY >= mainTop) {
+        anchorsNav.classList.add('fixed');
+      } else {
+        anchorsNav.classList.remove('fixed');
+      }
     }
     updateSelectedNav();
   });
@@ -160,44 +162,48 @@ $(function () {
   });
 
   // 「前へ」ボタン
-  document.querySelector('.anchors .prev').addEventListener('click', () => {
-    const current = document.querySelector('.anchors li.selected');
-    const prev = current?.previousElementSibling;
-    if (prev && prev.tagName === 'LI') {
-      const targetClass = prev.classList[0];
-      const targetSection = document.querySelector(`.${targetClass}-section`);
-      if (targetSection) {
-        const offsetTop = targetSection.getBoundingClientRect().top + window.scrollY;
-        const index = Array.from(navItems).indexOf(prev);
-        const adjust = (index % 2 === 1) ? 250 : 100;
-        window.scrollTo({
-          top: offsetTop - adjust,
-          behavior: 'smooth'
-        });
-        setTimeout(updateSelectedNav, 700);
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      const current = document.querySelector('.anchors li.selected');
+      const prev = current?.previousElementSibling;
+      if (prev && prev.tagName === 'LI') {
+        const targetClass = prev.classList[0];
+        const targetSection = document.querySelector(`.${targetClass}-section`);
+        if (targetSection) {
+          const offsetTop = targetSection.getBoundingClientRect().top + window.scrollY;
+          const index = Array.from(navItems).indexOf(prev);
+          const adjust = (index % 2 === 1) ? 250 : 100;
+          window.scrollTo({
+            top: offsetTop - adjust,
+            behavior: 'smooth'
+          });
+          setTimeout(updateSelectedNav, 700);
+        }
       }
-    }
-  });
+    });
+  }
 
   // 「次へ」ボタン
-  document.querySelector('.anchors .next').addEventListener('click', () => {
-    const current = document.querySelector('.anchors li.selected');
-    const next = current?.nextElementSibling;
-    if (next && next.tagName === 'LI') {
-      const targetClass = next.classList[0];
-      const targetSection = document.querySelector(`.${targetClass}-section`);
-      if (targetSection) {
-        const offsetTop = targetSection.getBoundingClientRect().top + window.scrollY;
-        const index = Array.from(navItems).indexOf(next);
-        const adjust = (index % 2 === 1) ? 250 : 100;
-        window.scrollTo({
-          top: offsetTop - adjust,
-          behavior: 'smooth'
-        });
-        setTimeout(updateSelectedNav, 700);
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      const current = document.querySelector('.anchors li.selected');
+      const next = current?.nextElementSibling;
+      if (next && next.tagName === 'LI') {
+        const targetClass = next.classList[0];
+        const targetSection = document.querySelector(`.${targetClass}-section`);
+        if (targetSection) {
+          const offsetTop = targetSection.getBoundingClientRect().top + window.scrollY;
+          const index = Array.from(navItems).indexOf(next);
+          const adjust = (index % 2 === 1) ? 250 : 100;
+          window.scrollTo({
+            top: offsetTop - adjust,
+            behavior: 'smooth'
+          });
+          setTimeout(updateSelectedNav, 700);
+        }
       }
-    }
-  });
+    });
+  }
 });
 /* -- /PageScroll -- */
 
@@ -213,7 +219,7 @@ $(function () {
     if (!headerTag) headerTag = document.querySelector('#header header');
     if (!buttonMenu) buttonMenu = document.querySelector('#header .btn_menu');
     if (!floatingLink) floatingLink = document.querySelector('.floating_link a');
-    if (!headerTag || !buttonMenu) return;
+    if (!headerTag || !buttonMenu || !floatingLink) return;
 
     // 翻訳バーの検出
     const bars = document.querySelectorAll('div.skiptranslate');
