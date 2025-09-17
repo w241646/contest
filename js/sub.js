@@ -1,12 +1,5 @@
 // JavaScript Document
 
-/* -- arctext -- */
-// $(function () {
-//   $('#txt_radius1').arctext({radius: 100});
-// });
-/* -- /arctext -- */
-
-
 /* -- inview -- */
 $(function () {
   // 共通の inview クラス処理
@@ -63,17 +56,6 @@ $(function () {
   bindInviewAnimationCardList();
 });
 /* -- /inview -- */
-
-
-/* -- ScrollHint -- *
-new ScrollHint('.tableArea', {
-  suggestiveShadow: true,
-  remainingTime: 5000,
-  i18n: {
-    scrollable: 'スクロールできます'
-  }
-});
-* -- /ScrollHint -- */
 
 
 /* -- PageScroll -- */

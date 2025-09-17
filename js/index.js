@@ -53,7 +53,6 @@ function applyResponsiveStyles() {
   const contentWidth = contentMinWidth + (contentMaxWidth - contentMinWidth) * normalized;
 
   // 適用対象の要素
-  // const target = document.querySelector('.responsive-box');
   const target = document.querySelector('.mainVI');
   if (target) {
     // target.style.fontSize = `${fontSize}px`;

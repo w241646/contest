@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
 /* -- /mainVI -- */
 
 
-/* -- /carousel -- */
-const swiper = new Swiper('.swiper-container', {
+/* -- carousel -- */
+const swiper = new Swiper('.carousel-container', {
   loop: true,
   centeredSlides: true,
   slidesPerView: 'auto',

@@ -3,11 +3,11 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
-// 🖼️ 画像読み込み
+// 画像読み込み
 const useImages = true; // ← true にすると画像表示に切り替わる
 
 const bicycleImg = new Image();
-bicycleImg.src = "./img/game_bicycle.png"; // 自機画像
+bicycleImg.src = "./img/game_bicycle.png";
 const bgImg = new Image();
 bgImg.src = "./img/game_background.png";
 
@@ -30,7 +30,7 @@ itemImages.bomb.src = "./img/game_bomb.png";
 itemImages.medkit.src = "./img/game_medkit.png";
 itemImages.clock.src = "./img/game_hourglass.png";
 
-// 🎯 ゲーム設定
+// ゲーム設定
 const timeLimit = 30;
 let timeLeft = timeLimit;
 let timerInterval;
@@ -52,7 +52,7 @@ const itemMarginWidth = 15;
 let useClearScore = false; 
 let clearScore = 500;
 
-// 🚲 プレイヤー設定
+// プレイヤー設定
 let bicycle = {
   x: 180,
   y: canvas.height - 60,
@@ -61,7 +61,7 @@ let bicycle = {
   speed: 5,
 };
 
-// 🍎 アイテム設定
+// アイテム設定
 const itemTypes = {
   negi: { color: "green", score: 10 },
   senbei: { color: "yellow", score: 20 },
@@ -87,7 +87,7 @@ const itemWeights = {
 function getRandomItemType() {
   const pool = [];
   for (let type in itemWeights) {
-    const count = Math.floor(itemWeights[type] * 10); // 10倍して整数化
+    const count = Math.floor(itemWeights[type] * 10);
     for (let i = 0; i < count; i++) {
       pool.push(type);
     }
@@ -105,18 +105,18 @@ let items = Array.from({ length: 5 }, () => ({
 let keys = {};
 let scorePopups = [];
 
-// 🎮 ゲーム開始
+// ゲーム開始
 document.getElementById("startButton").addEventListener("click", () => {
   startGame();
 });
 
-// 🔁 ゲーム再開
+// ゲーム再開
 document.getElementById("restartButton").addEventListener("click", () => {
   resetGame();
   startGame();
 });
 
-// 📱 タッチ操作
+// タッチ操作
 canvas.addEventListener("touchstart", handleTouch);
 canvas.addEventListener("touchmove", handleTouch);
 
@@ -129,7 +129,7 @@ function handleTouch(e) {
   e.preventDefault();
 }
 
-// ⌨️ キーボード操作
+// キーボード操作
 document.addEventListener("keydown", e => keys[e.key] = true);
 document.addEventListener("keyup", e => keys[e.key] = false);
 
@@ -158,17 +158,20 @@ function drawHUD() {
     ctx.fill();
   }
 
-  // 🏆 TOP3のスコア表示
-  // ctx.font = "14px sans-serif";
-  // ctx.fillStyle = "black";
-  // ctx.fillText("Top Scores:", 10, 90);
-  // topScores.slice(0, 3).forEach((entry, i) => {
-  //   const name = entry.name || "名無し";
-  //   const score = entry.score ?? 0;
-  //   ctx.fillText(`${i + 1}. 🧑 ${name} - ⭐ ${score}`, 10, 110 + i * 20);
-  // });
+  // TOP3のスコア表示
+/*
+  ctx.font = "14px sans-serif";
+  ctx.fillStyle = "black";
+  ctx.fillText("Top Scores:", 10, 90);
+  topScores.slice(0, 3).forEach((entry, i) => {
+    const name = entry.name || "名無し";
+    const score = entry.score ?? 0;
+    ctx.fillText(`${i + 1}. 🧑 ${name} - ⭐ ${score}`, 10, 110 + i * 20);
+  });
+*/
 }
 
+// ゲーム背景スクロール
 function drawBackground(deltaTime) {
   const scrollSpeed = bgSpeed;
   bgY += scrollSpeed * deltaTime;
@@ -179,7 +182,7 @@ function drawBackground(deltaTime) {
   ctx.drawImage(bgImg, 0, bgY, canvas.width, canvas.height);
 }
 
-// 🕹️ ゲームループ
+// ゲームループ
 function gameLoop(currentTime) {
   if (!gameStarted) return;
 
@@ -188,7 +191,7 @@ function gameLoop(currentTime) {
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-   // 🎨 背景描画をここに追加
+   // 背景描画をここに追加
   drawBackground(deltaTime);
 
   // 自機描画（ダメージ時は赤く点滅）
@@ -205,13 +208,13 @@ function gameLoop(currentTime) {
     ctx.fillRect(bicycle.x, bicycle.y, bicycle.width, bicycle.height);
   }
 
-  // 🚲 自転車移動
+  // 自転車移動
   const moveSpeed = bicycle.speed * 60; // bicycle.speed は「フレームベース」なので60FPS換算
   const moveMargin = 15;
   if (keys["ArrowLeft"]) bicycle.x = Math.max(moveMargin, bicycle.x - moveSpeed * deltaTime);
   if (keys["ArrowRight"]) bicycle.x = Math.min(canvas.width - bicycle.width - moveMargin, bicycle.x + moveSpeed * deltaTime);
 
-  // 🍎 アイテム処理
+  // アイテム処理
   const itemSpeed = bgSpeed;
   items.forEach(item => {
     item.y += itemSpeed * deltaTime;
@@ -262,14 +265,14 @@ function gameLoop(currentTime) {
       }
 */
 
-      // 💣爆弾処理
+      // 爆弾処理
       if (item.type === "bomb") {
         bombCount++;
         life--;
         damageFlash = true;
         flashTimer = 10;
 
-        // 💔 爆弾ポップアップ（濃い赤）
+        // 爆弾ポップアップ（濃い赤）
         scorePopups.push({
           x: item.x,
           y: item.y,
@@ -284,7 +287,7 @@ function gameLoop(currentTime) {
         }
       }
 
-      // 🛡️回復処理（ポップアップ（赤））
+      // 回復処理（ポップアップ（赤））
       if (item.type === "medkit") {
         if (life < 5) {
           life++;
@@ -307,13 +310,13 @@ function gameLoop(currentTime) {
         }
       }
 
-      // ⏳ 時間追加処理（ポップアップ（青））
+      // 時間追加処理（ポップアップ（青））
       if (item.type === "clock") {
         timeLeft += itemTypes[item.type].timeBoost;
         scorePopups.push({
           x: item.x,
           y: item.y,
-          text: "+" + itemTypes[item.type].timeBoost + "s",
+          text: "+" + itemTypes[item.type].timeBoost + "s⏳",
           alpha: 1.0,
           color: "blue"
         });
@@ -344,10 +347,10 @@ function gameLoop(currentTime) {
   // 消えたポップアップを削除
   scorePopups = scorePopups.filter(p => p.alpha > 0);
 
-   // 🎯 最後にHUDを描画（最前面に表示される）
+   // 最後にHUDを描画（最前面に表示される）
   drawHUD();
 
-  // 🎉 クリア判定
+  // クリア判定
   if (useClearScore && score >= clearScore) {
     endGame("Congratulations!");
     return;
@@ -368,7 +371,7 @@ function getRGB(colorName) {
   return colors[colorName] || "0,0,0";
 }
 
-// 🔄 アイテム再生成
+// アイテム再生成
 function resetItem(item) {
   item.y = -40;
   item.x = itemMarginWidth + Math.random() * (canvas.width - 30 - itemMarginWidth * 2);
@@ -407,7 +410,7 @@ function displayTopScores() {
   });
 }
 
-// 🧠 ゲーム開始処理
+// ゲーム開始処理
 function startGame() {
   gameStarted = true;
   score = 0;
@@ -427,7 +430,7 @@ function startGame() {
   requestAnimationFrame(gameLoop);
 }
 
-// 🔁 ゲームリセット処理
+// ゲームリセット処理
 function resetGame() {
   score = 0;
   bombCount = 0;
@@ -440,7 +443,7 @@ function resetGame() {
   }));
 }
 
-// 🛑 ゲーム終了処理
+// ゲーム終了処理
 function endGame(message) {
   gameStarted = false;
   clearInterval(timerInterval);
@@ -460,7 +463,7 @@ function endGame(message) {
   document.getElementById("restartButton").style.display = "block";
 }
 
-// 📐 キャンバスサイズ調整
+// キャンバスサイズ調整
 function resizeCanvas() {
   const rect = canvas.getBoundingClientRect();
   canvas.width = rect.width;

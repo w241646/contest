@@ -1,5 +1,5 @@
 // JavaScript Document
-/* List */
+/* Review_List */
 function review_list(callback, append, loop){
 var list = "";
     $.ajax({
