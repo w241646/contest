@@ -8,7 +8,7 @@ var list = "";
         dataType:"jsonp",
         jsonpCallback: callback,
         error:function() {
-//            alert("ロード失敗");
+            // alert("ロード失敗");
         },
         success: function(json){
     	 	var len = json.length;
