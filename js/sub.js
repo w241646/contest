@@ -1,9 +1,9 @@
 // JavaScript Document
 
 /* -- arctext -- */
-$(function () {
-  $('#txt_radius1').arctext({radius: 100});
-});
+// $(function () {
+//   $('#txt_radius1').arctext({radius: 100});
+// });
 /* -- /arctext -- */
 
 
