@@ -16,8 +16,8 @@
 
 @font-face {
   font-family: 'HonokaMincho';
-  src: url('./fonts/honoka-mincho.woff2') format('woff2'),
-       url('./fonts/honoka-mincho.woff') format('woff');
+  src: url('../fonts/Honoka_Shin_Mincho_L.woff2') format('woff2'),
+       url('../fonts/Honoka_Shin_Mincho_L.woff') format('woff');
 }
 
 :root {

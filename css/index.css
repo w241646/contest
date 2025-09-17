@@ -179,7 +179,8 @@ z-index: -1;
 }
 .mainVI .mVI_txt b {
   display: block;
-  font-family: var(--ttl-font);
+  font-family: serif;
+  /* font-family: var(--ttl-font); */
   font-size: 1em;
   line-height: normal;
 }
