@@ -200,8 +200,8 @@ $(function () {
     // インクルードされた要素がまだ読み込まれていない場合は再取得
     if (!headerTag) headerTag = document.querySelector('#header header');
     if (!buttonMenu) buttonMenu = document.querySelector('#header .btn_menu');
-    if (!floatingLink) floatingLink = document.querySelector('.floating_link a');
-    if (!headerTag || !buttonMenu || !floatingLink) return;
+    floatingLink = document.querySelector('.floating_link a');
+    if (!headerTag || !buttonMenu) return;
 
     // 翻訳バーの検出
     const bars = document.querySelectorAll('div.skiptranslate');
@@ -209,17 +209,17 @@ $(function () {
       const iframe = bar.querySelector('iframe.skiptranslate');
       if (iframe && bar.getAttribute('style') === '') {
         // 翻訳バーが表示されたとき
-        headerTag.style.top = '40px';
-        buttonMenu.style.top = '50px';
-        floatingLink.style.top = '15%';
+        if (headerTag) headerTag.style.top = '40px';
+        if (buttonMenu) buttonMenu.style.top = '40px';
+        if (floatingLink) floatingLink.style.top = '15%';
         return;
       }
     }
 
     // 翻訳バーが消えたとき
-    headerTag.style.top = '';
-    buttonMenu.style.top = '';
-    floatingLink.style.top = '';
+    if (headerTag) headerTag.style.top = '';
+    if (buttonMenu) buttonMenu.style.top = '';
+    if (floatingLink) floatingLink.style.top = '';
   }
 
   // 1秒ごとにチェック
