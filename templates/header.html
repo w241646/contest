@@ -1,27 +1,27 @@
 <script>
-// navigation
-$(document).ready(function() {
-  var htmLlist = [
-    '<li><a href="./origin.html" class="f__link">自転車文化の源流</a></li>',
-    '<li><a href="./cycling-road.html" class="f__link">サイクリングロード</a></li>',
-    '<li><a href="./saitama-criterium.html" class="f__link">サイクルイベント</a></li>',
-    '<li><a href="./trivia.html" class="f__link">自転車豆知識</a></li>',
-    '<li><a href="./game.html" class="f__link">自転車ゲーム</a></li>'
-  ];
-  htmLlist.forEach(function(listItem) {
-    $('.addList').append(listItem);
-  });
+  // navigation
+  $(document).ready(function() {
+    var htmLlist = [
+      '<li><a href="./origin.html" class="f__link">自転車文化の源流</a></li>',
+      '<li><a href="./cycling-road.html" class="f__link">サイクリングロード</a></li>',
+      '<li><a href="./saitama-criterium.html" class="f__link">サイクルイベント</a></li>',
+      '<li><a href="./trivia.html" class="f__link">自転車豆知識</a></li>',
+      '<li><a href="./game.html" class="f__link">自転車ゲーム</a></li>'
+    ];
+    htmLlist.forEach(function(listItem) {
+      $('.addList').append(listItem);
+    });
 
-/* -- current mark -- */
-  var currentPage = location.pathname.split("/").pop(); // 例: "game.html"
-  $('.f__link').each(function() {
-    var linkHref = $(this).attr('href').replace('./', '');
-    if (linkHref === currentPage) {
-      $(this).addClass('current');
-    }
+    /* -- current mark -- */
+    var currentPage = location.pathname.split("/").pop();
+    $('.f__link').each(function() {
+      var linkHref = $(this).attr('href').replace('./', '');
+      if (linkHref === currentPage) {
+        $(this).addClass('current');
+      }
+    });
+    /* -- /current mark -- */
   });
-/* -- /current mark -- */
-});
 </script>
 <script src="./js/common.js"></script>
 
@@ -49,15 +49,14 @@ $(document).ready(function() {
 
 
 <div id="Lang">
-<p>LANGUAGE</p>
-<div id="google_translate_element" class="lang"></div>
+  <p>LANGUAGE</p>
+  <div id="google_translate_element" class="lang"></div>
 </div>
 <script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'ja',
       includedLanguages: 'ja,en,zh-CN,ko',
-      // includedLanguages: 'ja,en,zh-CN,zh-TW,ko,fr,es,de,ru',
       layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
   }
