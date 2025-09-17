@@ -32,39 +32,17 @@
 
 <body id="Home">
 <div class="loading">
-  <!-- <div class="loading-bg"> -->
-    <div class="loading-animation">
-      <img src="./img/wheel_icon.png">
-      <p translate="no"><i>彩りの輪</i><span>Saitama Cycle Journey</span></p>
-    </div>
-  <!-- </div> -->
+  <div class="loading-animation">
+    <img src="./img/wheel_icon.png">
+    <p translate="no"><i>彩りの輪</i><span>Saitama Cycle Journey</span></p>
+  </div>
 </div>
 
 <div class="bg" style="display: none;"></div>
 
+<!-- // header // -->
 <div id="header"></div>
-<!-- // header // --
-<header class="fixed">
-  <div class="hwrap flexBox">
-    <h1 class="logo flexBox">
-      <img src="./img/saitama_icon.png" class="sIcon">
-      <a href="index.html"><span>Saitama Cycle Journey</span><p>彩りの輪</p></a>
-    </h1>
-    <nav class="navi sp_none"><ul class="addList flexBox"></ul></nav>
-  </div>
-
-  <div id="hamMenu" class="ham pc_none">
-    <button type="button" class="btn_menu">
-      <div class="back_color">
-        <span class="bar bar1"></span>
-        <span class="bar bar2"></span>
-        <span class="bar bar3"></span>
-      </div>
-    </button>
-    <nav class="scrollbar_none"><ul class="addList ham_list"></ul></nav>
-  </div>
-</header>
-!-- // header // -->
+<!-- // header // -->
 
 <!-- // mainVI // -->
 <section class="mainVI">
@@ -102,86 +80,24 @@
         <img src="./img/main_04.jpg" alt="画像4">
       </div>
     </div>
-
-    <!-- ページネーションとナビゲーション（任意）
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div> -->
   </div>
-
-
-  <!--
-    <figure><img src="./img/main.jpg" alt="メイン画像キャプション"></figure>
-    <figucaption>
-      <b>サブタイトル</b>
-      <p>
-        <b>メイン</b><i>の</i><br>キャッチコピー
-        <span>英文</span>
-      </p>
-    </figucaption>
-  -->
 </section>
 <!-- // mainVI // -->
 
-
 <nav class="page__nav">
   <ul class="flexBox">
-    <!-- <li><a href="#Sec01" class="">自転車の原点</a></li>
-    <li><a href="#Sec02" class="">日本一の絶景旅</a></li>
-    <li><a href="#Sec03" class="">埼玉が熱狂</a></li> -->
-    <li><a href="#Sec01" class="">知られざる魅力</a></li>
-    <li><a href="#Sec02" class="">学びと遊び</a></li>
+    <li><a href="#Sec01">知られざる魅力</a></li>
+    <li><a href="#Sec02">学びと遊び</a></li>
   </ul>
 </nav>
 
-
 <main>
-<!-- <p class="responsive-box" style="width: 1000px;">AAAAああああ</p> -->
-<!-- // intro // -->
+  <!-- // intro // -->
   <div class="intro inview fadeIn_up">
-
-<div class="bicycle-illust stay">
-  <img src="./img/illust_bicycle_01.png">
-  <img src="./img/illust_bicycle_03.png">
-</div>
-<style>
-.bicycle-illust img {
-  position: absolute;
-  top: 0;
-  transform: translate(-50%, -50%);
-  filter: saturate(30%);
-}
-.bicycle-illust.stay img {
-  width: 150px;
-  position: absolute;
-  top: 180px;
-  transform: translate(-50%, -50%);
-}
-.bicycle-illust.stay img[src$="_01.png"] {
-  top: 300px;
-  left: calc((100vw - 950px) / 2);
-  transform: rotate(-7deg);
-}
-.bicycle-illust.stay img[src$="_03.png"] {
-  max-width: 120px;
-  right: calc((100vw - 950px) / 2 + 35px);
-  transform: rotate(8deg) scaleX(-1);
-}
-@media screen and (max-width: 820px) {
-.bicycle-illust.stay img[src$="_01.png"] {
-  max-width: 100px;
-  top: -25px;
-  left: calc((100vw - 370px) / 2);
-  /* transform: rotate(10deg); */
-}
-.bicycle-illust.stay img[src$="_03.png"] {
-  width: 80px;
-  top: -25px;
-  right: calc((100vw - 345px) / 2);
-  /* transform: rotate(-6deg); */
-}
-}
-</style>
+    <div class="bicycle-illust stay">
+      <img src="./img/illust_bicycle_01.png">
+      <img src="./img/illust_bicycle_03.png">
+    </div>
 
     <h2><b>彩りの輪の旅</b>ペダルで巡る<br class="pc_none">さいたま再発見！<span translate="no">Saitama on Two Wheels</span></h2>
 
@@ -192,25 +108,21 @@
       「自転車王国・埼玉」の知られざる魅力を再発見！
     </p>
 
-<!-- infinite-slider -->
-<div class="infinite-slider">
-  <ul class="slider-track" id="sliderTrack">
-    <li><img src="./img/origin_main.jpg" alt="origin_main" class="#trim"></li>
-    <li><img src="./img/origin_01.jpg" alt="origin_01" class="#trim"></li>
-    <li><img src="./img/cycling_main.jpg" alt="cycling_main" class="#trim"></li>
-    <li><img src="./img/cycling_01.jpg" alt="cycling_01" class="#trim"></li>
-    <li><img src="./img/criterium_main.jpg" alt="criterium_main" class="#trim"></li>
-    <li><img src="./img/criterium_01.jpg" alt="criterium_01" class="#trim"></li>
-    <li><img src="./img/trivia_main.jpg" alt="trivia_main" class="#trim"></li>
-    <li><img src="./img/trivia_01.jpg" alt="trivia_01" class="#trim"></li>
-    <li><img src="./img/game_main.jpg" alt="game_main" class="#trim"></li>
-    <li><img src="./img/game_01.jpg" alt="game_01" class="#trim"></li>
-  </ul>
-</div>
-
-    <!-- <figure> -->
-      <!-- <img src="./img/main_04.jpg" alt="＊＊＊＊＊" class="trim ph"> -->
-    <!-- </figure> -->
+    <!-- infinite-slider -->
+    <div class="infinite-slider">
+      <ul class="slider-track" id="sliderTrack">
+        <li><img src="./img/origin_main.jpg" alt="origin_main" class="#trim"></li>
+        <li><img src="./img/origin_01.jpg" alt="origin_01" class="#trim"></li>
+        <li><img src="./img/cycling_main.jpg" alt="cycling_main" class="#trim"></li>
+        <li><img src="./img/cycling_01.jpg" alt="cycling_01" class="#trim"></li>
+        <li><img src="./img/criterium_main.jpg" alt="criterium_main" class="#trim"></li>
+        <li><img src="./img/criterium_01.jpg" alt="criterium_01" class="#trim"></li>
+        <li><img src="./img/trivia_main.jpg" alt="trivia_main" class="#trim"></li>
+        <li><img src="./img/trivia_01.jpg" alt="trivia_01" class="#trim"></li>
+        <li><img src="./img/game_main.jpg" alt="game_main" class="#trim"></li>
+        <li><img src="./img/game_01.jpg" alt="game_01" class="#trim"></li>
+      </ul>
+    </div>
 
     <div class="content-block">
       <dl class="talk">
@@ -229,19 +141,17 @@
       </dl>
     </div>
   </div>
-<!-- // intro // -->
+  <!-- // intro // -->
 
-
+  <!-- // mainCnt // -->
   <div class="mainCnt">
-
+    <!-- Sec01 -->
     <section id="Sec01" class="sec-scroll-point">
       <article class="inview fadeIn_up">
         <h3><span>自転車王国・埼玉</span><b>知られざる魅力</b></h3>
         <div class="overview content-block grid grid-2">
           <p>風を切る爽快感と、景色との一体感が味わえる埼玉県は、そんな自転車の魅力を満喫できる“自転車王国”として注目を集めています。知られざる魅力も満載で、車輪が回るたびに、彩り豊かな埼玉の表情が見えてきます。</p>
-          <figure>
-            <img src="./img/illust_japan.svg" alt="">
-          </figure>
+          <figure><img src="./img/illust_japan.svg" alt="日本地図"></figure>
         </div>
       </article>
 
@@ -251,7 +161,6 @@
             <h4><span translate="no">Bicycle Culture</span><b>自転車文化の源流<br>「陸船車<small>（りくせんしゃ）</small>」</b></h4>
             <img src="./img/origin_01.jpg" alt="">
             <p>自転車文化にゆかりある埼玉。自転車の歴史に触れ、ただの移動手段を超えた物語が待っています。</p>
-            <!-- <a href="origin.html" class="btn linkBtn">この魅力をもっと知る</a> -->
           </a>
         </div>
         <div class="flexBox">
@@ -259,7 +168,6 @@
             <h4><span translate="no">Cycling Road</span><b>日本最長の川沿い<br>サイクリングロード</b></h4>
             <img src="./img/cycling_main.jpg" alt="">
             <p>関東屈指の絶景ルート、利根川・江戸川サイクリングロード。自然と街並みを駆け抜ける爽快な旅へ。</p>
-            <!-- <a href="cycling-road.html" class="btn linkBtn">この魅力をもっと知る</a> -->
           </a>
         </div>
         <div class="flexBox">
@@ -267,70 +175,14 @@
             <h4><span translate="no">Cycle Event</span><b>ツール・ド・フランス<br>さいたまクリテリウム</b></h4>
             <img src="./img/criterium_main.jpg" alt="">
             <p>さいたまが沸く！ツール・ド・フランスの熱狂が街を包み、世界のトップライダーが駆け抜ける一日。</p>
-            <!-- <a href="saitama-criterium.html" class="btn linkBtn">この魅力をもっと知る</a> -->
           </a>
         </div>
       </article>
-
-<style>
-/* #TopMainList {
-  margin-top: 50px;
-} */
-#Sec01 .overview {
-  position: relative;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 10px;
-}
-#Sec01 .overview figure {
-  position: absolute;
-  top: -265px;
-  right: -150px;
-  width: 100%;
-  max-width: 500px;
-}
-#Sec01 .overview figure img {
-  border: none !important;
-  width: 100%;
-  max-width: 500px;
-}
-
-@media screen and (max-width: 820px) {
-#Sec01 .overview {
-  gap: 30px;
-}
-#Sec01 .overview figure {
-  position: unset;
-}
-}
-</style>
-
-
-      <!-- <img src="img/origin_main.jpg" alt="" class="#ph"> -->
-
-<!-- Swiper Carousel -->
-<!-- <div class="carousel-wrapper">
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="./img/origin_main.jpg" alt="Image 1"></div>
-      <div class="swiper-slide"><img src="./img/origin_01.jpg" alt="Image 2"></div>
-      <div class="swiper-slide"><img src="./img/origin_02.jpg" alt="Image 3"></div>
-      <div class="swiper-slide"><img src="./img/main_02.jpg" alt="Image 4"></div>
-      <div class="swiper-slide"><img src="./img/main_03.jpg" alt="Image 5"></div>
-      <div class="swiper-slide"><img src="./img/main_04.jpg" alt="Image 4"></div>
-    </div>
-  </div>
-</div> -->
-
-        <!-- <div class="content-block">
-          <p>日本で初めて自転車が走ったのは、ここ「埼玉」。歴史の息づく地を訪ね、自転車文化のはじまりに触れてみませんか？“ただの移動手段”を超えた物語が、ここにはあります。</p>
-        </div>
-        <a href="origin.html" class="btn linkBtn">この魅力をもっと知る</a> -->
     </section>
 
-
+    <!-- Sec02 -->
     <section id="Sec02" class="sec-scroll-point">
       <article class="inview fadeIn_up">
-
         <div id="TopSubList" class="card-list grid grid-2">
           <div class="">
             <a href="trivia.html">
@@ -355,150 +207,14 @@
             </a>
           </div>
         </div>
-        
-        <!-- <h3><span>日本一の絶景旅</span><b>日本最長の川沿い<br>サイクリングロード</b></h3>
-        <img src="./img/cycling_main.jpg" alt="サイクリングロード" class="#ph">
-        <div class="content-block">
-          <p>群馬・埼玉・千葉・東京を結ぶ利根川・江戸川サイクリングロードは、サイクリストの楽園。関東の大地を貫く壮大な川の流れに沿って、自然美と街並みが織りなす絶景の中を自由に駆け抜けよう。初心者もベテランも、風を切るたびに心躍る魅力が詰まった極上のサイクリングルートです！</p>
-        </div>
-        <a href="cycling-road.html" class="btn linkBtn">この魅力をもっと知る</a> -->
       </article>
     </section>
 
-
-
-
-
-    <!-- <section id="Sec01" class="sec-scroll-point">
-      <article class="inview fadeIn_up">
-        <h3><span>自転車の原点を巡る</span><b>自転車文化の源流</b></h3>
-        <img src="img/origin_main.jpg" alt="" class="#ph"> -->
-
-<!-- Swiper Carousel -->
-<!-- <div class="carousel-wrapper">
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="./img/origin_main.jpg" alt="Image 1"></div>
-      <div class="swiper-slide"><img src="./img/origin_01.jpg" alt="Image 2"></div>
-      <div class="swiper-slide"><img src="./img/origin_02.jpg" alt="Image 3"></div>
-      <div class="swiper-slide"><img src="./img/main_02.jpg" alt="Image 4"></div>
-      <div class="swiper-slide"><img src="./img/main_03.jpg" alt="Image 5"></div>
-      <div class="swiper-slide"><img src="./img/main_04.jpg" alt="Image 4"></div>
+    <div class="bicycle-illust move">
+      <img src="./img/illust_bicycle_06.png">
     </div>
-  </div>
-</div> -->
 
-        <!-- <div class="content-block">
-          <p>日本で初めて自転車が走ったのは、ここ「埼玉」。歴史の息づく地を訪ね、自転車文化のはじまりに触れてみませんか？“ただの移動手段”を超えた物語が、ここにはあります。</p>
-        </div> -->
-        <!--<a href="#" class="btn linkBtn"><span class="btnInner"><span class="btnTxt">リンクボタン</span></span></a>-->
-        <!-- <a href="origin.html" class="btn linkBtn">この魅力をもっと知る</a>
-      </article>
-    </section> -->
-    
-    
-    <!-- <section id="Sec02" class="sec-scroll-point">
-      <article class="inview fadeIn_up">
-        <h3><span>日本一の絶景旅</span><b>日本最長の川沿い<br>サイクリングロード</b></h3>
-        <img src="./img/cycling_main.jpg" alt="サイクリングロード" class="#ph">
-        <div class="content-block">
-          <p>群馬・埼玉・千葉・東京を結ぶ利根川・江戸川サイクリングロードは、サイクリストの楽園。関東の大地を貫く壮大な川の流れに沿って、自然美と街並みが織りなす絶景の中を自由に駆け抜けよう。初心者もベテランも、風を切るたびに心躍る魅力が詰まった極上のサイクリングルートです！</p>
-        </div>
-        <a href="cycling-road.html" class="btn linkBtn">この魅力をもっと知る</a>
-      </article>
-    </section> -->
-
-    <!-- <section id="Sec03" class="sec-scroll-point">
-      <article class="inview fadeIn_up">
-        <h3><span>街が熱狂するサイクルイベント</span><b>ツール・ド・フランス<br>さいたまクリテリウム</b></h3>
-        <img src="./img/criterium_main.jpg" alt="さいたまクリテリウム" class="#ph">
-        <div class="content-block">
-          <p>世界最大級の自転車レース「ツール・ド・フランス」が、ここさいたまの街を彩る！トップ選手の疾走を間近で体感できるチャンスに、街全体がサイクリングフェスへと変貌。走る人も見る人も、誰もが熱狂する一日。さいたまが、自転車の聖地になる瞬間を見逃すな！</p>
-        </div>
-        <a href="saitama-criterium.html" class="btn linkBtn">この魅力をもっと知る</a>
-      </article>
-    </section>
-
-
-    <section id="Sec04" class="sec-scroll-point">
-      <article class="inview fadeIn_up">
-        <h3><span>知ればもっと乗りたくなる！</span><b>自転車豆知識</b></h3>
-        <img src="./img/trivia_main.jpg" alt="自転車豆知識" class="#ph">
-        <div class="content-block">
-          <p>埼玉の自転車豆知識から、自転車に乗るときの基本ルールや、「ブレーキってどんな種類があるの？」「サドルの高さって重要？」など、自転車の安全利用が身につく豆知識集。知れば、あなたの自転車ライフはもっと快適で楽しくなる！</p>
-        </div>
-        <a href="trivia.html" class="btn linkBtn">自転車をもっと詳しくなる</a>
-      </article>
-    </section> -->
-
-
-    <!-- <section id="Sec05" class="sec-scroll-point">
-      <article class="inview fadeIn_up">
-        <h3><span>埼玉名産アイテムをキャッチ</span><b>自転車ゲーム</b></h3>
-        <img src="./img/game_main.jpg" alt="自転車ゲーム" class="#ph">
-        <div class="content-block">
-          <p>「埼玉の特産アイテム」を拾いながら、サイクリングでハイスコアを目指すゲーム！反射神経も学びもフル活用、遊びながら地元の魅力を再発見。大人も子どもも夢中になる、疾走アクション体験！</p>
-        </div>
-        <a href="game.html" class="btn linkBtn">ゲームを楽しむ</a>
-      </article>
-    </section> -->
-
-
-<div class="bicycle-illust move">
-  <img src="./img/illust_bicycle_06.png">
-</div>
-<style>
-@keyframes moveRight {
-  0% {
-    transform: translateX(-100px);
-  }
-  100% {
-    transform: translateX(calc(100vw + 100px));
-  }
-}
-@keyframes shake {
-  0%   { transform: translateX(0) rotate(0deg); }
-  25%  { transform: translateX(-2px) rotate(-1deg); }
-  50%  { transform: translateX(2px) rotate(1deg); }
-  75%  { transform: translateX(-2px) rotate(-1deg); }
-  100% { transform: translateX(0) rotate(0deg); }
-}
-@keyframes moveAndShake {
-  0%   { transform: translateX(0) rotate(0deg); }
-  10%  { transform: translateX(calc(10vw + 15px)) rotate(-5deg); }
-  20%  { transform: translateX(calc(20vw + 30px)) rotate(0deg); }
-  30%  { transform: translateX(calc(30vw + 45px)) rotate(-5deg); }
-  40%  { transform: translateX(calc(40vw + 60px)) rotate(0deg); }
-  50%  { transform: translateX(calc(50vw + 75px)) rotate(-5deg); }
-  60%  { transform: translateX(calc(60vw + 90px)) rotate(0deg); }
-  70%  { transform: translateX(calc(70vw + 105px)) rotate(-5deg); }
-  80%  { transform: translateX(calc(80vw + 120px)) rotate(0deg); }
-  90%  { transform: translateX(calc(90vw + 135px)) rotate(-5deg); }
-  100% { transform: translateX(calc(100vw + 150px)) rotate(0deg); }
-}
-.bicycle-illust {
-  position: relative;
-}
-.bicycle-illust.move {
-  width: 100%;
-}
-.bicycle-illust.move img {
-  position: absolute;
-  top: -100px;
-  left: -150px;
-  width: 150px;
-  /* animation: moveRight 18s linear infinite,
-             shake 0.3s ease-in-out infinite; */
-  animation: moveAndShake 18s linear infinite;
-}
-@media screen and (max-width: 820px) {
-.bicycle-illust.move img {
-  top: 60px;
-  width: 130px;
-}
-}
-</style>
-<!-- // snsArea // -->
+    <!-- snsArea -->
     <div class="snsArea sec-scroll-point">
       <div class="inview fadeIn_up">
         <b>SHARE</b>
@@ -509,22 +225,15 @@
         </ul>
       </div>
     </div>
-<!-- // snsArea // -->
-
   </div>
+  <!-- // mainCnt // -->
 </main>
 
-
+<!-- // footer // -->
 <div id="footer"></div>
-<!-- // footer // --
-<footer>
-  <p class="copy">&copy; 2025 **** All Rights Reserved.</p>
-</footer>
-!-- // footer // -->
-
+<!-- // footer // -->
 
 <div id="PageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></div>
-
 
 <!-- JS Area -->
 <script src="./js/swiper.configs.js"></script>
