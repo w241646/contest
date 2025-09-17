@@ -1,216 +1,216 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="format-detection" content="telephone=no">
-<title>自転車ゲーム | 彩りの輪 ～Saitama Cycle Journey～</title>
-<meta name="description" content="埼玉の特産品をキャッチしながら自転車で駆け抜ける爽快アクションゲーム！反射神経と判断力を駆使してハイスコアを狙え！遊びながら地元の魅力を再発見できる、子どもから大人まで楽しめるサイクル体験型コンテンツ。">
-<link rel="icon" href="./img/favicon.ico">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>自転車ゲーム | 彩りの輪 ～Saitama Cycle Journey～</title>
+    <meta name="description" content="埼玉の特産品をキャッチしながら自転車で駆け抜ける爽快アクションゲーム！反射神経と判断力を駆使してハイスコアを狙え！遊びながら地元の魅力を再発見できる、子どもから大人まで楽しめるサイクル体験型コンテンツ。">
+    <link rel="icon" href="./img/favicon.ico">
 
-<!-- CSS Area -->
-<link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="./css/normalize.css">
-<link rel="stylesheet" href="./css/common.css">
-<link rel="stylesheet" href="./css/style.css">
-<link rel="stylesheet" href="./css/add.css">
-<link rel="stylesheet" href="./css/page.css">
-<!-- /CSS Area -->
+    <!-- CSS Area -->
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/add.css">
+    <link rel="stylesheet" href="./css/page.css">
+    <!-- /CSS Area -->
 
-<!-- JS Area -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="./js/templates.include.js"></script>
-<!-- /JS Area -->
-</head>
+    <!-- JS Area -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/templates.include.js"></script>
+    <!-- /JS Area -->
+  </head>
 
+  <body id="Page" class="page-05">
+    <div class="bg" style="display: none;"></div>
 
-<body id="Page" class="page-05">
-<div class="bg" style="display: none;"></div>
+    <!-- // header // -->
+    <div id="header"></div>
+    <!-- // header // -->
 
+    <nav id="breadcrumb"></nav>
 
-<div id="header"></div>
-<nav id="breadcrumb"></nav>
+    <main>
+      <div class="floating_link fade-in"><a href="#Game"><i class="fas fa-gamepad"></i><p>GamePlay</p></a></div>
 
-<main>
-  <div class="floating_link fade-in"><a href="#Game"><i class="fas fa-gamepad"></i><p>GamePlay</p></a></div>
+      <!-- // intro // -->
+      <div class="intro inview fadeIn_up">
+        <h2><b id="txt_radius">埼玉名産アイテムをキャッチ</b>自転車ゲーム<span translate="no">Catch & Ride: Saitama’s Local Loot</span></h2>
+        <figure><img src="./img/game_main.jpg" alt="自転車ゲーム" class="page-eyecatch trim"></figure>
+        <p class="read_txt">
+          「埼玉の特産アイテム」を拾いながら、サイクリングでハイスコアを目指すゲーム！<br class="sp_none"><span class="u_line">反射神経も学びもフル活用、遊びながら地元の魅力を再発見。</span><br>大人も子どもも夢中になる、疾走アクション体験！
+        </p>
+      </div>
+      <!-- // intro // -->
 
-<!-- // intro // -->
-  <div class="intro inview fadeIn_up">
-    <h2><b id="txt_radius 1">埼玉名産アイテムをキャッチ</b>自転車ゲーム<span translate="no">Catch & Ride: Saitama’s Local Loot</span></h2>
-    <figure><img src="./img/game_main.jpg" alt="自転車ゲーム" class="page-eyecatch trim #ph"></figure>
-    <p class="read_txt">
-    「埼玉の特産アイテム」を拾いながら、サイクリングでハイスコアを目指すゲーム！<br class="sp_none"><span class="u_line">反射神経も学びもフル活用、遊びながら地元の魅力を再発見。</span><br>大人も子どもも夢中になる、疾走アクション体験！
-    </p>
-  </div>
-<!-- // intro // -->
-
-
-  <div class="mainCnt">
-    <section id="Sec01" class="sec-scroll-point">
-      <article class="inview fadeIn_up">
-        <h3><span translate="no">Catch Treasures</span><b>走って拾って、<br class="pc_none">埼玉再発見！</b></h3>
-        <figure><img src="./img/game_01.jpg" alt="走って拾って、埼玉再発見" class="media-cover #ph"></figure>
-        <div class="content-block">
-          <p class="leadTxt clearfix">
-            埼玉の特産アイテムをキャッチしてスコアを稼ぐ、シンプルながら戦略性のあるアクションゲーム。プレイヤーは自転車を操作し、各アイテムを集めながら、ダメージを避けてライフを守ります。制限時間内に高得点を目指し、回復アイテムや時計で生存時間を延ばすことも可能。ハイスコア更新を狙うもよし、特産アイテムをコンプリートするもよし。反射神経と判断力が試される、爽快なキャッチゲームをお楽しみください！
-          </p>
-        </div>
-
-        <div class="content-block">
-          <dl class="talk">
-            <dt class="inview_re delay_a">
-              <div class="faceicon icon-a"></div>
-              <b>高得点を狙っちゃいますよ！！</b>
-            </dt>
-            <dd class="inview_re delay_b">
-              <div class="faceicon icon-b"></div>
-              <p>
-                ほほう！そなた、高得点を狙うとな？<br>よき心意気じゃ！その志、まことに勇ましく、我が王国の誉れと申せよう。ならば命ずる――ダメージを避け、アイテムを掴み、時を操り、栄光の頂を目指すがよい！スコアの頂点に名を刻みし者には、王より称賛と祝福を授けようぞ！<br>さあ、進め！我が勇者よ！
+      <!-- // mainCnt // -->
+      <div class="mainCnt">
+        <!-- Sec01 -->
+        <section id="Sec01" class="sec-scroll-point">
+          <article class="inview fadeIn_up">
+            <h3><span translate="no">Catch Treasures</span><b>走って拾って、<br class="pc_none">埼玉再発見！</b></h3>
+            <figure><img src="./img/game_01.jpg" alt="走って拾って、埼玉再発見" class="media-cover"></figure>
+            <div class="content-block">
+              <p class="leadTxt clearfix">
+                埼玉の特産アイテムをキャッチしてスコアを稼ぐ、シンプルながら戦略性のあるアクションゲーム。プレイヤーは自転車を操作し、各アイテムを集めながら、ダメージを避けてライフを守ります。制限時間内に高得点を目指し、回復アイテムや時計で生存時間を延ばすことも可能。ハイスコア更新を狙うもよし、特産アイテムをコンプリートするもよし。反射神経と判断力が試される、爽快なキャッチゲームをお楽しみください！
               </p>
-            </dd>
-          </dl>
-        </div>
-      </article>
+            </div>
 
-      <div id="controls" class="content-block game-note inview fadeIn_up">
-        <h4><i class="fas fa-gamepad"></i>ゲームの操作方法</h4>
-        <ul>
-          <li><strong>名前入力：</strong> プレーヤー名を入力すると、スコアと一緒にランキングに表示されます。</li>
-          <li><strong translate="no">Game Start：</strong> ゲームを開始します。</li>
-          <li><strong translate="no">Play Again：</strong> 再挑戦できます。</li>
-          <li><strong>終了条件：</strong> 制限時間またはライフがゼロになると終了です。</li>
-          <li><strong>操作方法（PC / スマホ）：</strong> 
-            <ul>
-              <li>
-                <img src="./img/game_bicycle.png" alt="自転車">
-                <div class="flexBox item-text">
-                  <span class="item-name">PC：「←」「→」キーで左右に移動します。</span>
-                  <span class="item-name">スマホ：タッチで移動します。</span>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <li><strong>アイテムをキャッチしてスコアアップ：</strong>
-            <ul>
-              <li>
-                <img src="./img/game_negi.png" alt="深谷ネギ">
-                <div class="flexBox item-text">
-                  <span class="item-name">深谷ネギ：+10点</span>
-                  <small class="item-desc sp_none">埼玉県深谷市の特産・深谷ネギは、寒さが増す冬に甘みが際立つブランド野菜。白く太い根の部分は繊維が細かく、加熱するととろけるような柔らかさと濃厚な旨みが広がります。糖度は果物並みに高く、すき焼きや鍋料理に欠かせない存在として、地元はもちろん全国でも高い評価を受けています。</small>
-                  <small class="item-desc pc_none" aria-hidden="true">深谷市の特産・深谷ネギは冬に甘みが増す高糖度の特産野菜で、鍋料理に人気。</small>
-                </div>
-              </li>
-              <li>
-                <img src="./img/game_senbei.png" alt="草加せんべい">
-                <div class="flexBox item-text">
-                  <span class="item-name">草加せんべい：+20点</span>
-                  <small class="item-desc sp_none">埼玉県草加市の名物・草加せんべいは、うるち米を使った堅焼きの煎餅で、パリッとした食感と香ばしい醤油の風味が特徴。江戸時代、日光街道の宿場町として栄えた草加で誕生し、保存食としての団子を乾かして焼いたのが始まりとされています。</small>
-                  <small class="item-desc pc_none" aria-hidden="true">草加せんべいは埼玉県草加市発祥の堅焼き煎餅で、パリッとした食感と醤油の香ばしさが特徴。</small>
-                </div>
-              </li>
-              <li>
-                <img src="./img/game_washi.png" alt="小川和紙">
-                <div class="flexBox item-text">
-                  <span class="item-name">小川和紙：+30点</span>
-                  <small class="item-desc sp_none">埼玉県小川町の名産・小川和紙は、奈良時代から続く手漉き和紙。楮を原料に職人が一枚ずつ丁寧に漉き上げ、しなやかで温かみのある風合いが特徴です。ユネスコ無形文化遺産にも登録され、書道や工芸品など幅広く親しまれています。</small>
-                  <small class="item-desc pc_none" aria-hidden="true">小川町の名産・小川和紙は、奈良時代から続く手漉きの和紙。ユネスコ無形文化遺産にも登録されています。</small>
-                </div>
-              </li>
-              <li>
-                <img src="./img/game_manju.png" alt="十万石饅頭">
-                <div class="flexBox item-text">
-                  <span class="item-name">十万石饅頭：+40点</span>
-                  <small class="item-desc sp_none">埼玉県行田市の名物・十万石饅頭は、しっとりとした薯蕷（じょうよ）生地に、北海道産のこしあんを包んだ上品な和菓子。もちもちとした食感と、なめらかな甘さが特徴です。地元では「うまい、うますぎる！」のCMで知られ、埼玉県民に親しまれています。</small>
-                  <small class="item-desc pc_none" aria-hidden="true">十万石饅頭は行田市名物の和菓子で、もちもち食感と滑らかな甘さが特徴。「うまい、うますぎる！」のCMで親しまれています。</small>
-                </div>
-              </li>
-              <li>
-                <img src="./img/game_bonsai.png" alt="大宮盆栽">
-                <div class="flexBox item-text">
-                  <span class="item-name">大宮盆栽：+50点</span>
-                  <small class="item-desc sp_none">埼玉県さいたま市で育まれる大宮盆栽は、小さな鉢に自然の美を宿す、大宮盆栽村で受け継がれてきた伝統芸術。樹木の生命力と四季の移ろいを表現する繊細な技術が特徴で、国内外の愛好家から高い評価を受けています。「BONSAI」として世界中の盆栽ファンを魅了する、日本文化の象徴として、世界に誇れる芸術です。</small>
-                  <small class="item-desc pc_none" aria-hidden="true">大宮盆栽はさいたま市の伝統芸術で、自然美と四季を表現する繊細な技術が特徴。世界中の盆栽ファンを魅了する日本文化の象徴です。</small>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <li><strong>ダメージアイテム：</strong>
-            <ul>
-              <li>
-                <img src="./img/game_bomb.png" alt="爆弾">
-                <div class="flexBox item-text">
-                  <span class="item-name">爆弾：-15点、ライフ-1</span>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <li><strong>回復・補助アイテム：</strong>
-            <ul>
-              <li>
-                <img src="./img/game_medkit.png" alt="救急箱">
-                <div class="flexBox item-text">
-                  <span class="item-name">救急箱：ライフ+1</span>
-                </div>
-              </li>
-              <li>
-                <img src="./img/game_hourglass.png" alt="砂時計">
-                <div class="flexBox item-text">
-                  <span class="item-name">砂時計：時間+10秒</span>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <!-- <li>スコアが一定以上でゲームクリア</li> -->
-        </ul>
-      </div>
+            <div class="content-block">
+              <dl class="talk">
+                <dt class="inview_re delay_a">
+                  <div class="faceicon icon-a"></div>
+                  <b>高得点を狙っちゃいますよ！！</b>
+                </dt>
+                <dd class="inview_re delay_b">
+                  <div class="faceicon icon-b"></div>
+                  <p>
+                    ほほう！そなた、高得点を狙うとな？<br>よき心意気じゃ！その志、まことに勇ましく、我が王国の誉れと申せよう。ならば命ずる――ダメージを避け、アイテムを掴み、時を操り、栄光の頂を目指すがよい！スコアの頂点に名を刻みし者には、王より称賛と祝福を授けようぞ！<br>さあ、進め！我が勇者よ！
+                  </p>
+                </dd>
+              </dl>
+            </div>
+          </article>
 
-      <div id="Game" class="content-block inview fadeIn_up">
-        <!-- ゲーム本体 -->
-        <div style="position: relative; width: 100%; max-width: 400px; margin: auto;">
-          <div class="playerName">
-            <label for="playerName"><i class="fas fa-pen"></i>名前（ランキングに表示されます）:</label>
-            <input type="text" id="playerName" placeholder="未入力なら「名無し」になります">
+          <div id="controls" class="content-block game-note inview fadeIn_up">
+            <h4><i class="fas fa-gamepad"></i>ゲームの操作方法</h4>
+            <ul>
+              <li><strong>名前入力：</strong> プレーヤー名を入力すると、スコアと一緒にランキングに表示されます。</li>
+              <li><strong translate="no">Game Start：</strong> ゲームを開始します。</li>
+              <li><strong translate="no">Play Again：</strong> 再挑戦できます。</li>
+              <li><strong>終了条件：</strong> 制限時間またはライフがゼロになると終了です。</li>
+              <li><strong>操作方法（PC / スマホ）：</strong> 
+                <ul>
+                  <li>
+                    <img src="./img/game_bicycle.png" alt="自転車">
+                    <div class="flexBox item-text">
+                      <span class="item-name">PC：「←」「→」キーで左右に移動します。</span>
+                      <span class="item-name">スマホ：タッチで移動します。</span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li><strong>アイテムをキャッチしてスコアアップ：</strong>
+                <ul>
+                  <li>
+                    <img src="./img/game_negi.png" alt="深谷ネギ">
+                    <div class="flexBox item-text">
+                      <span class="item-name">深谷ネギ：+10点</span>
+                      <small class="item-desc sp_none">埼玉県深谷市の特産・深谷ネギは、寒さが増す冬に甘みが際立つブランド野菜。白く太い根の部分は繊維が細かく、加熱するととろけるような柔らかさと濃厚な旨みが広がります。糖度は果物並みに高く、すき焼きや鍋料理に欠かせない存在として、地元はもちろん全国でも高い評価を受けています。</small>
+                      <small class="item-desc pc_none" aria-hidden="true">深谷市の特産・深谷ネギは冬に甘みが増す高糖度の特産野菜で、鍋料理に人気。</small>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="./img/game_senbei.png" alt="草加せんべい">
+                    <div class="flexBox item-text">
+                      <span class="item-name">草加せんべい：+20点</span>
+                      <small class="item-desc sp_none">埼玉県草加市の名物・草加せんべいは、うるち米を使った堅焼きの煎餅で、パリッとした食感と香ばしい醤油の風味が特徴。江戸時代、日光街道の宿場町として栄えた草加で誕生し、保存食としての団子を乾かして焼いたのが始まりとされています。</small>
+                      <small class="item-desc pc_none" aria-hidden="true">草加せんべいは埼玉県草加市発祥の堅焼き煎餅で、パリッとした食感と醤油の香ばしさが特徴。</small>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="./img/game_washi.png" alt="小川和紙">
+                    <div class="flexBox item-text">
+                      <span class="item-name">小川和紙：+30点</span>
+                      <small class="item-desc sp_none">埼玉県小川町の名産・小川和紙は、奈良時代から続く手漉き和紙。楮を原料に職人が一枚ずつ丁寧に漉き上げ、しなやかで温かみのある風合いが特徴です。ユネスコ無形文化遺産にも登録され、書道や工芸品など幅広く親しまれています。</small>
+                      <small class="item-desc pc_none" aria-hidden="true">小川町の名産・小川和紙は、奈良時代から続く手漉きの和紙。ユネスコ無形文化遺産にも登録されています。</small>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="./img/game_manju.png" alt="十万石饅頭">
+                    <div class="flexBox item-text">
+                      <span class="item-name">十万石饅頭：+40点</span>
+                      <small class="item-desc sp_none">埼玉県行田市の名物・十万石饅頭は、しっとりとした薯蕷（じょうよ）生地に、北海道産のこしあんを包んだ上品な和菓子。もちもちとした食感と、なめらかな甘さが特徴です。地元では「うまい、うますぎる！」のCMで知られ、埼玉県民に親しまれています。</small>
+                      <small class="item-desc pc_none" aria-hidden="true">十万石饅頭は行田市名物の和菓子で、もちもち食感と滑らかな甘さが特徴。「うまい、うますぎる！」のCMで親しまれています。</small>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="./img/game_bonsai.png" alt="大宮盆栽">
+                    <div class="flexBox item-text">
+                      <span class="item-name">大宮盆栽：+50点</span>
+                      <small class="item-desc sp_none">埼玉県さいたま市で育まれる大宮盆栽は、小さな鉢に自然の美を宿す、大宮盆栽村で受け継がれてきた伝統芸術。樹木の生命力と四季の移ろいを表現する繊細な技術が特徴で、国内外の愛好家から高い評価を受けています。「BONSAI」として世界中の盆栽ファンを魅了する、日本文化の象徴として、世界に誇れる芸術です。</small>
+                      <small class="item-desc pc_none" aria-hidden="true">大宮盆栽はさいたま市の伝統芸術で、自然美と四季を表現する繊細な技術が特徴。世界中の盆栽ファンを魅了する日本文化の象徴です。</small>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li><strong>ダメージアイテム：</strong>
+                <ul>
+                  <li>
+                    <img src="./img/game_bomb.png" alt="爆弾">
+                    <div class="flexBox item-text">
+                      <span class="item-name">爆弾：-15点、ライフ-1</span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li><strong>回復・補助アイテム：</strong>
+                <ul>
+                  <li>
+                    <img src="./img/game_medkit.png" alt="救急箱">
+                    <div class="flexBox item-text">
+                      <span class="item-name">救急箱：ライフ+1</span>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="./img/game_hourglass.png" alt="砂時計">
+                    <div class="flexBox item-text">
+                      <span class="item-name">砂時計：時間+10秒</span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
-          <div class="game_frame"><canvas id="gameCanvas"></canvas></div>
-          <button id="startButton" translate="no">Game Start</button>
-          <button id="restartButton" translate="no" style="display:none;">Play Again</button>
+
+          <div id="Game" class="content-block inview fadeIn_up">
+            <!-- ゲーム本体 -->
+            <div style="position: relative; width: 100%; max-width: 400px; margin: auto;">
+              <div class="playerName">
+                <label for="playerName"><i class="fas fa-pen"></i>名前（ランキングに表示されます）:</label>
+                <input type="text" id="playerName" placeholder="未入力なら「名無し」になります">
+              </div>
+              <div class="game_frame"><canvas id="gameCanvas"></canvas></div>
+              <button id="startButton" translate="no">Game Start</button>
+              <button id="restartButton" translate="no" style="display:none;">Play Again</button>
+            </div>
+          </div>
+
+          <div id="Score" class="content-block game-note inview fadeIn_up">
+            <div id="topScoresDisplay">
+              <h4><i class="fas fa-trophy"></i>Top 3 Scores</h4>
+              <ul id="topScoresList"></ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- snsArea -->
+        <div class="snsArea sec-scroll-point">
+          <div class="inview fadeIn_up">
+            <b>SHARE</b>
+            <ul class="flexBox">
+              <li><a href="https://www.facebook.com/share.php?u={URL}" rel="nofollow noopener" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+              <li><a href="http://twitter.com/share?url=[URL]" rel="nofollow noopener" target="_blank"><img src="./img/logo-white.png" class="x_icon"></a></li>
+              <li><a href="https://line.me/R/msg/text/?{URL}" target="_blank" rel="nofollow noopener"><i class="fab fa-line"></i></a></li>
+            </ul>
+          </div>
         </div>
       </div>
+      <!-- // mainCnt // -->
+    </main>
 
-      <div id="Score" class="content-block game-note inview fadeIn_up">
-        <div id="topScoresDisplay">
-          <h4><i class="fas fa-trophy"></i>Top 3 Scores</h4>
-          <ul id="topScoresList"></ul>
-        </div>
-      </div>
-    </section>
+    <!-- // footer // -->
+    <div id="footer"></div>
+    <!-- // footer // -->
 
+    <div id="PageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></div>
 
-<!-- // snsArea // -->
-    <div class="snsArea sec-scroll-point">
-      <div class="inview fadeIn_up">
-        <b>SHARE</b>
-        <ul class="flexBox">
-          <li><a href="https://www.facebook.com/share.php?u={URL}" rel="nofollow noopener" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-          <li><a href="http://twitter.com/share?url=[URL]" rel="nofollow noopener" target="_blank"><img src="./img/logo-white.png" class="x_icon"></a></li>
-          <li><a href="https://line.me/R/msg/text/?{URL}" target="_blank" rel="nofollow noopener"><i class="fab fa-line"></i></a></li>
-        </ul>
-      </div>
-    </div>
-<!-- // snsArea // -->
-
-  </div>
-</main>
-
-
-<div id="footer"></div>
-<div id="PageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></div>
-
-
-<!-- JS Area -->
-<script src="./js/game.js"></script>
-<!-- /JS Area -->
-</body>
+    <!-- JS Area -->
+    <script src="./js/game.js"></script>
+    <!-- /JS Area -->
+  </body>
 </html>
