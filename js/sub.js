@@ -210,7 +210,7 @@ $(function () {
       if (iframe && bar.getAttribute('style') === '') {
         // 翻訳バーが表示されたとき
         if (headerTag) headerTag.style.top = '40px';
-        if (buttonMenu) buttonMenu.style.top = '40px';
+        if (buttonMenu) buttonMenu.style.top = '50px';
         if (floatingLink) floatingLink.style.top = '15%';
         return;
       }
