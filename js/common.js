@@ -104,64 +104,17 @@ $(function () {
 
 
 /* -- breadcrumb -- */
-// function generateBreadcrumbs() {
-//   const breadcrumbContainer = document.getElementById("breadcrumb");
-
-//   // 要素が存在しない場合は何もしない
-//   if (!breadcrumbContainer) return;
-
-//   // TOPページ（ルートパスまたは index.html）なら何もしない
-//   const path = window.location.pathname;
-//   if (path === "/" || path === "/index.html") return;
-
-//   const pathArray = path.split("/").filter(Boolean);
-//   const currentLabel = getMainTextFromH2() || "現在地";
-
-//   let breadcrumbHTML = `<a href="/">Home</a>`;
-//   let accumulatedPath = "";
-//   pathArray.forEach((segment, index) => {
-//     accumulatedPath += `/${segment}`;
-//     if (index === pathArray.length - 1) {
-//       breadcrumbHTML += ` &gt; <span>${currentLabel}</span>`;
-//     } else {
-//       breadcrumbHTML += ` &gt; <a href="${accumulatedPath}">${decodeURIComponent(segment)}</a>`;
-//     }
-//   });
-
-//   breadcrumbContainer.innerHTML = breadcrumbHTML;
-// }
-
-// if (document.readyState === "loading") {
-//   document.addEventListener("DOMContentLoaded", generateBreadcrumbs);
-// } else {
-//   setTimeout(generateBreadcrumbs, 100);
-// }
-
-// // h2の対象の文字を抽出
-// function getMainTextFromH2() {
-//   const h2 = document.querySelector("h2");
-//   if (!h2) return null;
-
-//   const textParts = Array.from(h2.childNodes)
-//     .filter(node => node.nodeType === Node.TEXT_NODE)
-//     .map(node => node.textContent.trim())
-//     .filter(text => text.length > 0);
-
-//   return textParts[1] || textParts[0] || "現在地";
-// }
-
-
-/* -- breadcrumb -- */
 function generateBreadcrumbs() {
   const breadcrumbContainer = document.getElementById("breadcrumb");
   if (!breadcrumbContainer) return;
 
   const path = window.location.pathname;
-  if (path === "/" || path === "/index.html") return;
+  const currentFile = getFileName(path);
+  if (currentFile === "index") return;
 
   const currentLabel = getMainTextFromH2() || getFileName(path) || "現在地";
+  const breadcrumbHTML = `<a href="index.html">Home</a> &gt; <span>${currentLabel}</span>`;
 
-  const breadcrumbHTML = `<a href="/">Home</a> &gt; <span>${currentLabel}</span>`;
   breadcrumbContainer.innerHTML = breadcrumbHTML;
 }
 
@@ -187,7 +140,6 @@ if (document.readyState === "loading") {
 } else {
   setTimeout(generateBreadcrumbs, 100);
 }
-/* -- /breadcrumb -- */
 /* -- /breadcrumb -- */
 
 
